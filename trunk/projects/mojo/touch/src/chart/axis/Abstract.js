@@ -2,11 +2,12 @@
  * @class Ext.chart.axis.Abstract
  * @ignore
  */
-Ext.define('Ext.chart.axis.Abstract', {
+//Ext.define('Ext.chart.axis.Abstract', {
 
+Ext.chart.axis.Abstract = Ext.extend(Ext.util.Observable, {
     /* Begin Definitions */
 
-    requires: ['Ext.chart.Chart'],
+    //requires: ['Ext.chart.Chart'],
 
     /* End Definitions */
 

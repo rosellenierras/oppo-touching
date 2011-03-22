@@ -22,11 +22,11 @@
     the <em>name</em> property and set as title <em>Month of the Year</em>.
  */
 
-Ext.define('Ext.chart.axis.Category', {
-
+//Ext.define('Ext.chart.axis.Category', {
+Ext.chart.axis.Category = Ext.extend(Ext.chart.axis.Axis, {
     /* Begin Definitions */
 
-    extend: 'Ext.chart.axis.Axis',
+    //extend: 'Ext.chart.axis.Axis',
 
     /* End Definitions */
 

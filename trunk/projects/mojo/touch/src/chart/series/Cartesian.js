@@ -6,11 +6,12 @@
  *
  * @constructor
  */
-Ext.define('Ext.chart.series.Cartesian', {
+//Ext.define('Ext.chart.series.Cartesian', {
 
+Ext.chart.series.Cartesian = Ext.extend(Ext.chart.series.Series, {
     /* Begin Definitions */
 
-    extend: 'Ext.chart.series.Series',
+    //extend: 'Ext.chart.series.Series',
 
     /* End Definitions */
 

@@ -45,13 +45,13 @@
  * category axis the labels will be rotated so they can fit the space better.
  * 
  */
-Ext.define('Ext.chart.axis.Axis', {
-
+//Ext.define('Ext.chart.axis.Axis', {
+Ext.chart.axis.Axis = Ext.extend(Ext.chart.axis.Abstract, {
     /* Begin Definitions */
 
-    extend: 'Ext.chart.axis.Abstract',
+    //extend: 'Ext.chart.axis.Abstract',
 
-    requires: ['Ext.draw.Draw'],
+    //requires: ['Ext.draw.Draw'],
 
     /* End Definitions */
 

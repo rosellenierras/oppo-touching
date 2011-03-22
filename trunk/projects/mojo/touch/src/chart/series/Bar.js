@@ -36,13 +36,13 @@
     like `color`, `text-anchor`, etc.
    </p>
  */
-Ext.define('Ext.chart.series.Bar', {
-
+//Ext.define('Ext.chart.series.Bar', {
+Ext.chart.series.Bar = Ext.extend(Ext.chart.series.Cartesian, {
     /* Begin Definitions */
 
-    extend: 'Ext.chart.series.Cartesian',
+    //extend: 'Ext.chart.series.Cartesian',
 
-    requires: ['Ext.chart.axis.Axis', 'Ext.fx.Anim'],
+    //requires: ['Ext.chart.axis.Axis', 'Ext.fx.Anim'],
 
     /* End Definitions */
 
@@ -85,7 +85,8 @@ Ext.define('Ext.chart.series.Bar', {
     ypadding: 10,
 
     constructor: function(config) {
-        this.callParent(arguments);
+        //this.callParent(arguments);
+        Ext.chart.series.Bar.superclass.constructor.call(this, config);
         var me = this,
             surface = me.chart.surface,
             shadow = me.chart.shadow,
@@ -703,7 +704,9 @@ Ext.define('Ext.chart.series.Bar', {
     // @private used to animate label, markers and other sprites.
     onAnimate: function(sprite, attr) {
         sprite.show();
-        return this.callParent(arguments);
+        // return this.callParent(arguments);
+        var res = Ext.chart.series.Bar.superclass.onAnimate.call(this, sprite, attr);
+        return res;
     },
     
     isItemInPoint: function(x, y, item) {

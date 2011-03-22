@@ -2,11 +2,11 @@
  * @class Ext.chart.theme.Theme
  * @ignore
  */
-Ext.define('Ext.chart.theme.Theme', {
-
+// Ext.define('Ext.chart.theme.Theme', {
+Ext.chart.theme.Theme = Ext.extend(Object, {
     /* Begin Definitions */
 
-    requires: ['Ext.draw.Color'],
+    //requires: ['Ext.draw.Color'],
 
     /* End Definitions */
 

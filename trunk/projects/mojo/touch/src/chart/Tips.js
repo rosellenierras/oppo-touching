@@ -2,11 +2,11 @@
  * @class Ext.chart.Tips
  * @ignore
  */
-Ext.define('Ext.chart.Tips', {
-
+//Ext.define('Ext.chart.Tips', {
+Ext.chart.Tips = Ext.extend(Object, {
     /* Begin Definitions */
 
-    requires: ['Ext.tip.ToolTip', 'Ext.chart.TipSurface'],
+    //requires: ['Ext.tip.ToolTip', 'Ext.chart.TipSurface'],
 
     /* End Definitions */
 

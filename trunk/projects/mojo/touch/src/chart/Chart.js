@@ -33,10 +33,10 @@
  * @xtype chart
  */
 
-Ext.define('Ext.chart.Chart', {
-
+// Ext.define('Ext.chart.Chart', {
+Ext.chart.Chart = Ext.extend(Ext.draw.Component, {
     /* Begin Definitions */
-
+    /*
     alias: 'widget.chart',
 
     extend: 'Ext.draw.Component',
@@ -52,7 +52,7 @@ Ext.define('Ext.chart.Chart', {
         'Ext.chart.Legend',
         'Ext.util.DelayedTask'
     ],
-
+    */ 
     /* End Definitions */
     // @private
     viewBox: false,
@@ -109,14 +109,16 @@ Ext.define('Ext.chart.Chart', {
             }
         }
         me.mixins.mask.constructor.call(me, config);
-        me.callParent([config]);
+        //me.callParent([config]);
+        Ext.chart.Chart.superclass.constructor.call(this, config);
     },
     
     initComponent: function() {
         var me = this,
             axes,
             series;
-        me.callParent();
+        //me.callParent();
+        Ext.chart.Chart.superclass.constructor.initComponent.call(this);
         me.addEvents(
             'itemmousedown',
             'itemmouseup',
@@ -634,3 +636,6 @@ Ext.define('Ext.chart.Chart', {
         this.callParent(arguments);
     }
 });
+Ext.reg('chart', Ext.chart.Chart);
+Ext.mixin(Ext.chart.Chart, 'themeMgr', Ext.chart.theme.Theme);
+Ext.mixin(Ext.chart.Chart, 'mask', Ext.chart.Mask);

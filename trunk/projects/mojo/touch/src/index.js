@@ -204,7 +204,7 @@ Ext.ux.UniversalUI = Ext.extend(Ext.Panel, {
             type        = record.get('type');
             var name = record.get('name');
             if(type == 'page') {
-                card        = new Ext.Page({title: name});
+                card        = new Ext.Page({page: name});
                 //card        = record.get('card');
                 //anim        = record.get('cardSwitchAnimation');
                 //preventHide = record.get('preventHide');

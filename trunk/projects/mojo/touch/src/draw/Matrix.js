@@ -2,11 +2,11 @@
  * @class Ext.draw.Matrix
  * @private
  */
-Ext.define('Ext.draw.Matrix', {
-
+//Ext.define('Ext.draw.Matrix', {
+Ext.draw.Matrix = Ext.extend(Object, {
     /* Begin Definitions */
 
-    requires: ['Ext.draw.Draw'],
+    //requires: ['Ext.draw.Draw'],
 
     /* End Definitions */
 

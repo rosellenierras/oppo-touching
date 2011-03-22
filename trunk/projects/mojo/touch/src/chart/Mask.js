@@ -7,7 +7,9 @@
  * @constructor
  */
 
-Ext.define('Ext.chart.Mask', {
+//Ext.define('Ext.chart.Mask', {
+Ext.chart.Mask = Ext.extend(Ext.util.Observable, {
+    
     constructor: function(config) {
         var me = this;
 

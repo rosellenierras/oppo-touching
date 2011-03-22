@@ -3,12 +3,13 @@
  * Base Drawing class.  Provides base drawing functions.
  */
 
-Ext.define('Ext.draw.Draw', {
+// Ext.define('Ext.draw.Draw', {
+Ext.draw.Draw = Ext.extend(Object, {
     /* Begin Definitions */
 
-    singleton: true,
+    //singleton: true,
 
-    requires: ['Ext.draw.Color'],
+    //requires: ['Ext.draw.Color'],
 
     /* End Definitions */
 

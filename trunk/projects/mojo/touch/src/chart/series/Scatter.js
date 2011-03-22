@@ -47,13 +47,14 @@
  * @xtype scatter
  * 
  */
-Ext.define('Ext.chart.series.Scatter', {
+//Ext.define('Ext.chart.series.Scatter', {
 
+Ext.chart.series.Scatter = Ext.extend(Ext.chart.series.Cartesian, {
     /* Begin Definitions */
 
-    extend: 'Ext.chart.series.Cartesian',
+    //extend: 'Ext.chart.series.Cartesian',
 
-    requires: ['Ext.chart.axis.Axis', 'Ext.chart.Shapes', 'Ext.fx.Anim'],
+    //requires: ['Ext.chart.axis.Axis', 'Ext.chart.Shapes', 'Ext.fx.Anim'],
 
     /* End Definitions */
 
@@ -70,7 +71,8 @@ Ext.define('Ext.chart.series.Scatter', {
      */
 
     constructor: function(config) {
-        this.callParent(arguments);
+        //this.callParent(arguments);
+        Ext.chart.series.Scatter.superclass.constructor.call(this, config);
         var me = this,
             shadow = me.chart.shadow,
             surface = me.chart.surface, i, l;
@@ -602,7 +604,9 @@ Ext.define('Ext.chart.series.Scatter', {
     // @private handles sprite animation for the series.
     onAnimate: function(sprite, attr) {
         sprite.show();
-        return this.callParent(arguments);
+        //return this.callParent(arguments);
+        var re = Ext.chart.series.Scatter.superclass.onAnimate.call(this, sprite, attr);
+        return re;
     },
 
     isItemInPoint: function(x, y, item) {

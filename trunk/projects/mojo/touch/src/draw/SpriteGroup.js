@@ -2,15 +2,16 @@
  * @class Ext.draw.SpriteGroup
  * @extends Ext.util.MixedCollection
  */
-Ext.define('Ext.draw.SpriteGroup', {
+//Ext.define('Ext.draw.SpriteGroup', {
 
+Ext.draw.SpriteGroup = Ext.extend(Ext.util.MixedCollection, {
     /* Begin Definitions */
-
+/*
     extend: 'Ext.util.MixedCollection',
     mixins: {
         animate: 'Ext.util.Animate'
     },
-
+*/
     /* End Definitions */
     isSpriteGroup: true,
     constructor: function(config) {
@@ -27,7 +28,8 @@ Ext.define('Ext.draw.SpriteGroup', {
             'click'
         );
         me.id = Ext.id(null, 'ext-sprite-group-');
-        me.callParent();
+        //me.callParent();
+        Ext.draw.SpriteGroup.superclass.constructor.call(this);
     },
 
     // private
@@ -69,13 +71,15 @@ Ext.define('Ext.draw.SpriteGroup', {
     },
 
     add: function(key, o) {
-        var result = this.callParent(arguments);
+        //var result = this.callParent(arguments);
+        var result = Ext.draw.SpriteGroup.superclass.add.call(this, arguments);
         this.attachEvents(result);
         return result;
     },
 
     insert: function(index, key, o) {
-        return this.callParent(arguments);
+        //return this.callParent(arguments);
+        return Ext.draw.SpriteGroup.superclass.insert.call(this, arguments);
     },
 
     remove: function(o) {
@@ -89,7 +93,8 @@ Ext.define('Ext.draw.SpriteGroup', {
             mouseout: me.onMouseOut,
             click: me.onClick
         });
-        me.callParent(arguments);
+        //me.callParent(arguments);
+        Ext.draw.SpriteGroup.superclass.remove.call(this, arguments);
     },
     // Returns the group bounding box.
     getBBox: function() {

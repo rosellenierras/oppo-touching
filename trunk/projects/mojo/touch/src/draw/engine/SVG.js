@@ -3,13 +3,14 @@
  * @extends Ext.draw.Surface
  * Provides specific methods to draw with SVG.
  */
-Ext.define('Ext.draw.engine.SVG', {
+//Ext.define('Ext.draw.engine.SVG', {
 
+Ext.draw.engine.SVG = Ext.extend(Ext.draw.Surface, {
     /* Begin Definitions */
 
-    extend: 'Ext.draw.Surface',
+    //extend: 'Ext.draw.Surface',
 
-    requires: ['Ext.draw.Draw', 'Ext.draw.Sprite', 'Ext.draw.Matrix', 'Ext.core.Element'],
+    //requires: ['Ext.draw.Draw', 'Ext.draw.Sprite', 'Ext.draw.Matrix', 'Ext.core.Element'],
 
     /* End Definitions */
 
@@ -223,7 +224,8 @@ Ext.define('Ext.draw.engine.SVG', {
             width: w,
             height: h
         });
-        me.callParent([w, h]);
+        //me.callParent([w, h]);
+        Ext.draw.engine.SVG.superclass.setSize.call(this, w, h);
     },
 
     /**
@@ -251,11 +253,13 @@ Ext.define('Ext.draw.engine.SVG', {
             item.el.remove();
             delete item.el;
         }
-        this.callParent(arguments);
+        //this.callParent(arguments);
+        Ext.draw.engine.SVG.superclass.onRemove.call(this, item);
     },
     
     setViewBox: function(x, y, width, height) {
-        this.callParent(arguments);
+        //this.callParent(arguments);
+        Ext.draw.engine.SVG.superclass.SetViewBox.call(this, arguments);
         this.el.dom.setAttribute("viewBox", [x, y, width, height].join(" "));
     },
 
@@ -618,7 +622,8 @@ Ext.define('Ext.draw.engine.SVG', {
     destroy: function() {
         var me = this;
         
-        me.callParent();
+        //me.callParent();
+        Ext.draw.engine.SVG.superclass.destroy.call(this);
         if (me.el) {
             me.el.remove();
         }

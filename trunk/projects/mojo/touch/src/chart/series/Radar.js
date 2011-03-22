@@ -57,13 +57,14 @@
  * @xtype radar
  * 
  */
-Ext.define('Ext.chart.series.Radar', {
+//Ext.define('Ext.chart.series.Radar', {
 
+Ext.chart.series.Radar = Ext.extend(Ext.chart.series.Series, {
     /* Begin Definitions */
 
-    extend: 'Ext.chart.series.Series',
+    //extend: 'Ext.chart.series.Series',
 
-    requires: ['Ext.chart.Shapes', 'Ext.fx.Anim'],
+    //requires: ['Ext.chart.Shapes', 'Ext.fx.Anim'],
 
     /* End Definitions */
 
@@ -79,7 +80,8 @@ Ext.define('Ext.chart.series.Radar', {
     style: {},
     
     constructor: function(config) {
-        this.callParent(arguments);
+        //this.callParent(arguments);
+        Ext.chart.series.Radar.superclass.constructor.call(this, config);
         var me = this,
             surface = me.chart.surface, i, l;
         me.group = surface.getGroup(me.seriesId);
