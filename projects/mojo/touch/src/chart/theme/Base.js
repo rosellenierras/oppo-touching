@@ -3,11 +3,12 @@
  * Provides default colors for non-specified things. Should be sub-classed when creating new themes.
  * @ignore
  */
-Ext.define('Ext.chart.theme.Base', {
+//Ext.define('Ext.chart.theme.Base', {
 
+Ext.chart.theme.Base = Ext.extend(Object, {
     /* Begin Definitions */
 
-    requires: ['Ext.chart.theme.Theme'],
+    //requires: ['Ext.chart.theme.Theme'],
 
     /* End Definitions */
 

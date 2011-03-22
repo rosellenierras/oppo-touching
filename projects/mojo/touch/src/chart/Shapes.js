@@ -2,8 +2,8 @@
  * @class Ext.chart.Shapes
  * @ignore
  */
-Ext.define('Ext.chart.Shapes', {
-
+// Ext.define('Ext.chart.Shapes', {
+Ext.chart.Shapes = Ext.extend(Object, {
     /* Begin Definitions */
 
     singleton: true,

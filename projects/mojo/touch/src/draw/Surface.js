@@ -2,27 +2,28 @@
  * @class Ext.draw.Surface
  * @extends Object
  */
-Ext.define('Ext.draw.Surface', {
+// Ext.define('Ext.draw.Surface', {
 
+Ext.draw.Surface = Ext.extend(Ext.util.Observable, {
     /* Begin Definitions */
-
+/*
     mixins: {
         observable: 'Ext.util.Observable'
     },
 
     requires: ['Ext.draw.SpriteGroup'],
     uses: ['Ext.draw.engine.SVG', 'Ext.draw.engine.VML', 'Ext.draw.engine.Canvas'],
-
+*/
     separatorRe: /[, ]+/,
 
-    statics: {
+    // statics: {
         /**
          * Create and return a new concrete Surface instance appropriate for the current environment.
          * @param {Object} config Initial configuration for the Surface instance
          * @param {Array} implOrder Optional order of implementations to use; the first one that is
          *                available in the current environment will be used. Defaults to
          *                <code>['SVG', 'Canvas', 'VML']</code>.
-         */
+         *
         newInstance: function(config, implOrder) {
             implOrder = implOrder || ['SVG', 'Canvas', 'VML'];
 
@@ -40,7 +41,7 @@ Ext.define('Ext.draw.Surface', {
             }
             return false;
         }
-    },
+    },*/
 
     /* End Definitions */
 
@@ -121,8 +122,8 @@ Ext.define('Ext.draw.Surface', {
             'click'
         );
 
-        me.mixins.observable.constructor.call(me);
-
+        Ext.draw.Surface.superclass.constructor.call(me);
+        
         me.getId();
         me.initGradients();
         me.initItems();
@@ -552,3 +553,21 @@ Ext.define('Ext.draw.Surface', {
         this.removeAll();
     }
 });
+
+Ext.draw.Surface.newInstance = function(config, implOrder) {
+            implOrder = implOrder || ['SVG', 'Canvas', 'VML'];
+
+            var i = 0,
+                len = implOrder.length,
+                surfaceClass;
+
+            for (; i < len; i++) {
+                if (Ext.supports[implOrder[i]]) {
+                    surfaceClass = Ext.draw.engine[implOrder[i]];
+                    if (surfaceClass) {
+                        return new surfaceClass(config);
+                    }
+                }
+            }
+            return false;
+        }

@@ -20,11 +20,11 @@
  *
  * @constructor
  */
-Ext.define('Ext.chart.Legend', {
-
+//Ext.define('Ext.chart.Legend', {
+Ext.chart.Legend = Ext.extend(Object, {
     /* Begin Definitions */
 
-    requires: ['Ext.chart.LegendItem'],
+    //requires: ['Ext.chart.LegendItem'],
 
     /* End Definitions */
 

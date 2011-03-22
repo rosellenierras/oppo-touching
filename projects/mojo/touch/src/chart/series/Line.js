@@ -52,13 +52,14 @@
  </p>
  */
 
-Ext.define('Ext.chart.series.Line', {
+//Ext.define('Ext.chart.series.Line', {
 
+Ext.chart.series.Line = Ext.extend(Ext.chart.series.Cartesian, {
     /* Begin Definitions */
 
-    extend: 'Ext.chart.series.Cartesian',
+    //extend: 'Ext.chart.series.Cartesian',
 
-    requires: ['Ext.chart.axis.Axis', 'Ext.chart.Shapes', 'Ext.draw.Draw', 'Ext.fx.Anim'],
+    //requires: ['Ext.chart.axis.Axis', 'Ext.chart.Shapes', 'Ext.draw.Draw', 'Ext.fx.Anim'],
 
     /* End Definitions */
 
@@ -111,7 +112,8 @@ Ext.define('Ext.chart.series.Line', {
     fill: false,
 
     constructor: function(config) {
-        this.callParent(arguments);
+        //this.callParent(arguments);
+        Ext.chart.series.Line.superclass.constructor.call(this, config);
         var me = this,
             surface = me.chart.surface,
             shadow = me.chart.shadow,
@@ -704,7 +706,8 @@ Ext.define('Ext.chart.series.Line', {
     //@private Overriding highlights.js highlightItem method.
     highlightItem: function() {
         var me = this;
-        me.callParent(arguments);
+        //me.callParent(arguments);
+        Ext.chart.series.Line.superclass.highlightItem.call(me, arguments);
         if (this.line && !this.highlighted) {
             if (!('__strokeWidth' in this.line)) {
                 this.line.__strokeWidth = this.line.attr['stroke-width'] || 0;
@@ -725,7 +728,8 @@ Ext.define('Ext.chart.series.Line', {
     //@private Overriding highlights.js unHighlightItem method.
     unHighlightItem: function() {
         var me = this;
-        me.callParent(arguments);
+        //me.callParent(arguments);
+        Ext.chart.series.Line.superclass.unHighlightItem.call(me, arguments);
         if (this.line && this.highlighted) {
             this.line.__anim = new Ext.fx.Anim({
                 target: this.line,

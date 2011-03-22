@@ -2,7 +2,7 @@
  * @class Ext.chart.Callouts
  * @ignore
  */
-Ext.define('Ext.chart.Callouts', {
+Ext.chart.Callouts = Ext.extend(Object, {
 
     /* Begin Definitions */
 

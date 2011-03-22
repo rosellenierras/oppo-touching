@@ -32,11 +32,11 @@
     </ul>
   
  */
-Ext.define('Ext.chart.Labels', {
-
+//Ext.define('Ext.chart.Labels', {
+Ext.chart.Labels = Ext.extend(Object, {
     /* Begin Definitions */
 
-    requires: ['Ext.draw.Color'],
+    //requires: ['Ext.draw.Color'],
     
     /* End Definitions */
 

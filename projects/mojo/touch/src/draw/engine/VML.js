@@ -4,13 +4,14 @@
  * Provides specific methods to draw with VML.
  */
 
-Ext.define('Ext.draw.engine.VML', {
+//Ext.define('Ext.draw.engine.VML', {
 
+Ext.draw.engine.VML = Ext.extend(Ext.draw.Surface, {
     /* Begin Definitions */
 
-    extend: 'Ext.draw.Surface',
+    //extend: 'Ext.draw.Surface',
 
-    requires: ['Ext.draw.Draw', 'Ext.draw.Color', 'Ext.draw.Sprite', 'Ext.draw.Matrix', 'Ext.core.Element'],
+    //requires: ['Ext.draw.Draw', 'Ext.draw.Color', 'Ext.draw.Sprite', 'Ext.draw.Matrix', 'Ext.core.Element'],
 
     /* End Definitions */
 
@@ -620,11 +621,13 @@ Ext.define('Ext.draw.engine.VML', {
                 me.transform(items[i]);
             }
         }
-        this.callParent(arguments);
+        //this.callParent(arguments);
+        Ext.draw.engine.VML.superclass.setSize.call(this, arguments);
     },
 
     setViewBox: function(x, y, width, height) {
-        this.callParent(arguments);
+        //this.callParent(arguments);
+        Ext.draw.engine.VML.superclass.setViewBox.call(this, arguments);
         this.viewBox = {
             x: x,
             y: y,
@@ -634,7 +637,8 @@ Ext.define('Ext.draw.engine.VML', {
     },
 
     onAdd: function(item) {
-        this.callParent(arguments);
+        //this.callParent(arguments);
+        Ext.draw.engine.VML.superclass.onAdd.call(this, arguments);
         if (this.el) {
             this.renderItem(item);
         }
@@ -645,7 +649,8 @@ Ext.define('Ext.draw.engine.VML', {
             item.el.remove();
             delete item.el;
         }
-        this.callParent(arguments);
+        //this.callParent(arguments);
+        Ext.draw.engine.VML.superclass.onRemove.call(this, arguments);
     },
 
     render: function (container) {
@@ -870,7 +875,8 @@ Ext.define('Ext.draw.engine.VML', {
     destroy: function() {
         var me = this;
         
-        me.callParent(arguments);
+        //me.callParent(arguments);
+        Ext.draw.engine.VML.superclass.destroy.call(this);
         if (me.el) {
             me.el.remove();
         }

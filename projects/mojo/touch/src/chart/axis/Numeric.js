@@ -39,11 +39,12 @@
  *
  * @constructor
  */
-Ext.define('Ext.chart.axis.Numeric', {
+// Ext.define('Ext.chart.axis.Numeric', {
 
+Ext.chart.axis.Numeric = Ext.extend(Ext.chart.axis.Axis, {
     /* Begin Definitions */
 
-    extend: 'Ext.chart.axis.Axis',
+    //extend: 'Ext.chart.axis.Axis',
 
     /* End Definitions */
 

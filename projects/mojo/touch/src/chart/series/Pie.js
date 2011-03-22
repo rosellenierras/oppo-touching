@@ -37,11 +37,11 @@
  * @xtype pie
  *
  */
-Ext.define('Ext.chart.series.Pie', {
-
+//Ext.define('Ext.chart.series.Pie', {
+Ext.chart.series.Pie = Ext.extend(Ext.chart.series.Series, {
     /* Begin Definitions */
 
-    extend: 'Ext.chart.series.Series',
+    //extend: 'Ext.chart.series.Series',
 
     /* End Definitions */
 
@@ -96,7 +96,8 @@ Ext.define('Ext.chart.series.Pie', {
     style: {},
     
     constructor: function(config) {
-        this.callParent(arguments);
+        //this.callParent(arguments);
+        Ext.chart.series.Pie.superclass.constructor.call(this, config);
         var me = this,
             chart = me.chart,
             surface = chart.surface,
@@ -722,7 +723,9 @@ Ext.define('Ext.chart.series.Pie', {
     // @private handles sprite animation for the series.
     onAnimate: function(sprite, attr) {
         sprite.show();
-        return this.callParent(arguments);
+        //return this.callParent(arguments);
+        var re = Ext.chart.series.Pie.superclass.onAnimate.call(this, sprite, attr);
+        return re;
     },
 
     isItemInPoint: function(x, y, item, i) {
@@ -790,7 +793,8 @@ Ext.define('Ext.chart.series.Pie', {
         if (!item || item.sprite && item.sprite._animating) {
             return;
         }
-        me.callParent([item]);
+        //me.callParent([item]);
+        Ext.chart.series.Pie.superclass.highlightItem.call(me, item);
         if (!me.highlight) {
             return;
         }
@@ -948,7 +952,8 @@ Ext.define('Ext.chart.series.Pie', {
                 }
             }
         }
-        me.callParent(arguments);
+        //me.callParent(arguments);
+        Ext.chart.series.Pie.superclass.unHighlightItem.call(me);
     },
     
     /**

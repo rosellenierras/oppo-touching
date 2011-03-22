@@ -2,10 +2,11 @@
  * @class Ext.draw.Component
  * @extends Ext.Component
  */
-Ext.define('Ext.draw.Component', {
+//Ext.define('Ext.draw.Component', {
 
+Ext.draw.Component = Ext.extend(Ext.Component, {
     /* Begin Definitions */
-
+    /*
     alias: 'widget.draw',
 
     extend: 'Ext.Component',
@@ -14,7 +15,7 @@ Ext.define('Ext.draw.Component', {
         'Ext.draw.Surface',
         'Ext.layout.component.Draw'
     ],
-
+    */
     /* End Definitions */
 
     /**
@@ -42,8 +43,8 @@ Ext.define('Ext.draw.Component', {
     autoSize: false,
 
     initComponent: function() {
-        this.callParent(arguments);
-
+        //this.callParent(arguments);
+        Ext.draw.Component.superclass.initComponent.call(this);
         this.addEvents(
             'mousedown',
             'mouseup',
@@ -62,8 +63,8 @@ Ext.define('Ext.draw.Component', {
             viewBox = me.viewBox,
             autoSize = me.autoSize,
             bbox, items, width, height, x, y;
-        me.callParent(arguments);
-
+        //me.callParent(arguments);
+        Ext.draw.Component.superclass.onRender.call(this, arguments);
         me.createSurface();
 
         items = me.surface.items;
@@ -143,7 +144,8 @@ Ext.define('Ext.draw.Component', {
         if (surface) {
             surface.destroy();
         }
-        this.callParent(arguments);
+        // this.callParent(arguments);
+        Ext.draw.Component.superclass.onDestroy.call(this);
     }
 
 });

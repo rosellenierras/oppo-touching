@@ -2,11 +2,12 @@
  * @class Ext.chart.TipSurface
  * @ignore
  */
-Ext.define('Ext.chart.TipSurface', {
+//Ext.define('Ext.chart.TipSurface', {
 
+Ext.chart.TipSurface = Ext.extend(Ext.draw.Component, {
     /* Begin Definitions */
 
-    extend: 'Ext.draw.Component',
+    //extend: 'Ext.draw.Component',
 
     /* End Definitions */
 

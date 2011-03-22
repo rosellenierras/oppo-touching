@@ -32,13 +32,14 @@
  * @xtype area
  * 
  */
-Ext.define('Ext.chart.series.Area', {
+//Ext.define('Ext.chart.series.Area', {
 
+Ext.chart.series.Area = Ext.extend(Ext.chart.series.Cartesian, {
     /* Begin Definitions */
 
-    extend: 'Ext.chart.series.Cartesian',
+    //extend: 'Ext.chart.series.Cartesian',
 
-    requires: ['Ext.chart.axis.Axis', 'Ext.draw.Color', 'Ext.fx.Anim'],
+    //requires: ['Ext.chart.axis.Axis', 'Ext.draw.Color', 'Ext.fx.Anim'],
 
     /* End Definitions */
 
@@ -51,7 +52,8 @@ Ext.define('Ext.chart.series.Area', {
     style: {},
 
     constructor: function(config) {
-        this.callParent(arguments);
+        //this.callParent(arguments);
+        Ext.chart.series.Area.superclass.constructor.call(this, config);
         var me = this,
             surface = me.chart.surface,
             i, l;
@@ -343,7 +345,9 @@ Ext.define('Ext.chart.series.Area', {
     // @private
     onAnimate: function(sprite, attr) {
         sprite.show();
-        return this.callParent(arguments);
+        //return this.callParent(arguments);
+        var res = Ext.chart.series.Area.superclass.onAnimate.call(this, arguments);
+        return res;
     },
 
     // @private

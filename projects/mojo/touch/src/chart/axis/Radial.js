@@ -3,11 +3,11 @@
  * @extends Ext.chart.axis.Abstract
  * @ignore
  */
-Ext.define('Ext.chart.axis.Radial', {
-
+//Ext.define('Ext.chart.axis.Radial', {
+Ext.chart.axis.Radial = Ext.extend(Ext.chart.axis.Abstract, {
     /* Begin Definitions */
 
-    extend: 'Ext.chart.axis.Abstract',
+    //extend: 'Ext.chart.axis.Abstract',
 
     /* End Definitions */
 

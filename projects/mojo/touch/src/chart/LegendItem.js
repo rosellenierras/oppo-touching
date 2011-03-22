@@ -4,13 +4,13 @@
  * A single item of a legend (marker plus label)
  * @constructor
  */
-Ext.define('Ext.chart.LegendItem', {
-
+//Ext.define('Ext.chart.LegendItem', {
+Ext.chart.LegendItem = Ext.extend(Ext.draw.SpriteGroup, {
     /* Begin Definitions */
 
-    extend: 'Ext.draw.SpriteGroup',
+    //extend: 'Ext.draw.SpriteGroup',
 
-    requires: ['Ext.chart.Shapes'],
+    //requires: ['Ext.chart.Shapes'],
 
     /* End Definitions */
 
@@ -20,7 +20,8 @@ Ext.define('Ext.chart.LegendItem', {
     zIndex: 500,
 
     constructor: function(config) {
-        this.callParent(arguments);
+        //this.callParent(arguments);
+        Ext.chart.LegendItem.superclass.constructor.call(this, config);
         this.createSprites(config);
     },
 

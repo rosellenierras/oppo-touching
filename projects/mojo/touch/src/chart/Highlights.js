@@ -2,11 +2,11 @@
  * @class Ext.chart.Highlights
  * @ignore
  */
-Ext.define('Ext.chart.Highlights', {
-
+//Ext.define('Ext.chart.Highlights', {
+Ext.chart.Highlights = Ext.extend(Object, {
     /* Begin Definitions */
 
-    requires: ['Ext.fx.Anim'],
+    //requires: ['Ext.fx.Anim'],
 
     /* End Definitions */
 

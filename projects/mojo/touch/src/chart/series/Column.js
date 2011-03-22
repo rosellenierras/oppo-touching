@@ -25,11 +25,12 @@
   </p>
  */
 
-Ext.define('Ext.chart.series.Column', {
+//Ext.define('Ext.chart.series.Column', {
 
+Ext.chart.series.Series = Ext.extend(Ext.chart.series.Bar, {
     /* Begin Definitions */
 
-    extend: 'Ext.chart.series.Bar',
+    //extend: 'Ext.chart.series.Bar',
 
     /* End Definitions */
 
