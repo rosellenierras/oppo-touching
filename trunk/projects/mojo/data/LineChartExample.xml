@@ -1,0 +1,62 @@
+<widget version="v4" label="Line Chart Example" type="Dashboard" backgroundColor="#ffffff">
+  <metadata>
+    <property visual="true" refreshable="true"/>
+  </metadata>
+  <inputs/>
+  <outputs/>
+  <layout name="#NULL"/>
+  <notes/>
+  <widgets>
+    <widget uuid="0A42365B-ADD3-05B8-764C-64CA0A169AB8" name="builtin:generated-record-test-data-widget" title="Generated Record" xpos="312" ypos="110" compx="183.1" compy="143" width="80" height="40" frame="RoundedBox" frameStyle="null" visible="Never" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="$numRecord" value="6"/>
+      <param name="$numLabelField" value="0"/>
+      <param name="$tokenList" value="LoremIpsum"/>
+      <param name="$numValueField" value="3"/>
+    </widget>
+    <widget uuid="BDC5DDC2-7159-1B59-AA47-6A9BCE9F97C0" name="builtin:vertical-slider-widget" title="UpperThreshold" xpos="406" ypos="186" compx="248" compy="294" width="191" height="150" frame="RoundedBox" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="minimum" value="50"/>
+      <param name="maximum" value="100"/>
+      <param name="tick-interval" value="10"/>
+    </widget>
+    <widget uuid="8B91F423-3174-2E71-42AD-6A9BD650C096" name="builtin:vertical-slider-widget" title="LowerThreshold" xpos="402" ypos="347" compx="236.15" compy="415" width="200" height="150" frame="RoundedBox" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="maximum" value="50"/>
+      <param name="tick-interval" value="10"/>
+    </widget>
+    <widget uuid="A40E8CDE-B40C-0F56-A9DC-64CA5053B9FC" name="builtin:line-chart-widget" title="Multi Series" xpos="609" ypos="177" compx="444.15" compy="286" width="384" height="329" frame="Panel" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="series" value="value0,value1,value2"/>
+      <param name="labels" value="group0"/>
+      <param name="legend" value="false"/>
+      <param name="numberPrecision" value="2"/>
+      <param name="$style" value="seriesLineAlpha=0.8,seriesLineThickness=3,seriesLineForm=curve,seriesAreaFillFocalPointRatio=0,seriesAreaFillAngle=0,seriesAreaFillStyle=solid,seriesAreaFillAlphaTo=1,seriesAreaFillAlphaFrom=1,seriesPlotHighlightRadius=5,seriesPlotRadius=5,chartTextFontFamily=Arial,chartTextFontSize=10,chartTextFontWeight=normal,chartTextFontStyle=normal,chartTextColor=#0,chartLegendFontFamily=Arial,chartLegendDirection=horizontal,chartLegendPosition=bottom,chartLegendBorderColor=#999999,chartLegendFontSize=10,chartLegendFontWeight=normal,chartLegendFontStyle=normal,chartLegendColor=#999999,horizontalAxisAlpha=0.8,horizontalAxisThickness=3,horizontalAxisTitle=none,horizontalAxisColor=#999999,verticalAxisAlpha=0.8,verticalAxisThickness=3,verticalAxisTitle=none,verticalAxisColor=#999999,gridLineStrokeAlpha=0.3,gridLineStrokeThickness=1,gridLineStrokeColor=#999999,upperThresholdStrokeAlpha=0.2,upperThresholdStrokeThickness=3,upperThresholdStrokeColor=#ff0000,lowerThresholdStrokeAlpha=0.2,lowerThresholdStrokeThickness=3,lowerThresholdStrokeColor=#ff,formatCategoryNumberThousandSeparator=%2C,formatCategoryFormatting=string,formatCategoryDateFormat=MM/DD/YY,formatCategoryNumberPrecision=2,formatCategoryDateTimeFormat=MM/DD/YY%0AL%3ANN%20A,formatCategoryNumberDecimalSeparator=.,formatCategoryTimeFormat=L%3ANN%20A,formatCategoryCurrencyThousandSeparator=%2C,formatCategoryCurrencyDecimalSeparator=.,formatCategoryCurrencySymbol=%24,formatCategoryCurrencyPrecision=2,formatValueNumberThousandSeparator=%2C,formatValueFormatting=string,formatValueDateFormat=MM/DD/YY,formatValueNumberPrecision=2,formatValueDateTimeFormat=MM/DD/YY%0AL%3ANN%20A,formatValueNumberDecimalSeparator=.,formatValueTimeFormat=L%3ANN%20A,formatValueCurrencyThousandSeparator=%2C,formatValueCurrencyDecimalSeparator=.,formatValueCurrencySymbol=%24,formatValueCurrencyPrecision=2"/>
+      <param name="maxValue" value="100"/>
+      <param name="minValue" value="0"/>
+    </widget>
+    <widget uuid="C64CE1A4-6747-4F0B-05E1-64CA2D9A5B64" name="builtin:line-chart-widget" title="Single Series" xpos="14" ypos="171" compx="464.15" compy="12" width="378" height="337" frame="Panel" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="series" value="value0"/>
+      <param name="labels" value="group0"/>
+      <param name="legend" value="false"/>
+      <param name="numberPrecision" value="2"/>
+    </widget>
+    <widget uuid="34871148-3B0E-F240-723B-EB3257378219" name="builtin:rich-text-widget" title="Description" xpos="162" ypos="17" compx="319" compy="43" width="685" height="126" frame="Box" frameStyle="frameColor=#0,frameThickness=1.0,color=#0,bgColor=#66,bgAlpha=0.2" visible="Always" selectable="true" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="$text" value="&lt;TEXTFORMAT LEADING=&quot;2&quot;>&lt;P ALIGN=&quot;CENTER&quot;>&lt;FONT FACE=&quot;Verdana&quot; SIZE=&quot;22&quot; COLOR=&quot;#0000FF&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;>&lt;B>Line Chart Example&lt;/B>&lt;/FONT>&lt;/P>&lt;/TEXTFORMAT>&lt;TEXTFORMAT LEADING=&quot;2&quot;>&lt;P ALIGN=&quot;LEFT&quot;>&lt;FONT FACE=&quot;Verdana&quot; SIZE=&quot;16&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;>The Line Chart widget allows you to display a single series or multiple series of values by the line. In this example,In this example, we use two Vertical Slider widgets to output the threshold values displayed in the Multi Series chart. The Generated Record widget generates a random set of values for the charts.&lt;/FONT>&lt;/P>&lt;/TEXTFORMAT>"/>
+    </widget>
+  </widgets>
+  <connection>
+    <link event="undefined">
+      <source uuid="0A42365B-ADD3-05B8-764C-64CA0A169AB8" port="$result"/>
+      <target uuid="C64CE1A4-6747-4F0B-05E1-64CA2D9A5B64" port="$results"/>
+    </link>
+    <link event="undefined">
+      <source uuid="0A42365B-ADD3-05B8-764C-64CA0A169AB8" port="$result"/>
+      <target uuid="A40E8CDE-B40C-0F56-A9DC-64CA5053B9FC" port="$results"/>
+    </link>
+    <link event="undefined">
+      <source uuid="BDC5DDC2-7159-1B59-AA47-6A9BCE9F97C0" port="$value"/>
+      <target uuid="A40E8CDE-B40C-0F56-A9DC-64CA5053B9FC" port="upperThreshold"/>
+    </link>
+    <link event="undefined">
+      <source uuid="8B91F423-3174-2E71-42AD-6A9BD650C096" port="$value"/>
+      <target uuid="A40E8CDE-B40C-0F56-A9DC-64CA5053B9FC" port="lowerThreshold"/>
+    </link>
+  </connection>
+</widget>

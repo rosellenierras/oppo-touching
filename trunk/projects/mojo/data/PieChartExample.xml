@@ -1,0 +1,46 @@
+<widget version="v4" label="Pie Chart Example" type="Dashboard" backgroundColor="#ffffff">
+  <metadata>
+    <property visual="true" refreshable="true"/>
+  </metadata>
+  <inputs/>
+  <outputs/>
+  <layout name="#NULL"/>
+  <notes/>
+  <widgets>
+    <widget uuid="2C6C444A-D1B7-027E-5C77-64CDD0C579F7" name="builtin:generated-record-test-data-widget" title="Generated Record" xpos="254" ypos="150" compx="168" compy="150" width="80" height="40" frame="RoundedBox" frameStyle="null" visible="Never" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="$numRecord" value="6"/>
+      <param name="$numLabelField" value="0"/>
+      <param name="$tokenList" value="LoremIpsum"/>
+      <param name="$numValueField" value="20"/>
+    </widget>
+    <widget uuid="D9690140-0962-7D00-9E27-64CDA8CD553B" name="builtin:pie-chart-widget" title="Single Series Pie Chart with Wedges" xpos="21" ypos="187" compx="472" compy="60" width="482" height="327" frame="Panel" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="$fields" value="group0,value0"/>
+      <param name="series" value="value0"/>
+      <param name="labels" value="group0"/>
+      <param name="legend" value="false"/>
+      <param name="labelPosition" value="outside"/>
+      <param name="numberPrecision" value="1"/>
+    </widget>
+    <widget uuid="B1E0C21B-E759-9BD6-82CA-64CDAFC22BA6" name="builtin:pie-chart-widget" title="Multiple Series Pie Chart with Donut Sections" xpos="517" ypos="188" compx="475.15" compy="220" width="464" height="326" frame="Panel" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="$fields" value="group0,value0,value1,value2"/>
+      <param name="series" value="value0,value1,value2"/>
+      <param name="labels" value="group0"/>
+      <param name="legend" value="false"/>
+      <param name="labelPosition" value="callout"/>
+      <param name="$style" value="seriesAreaFillFocalPointRatio=0.5,seriesAreaFillAngle=90,seriesAreaFillStyle=solid,seriesAreaFillAlphaTo=1,seriesAreaFillAlphaFrom=0.7,chartTextFontFamily=Arial,chartTextFontSize=10,chartTextFontWeight=normal,chartTextFontStyle=normal,chartTextColor=#0,chartLegendFontFamily=Arial,chartLegendDirection=horizontal,chartLegendPosition=bottom,chartLegendBorderColor=#999999,chartLegendFontSize=10,chartLegendFontWeight=normal,chartLegendFontStyle=normal,chartLegendColor=#999999,calloutStrokeAlpha=0.6,calloutStrokeThickness=1,calloutStrokeColor=#999999,radialStrokeAlpha=0.8,radialStrokeThickness=1,radialStrokeColor=#999999,borderStrokeAlpha=1,borderStrokeThickness=2,borderStrokeColor=#999999,formatValueNumberThousandSeparator=%2C,formatValueFormatting=string,formatValueDateFormat=MM/DD/YY,formatValueNumberPrecision=2,formatValueDateTimeFormat=MM/DD/YY%0AL%3ANN%20A,formatValueNumberDecimalSeparator=.,formatValueTimeFormat=L%3ANN%20A,formatValueCurrencyThousandSeparator=%2C,formatValueCurrencyDecimalSeparator=.,formatValueCurrencySymbol=%24,formatValueCurrencyPrecision=2"/>
+    </widget>
+    <widget uuid="4EBC8466-D2CC-F354-7559-EB343DA9771F" name="builtin:rich-text-widget" title="Description" xpos="234" ypos="22" compx="278.15" compy="15" width="605" height="128" frame="Box" frameStyle="frameColor=#0,frameThickness=1.0,color=#0,bgColor=#66,bgAlpha=0.2" visible="Always" selectable="true" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="$text" value="&lt;TEXTFORMAT LEADING=&quot;2&quot;>&lt;P ALIGN=&quot;CENTER&quot;>&lt;FONT FACE=&quot;Verdana&quot; SIZE=&quot;22&quot; COLOR=&quot;#0000FF&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;>&lt;B>Pie Chart Example&lt;/B>&lt;FONT SIZE=&quot;11&quot; COLOR=&quot;#000000&quot;>&lt;/FONT>&lt;/FONT>&lt;/P>&lt;/TEXTFORMAT>&lt;TEXTFORMAT LEADING=&quot;2&quot;>&lt;P ALIGN=&quot;LEFT&quot;>&lt;FONT FACE=&quot;Verdana&quot; SIZE=&quot;16&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;>The Pie Chart widget allows you to display a single series of values in a Pie chart with wedges, or multiple series of value with concentric donut sections. In this example, the Generated Record widget generates a random set of values for the charts.&lt;/FONT>&lt;/P>&lt;/TEXTFORMAT>"/>
+    </widget>
+  </widgets>
+  <connection>
+    <link event="undefined">
+      <source uuid="2C6C444A-D1B7-027E-5C77-64CDD0C579F7" port="$result"/>
+      <target uuid="D9690140-0962-7D00-9E27-64CDA8CD553B" port="$results"/>
+    </link>
+    <link event="undefined">
+      <source uuid="2C6C444A-D1B7-027E-5C77-64CDD0C579F7" port="$result"/>
+      <target uuid="B1E0C21B-E759-9BD6-82CA-64CDAFC22BA6" port="$results"/>
+    </link>
+  </connection>
+</widget>

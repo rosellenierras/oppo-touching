@@ -1,0 +1,72 @@
+<widget version="v4" label="Column Chart Example" type="Dashboard" backgroundColor="#ffffff">
+  <metadata>
+    <property visual="true" refreshable="true"/>
+  </metadata>
+  <inputs/>
+  <outputs/>
+  <layout name="#NULL"/>
+  <notes/>
+  <widgets>
+    <widget uuid="1773180A-B98B-72D6-F669-64A6F961E282" name="builtin:generated-record-test-data-widget" title="Generated Record" xpos="335" ypos="103" compx="223" compy="104" width="80" height="40" frame="RoundedBox" frameStyle="null" visible="Never" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="$numRecord" value="6"/>
+      <param name="$numLabelField" value="0"/>
+      <param name="$tokenList" value="LoremIpsum"/>
+      <param name="$numValueField" value="3"/>
+    </widget>
+    <widget uuid="72BE8805-DE93-06E0-89BC-64A77BEDC14E" name="builtin:column-chart-widget" title="Multiple Series Column Chart" xpos="311" ypos="184" compx="479.15" compy="261" width="359" height="351" frame="Panel" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="$fields" value="group0,value0,value1,value2"/>
+      <param name="series" value="value0,value1,value2"/>
+      <param name="labels" value="group0"/>
+      <param name="legend" value="false"/>
+      <param name="colors" value="0xFF0000,0xFFFF00,0x0000FF"/>
+      <param name="numberPrecision" value="1"/>
+    </widget>
+    <widget uuid="532F3EB3-1CA6-379A-1977-7E5EE406D258" name="builtin:text-display-widget" title="group0"
+            xpos="684" ypos="416" compx="814.15" compy="201" width="327" height="128"
+            frame="Panel" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false"/>
+    <widget uuid="762B1D43-93DA-8044-7808-7E5F00855CA7" name="builtin:text-display-widget" title="value0"
+            xpos="683" ypos="298" compx="815" compy="334" width="330" height="109"
+            frame="Panel" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false"/>
+    <widget uuid="9E9DD84C-5F53-2C40-1266-64A7715E910D" name="builtin:column-chart-widget"
+            title="Single Series Column Chart" xpos="7" ypos="182" compx="483" compy="47"
+            width="293" height="352" frame="Panel" frameStyle="null" visible="Always"
+            selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="series" value="value0"/>
+      <param name="labels" value="group0"/>
+      <param name="legend" value="false"/>
+      <param name="colors" value="0x0000FF"/>
+      <param name="numberPrecision" value="3"/>
+    </widget>
+    <widget uuid="83CEB0CB-3374-7C04-4190-EB2C5401E370" name="builtin:rich-text-widget"
+            title="Description" xpos="164" ypos="12" compx="239" compy="288" width="685"
+            height="150" frame="Box" frameStyle="frameColor=#0,frameThickness=1.0,color=#0,bgColor=#66,bgAlpha=0.2"
+            visible="Always" selectable="true" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="$text" value="&lt;TEXTFORMAT LEADING=&quot;2&quot;>&lt;P ALIGN=&quot;CENTER&quot;>&lt;FONT FACE=&quot;Verdana&quot; SIZE=&quot;6&quot; COLOR=&quot;#0000FF&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;>&lt;B>Column Chart Example&lt;/B>&lt;/FONT>&lt;/P>&lt;/TEXTFORMAT>&lt;TEXTFORMAT LEADING=&quot;2&quot;>&lt;P ALIGN=&quot;LEFT&quot;>&lt;FONT FACE=&quot;Verdana&quot; SIZE=&quot;5&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;>The Column Chart widget allows you to display a single series of values or multiple series of values in a column chart with vertical columns whose height is determined by values. In this example, the Generated Record widget generates a random set of values for the charts. When Clicking an item of the multiple series column chart, corresponding values are pushed to the DataDisplay widget.&lt;/FONT>&lt;/P>&lt;/TEXTFORMAT>"/>
+    </widget>
+    <widget uuid="BBF17D92-B971-0649-43FC-BE62505A9C8C" name="builtin:text-display-widget"
+            title="Selected Row" xpos="682" ypos="180" compx="854" compy="51"
+            width="331" height="110" frame="Panel" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false"/>
+  </widgets>
+  <connection>
+    <link event="undefined">
+      <source uuid="1773180A-B98B-72D6-F669-64A6F961E282" port="$result"/>
+      <target uuid="9E9DD84C-5F53-2C40-1266-64A7715E910D" port="$results"/>
+    </link>
+    <link event="undefined">
+      <source uuid="1773180A-B98B-72D6-F669-64A6F961E282" port="$result"/>
+      <target uuid="72BE8805-DE93-06E0-89BC-64A77BEDC14E" port="$results"/>
+    </link>
+    <link event="undefined">
+      <source uuid="72BE8805-DE93-06E0-89BC-64A77BEDC14E" port="@group0"/>
+      <target uuid="532F3EB3-1CA6-379A-1977-7E5EE406D258" port="$value"/>
+    </link>
+    <link event="undefined">
+      <source uuid="72BE8805-DE93-06E0-89BC-64A77BEDC14E" port="@value0"/>
+      <target uuid="762B1D43-93DA-8044-7808-7E5F00855CA7" port="$value"/>
+    </link>
+    <link event="undefined">
+      <source uuid="72BE8805-DE93-06E0-89BC-64A77BEDC14E" port="selected"/>
+      <target uuid="BBF17D92-B971-0649-43FC-BE62505A9C8C" port="$value"/>
+    </link>
+  </connection>
+</widget>

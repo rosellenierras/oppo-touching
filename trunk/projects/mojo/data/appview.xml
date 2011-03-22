@@ -1,0 +1,15 @@
+<root>
+    <node id="1" name="TXU" type="view">
+        <node id="100" name="Page Sample" image="null" type="book">
+            <node id="1000" name="AreaChartExample" type="page" image="null" def="../data/AreaChartExample.xml"/>
+            <node id="1001" name="BarChartExample" type="page" image="null" def="../data/BarChartExample.xml"/>
+            <node id="1002" name="ColumnChartExample" type="page" image="null" def="../data/ColumnChartExample.xml"/>
+            <node id="1003" name="LineChartExample" type="page" image="null" def="../data/LineChartExample.xml"/>
+            <node id="1000" name="PieChartExample" type="page" image="null" def="../data/PieChartExample.xml"/>
+        </node>
+    </node>
+    <node id="1" name="TXU2" type="view">
+        <node id="100" name="Page Sample2" image="null" type="book">
+        </node>
+    </node>
+</root>
