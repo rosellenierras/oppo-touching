@@ -1,0 +1,19 @@
+<widget type="GlobalFunctionWidget" label="i18n:globalFunction-title">
+  <description>
+  i18n:globalFunction-desc
+  </description>
+  <metadata>
+    <property frame="RoundedBox" visible="Never" visual="false" hidden="true" inspectable="true"/>
+  </metadata>  
+  <inputs>
+    <param type="tree" referencetype="globalfunction" label="i18n:globalFunction-service-tree" name="globalFunctionService" 
+        dataProvider="global-function-service" binding="false" control="false">
+      <description>i18n:globalFunction-service-tree-desc</description>   
+    </param>                            
+  </inputs>
+  <outputs>
+    <param type="string" label="i18n:globalFunction-data" name="$result" setting="false">
+       <description>i18n:globalFunction-data-desc</description>
+    </param>
+  </outputs>
+</widget>

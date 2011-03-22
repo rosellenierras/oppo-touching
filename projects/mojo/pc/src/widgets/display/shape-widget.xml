@@ -1,0 +1,56 @@
+<widget type="ShapeWidget" label="i18n:shape-title">
+  <description>i18n:shape-title-description</description>
+  <metadata>
+    <property frame="None" selectable="true" refreshable="false" minimizable="false" actionable="true"/>
+  </metadata>
+  <!-- expects only ONE row in the results -->
+  <inputs>
+    <param binding="false" type="MultiFieldValue" label="i18n:shape-key-value-pair" name="keys">
+      <description>i18n:shape-key-value-pair-description</description>
+    </param>
+    <param binding="false" type="SingleField" label="i18n:shape-field" name="field">
+      <description>i18n:shape-field-description</description>
+    </param>
+    <param binding="true" value="0" type="Number" label="i18n:shape-minimum-value" name="minimum">
+      <description>i18n:shape-minimum-value-description</description>
+    </param>
+    <param binding="true" value="100" max="10000" type="Number" label="i18n:shape-maximum-value" name="maximum">
+      <description>i18n:shape-maximum-value-description</description>
+    </param>
+    <param binding="false" type="Enumeration" label="i18n:shape-type" name="type" style="true">
+      <description>i18n:shape-type-description</description>
+      <choice label="i18n:shape-rectangle" data="Rectangle"/>
+      <choice label="i18n:shape-circle" data="Circle"/>
+      <choice label="i18n:shape-ellipse" data="Ellipse"/>
+      <choice label="i18n:shape-triangle" data="Triangle"/>
+    </param>
+    <param binding="false" type="ShapeWidgetStyleForm" label="i18n:shape-style" name="style" style="true">
+      <description><![CDATA[Type of visual rendering]]></description>
+    </param>
+    <param control="false" binding="false" type="ColorSet" label="i18n:line-colors" name="colors" style="true">
+      <description>i18n:shape-colors-description</description>
+    </param>
+    <param binding="false" value="none" type="Enumeration" label="i18n:shape-border-style" name="borderStyle" style="true">
+      <description>i18n:shape-style-description</description>
+      <choice label="i18n:shape-none" data="none"/>
+      <choice label="i18n:shape-solid" data="solid"/>
+    </param>
+    <param binding="false" value="0" type="Color" label="i18n:shape-border-color" name="borderColor" style="true">
+      <description>i18n:shape-border-color-description</description>
+    </param>
+    <param binding="false" max="10" min="0" value="0" type="Number" label="i18n:shape-border-thickness" name="borderThick" style="true">
+      <description>i18n:shape-border-thickness-description</description>
+    </param>
+    <param control="false" setting="false" label="i18n:shape-value" name="$value">
+      <description>i18n:shape-value-description</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="true" type="String" label="i18n:shape-identity" name="identity">
+      <description>i18n:shape-identity-description</description>
+    </param>
+    <param setting="true" type="String" label="i18n:shape-properties" name="properties">
+      <description>i18n:shape-properties-description</description>
+    </param>
+  </outputs>
+</widget>

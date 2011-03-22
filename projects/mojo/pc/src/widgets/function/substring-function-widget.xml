@@ -1,0 +1,24 @@
+<widget type="SubstringFunctionWidget" label="i18n:substring-title">
+  <description>i18n:substring-description</description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+  </metadata>
+  <inputs>
+    <param name="$operation" value="SUBSTRING" setting="false" binding="false" control="false"/>
+    <param type="string" label="i18n:substring-string" name="$arg">
+       <description>i18n:substring-string-desc</description>
+    </param>
+    <param binding="false" type="number" label="i18n:substring-start-index" name="$start" value="0" min="0">
+       <description>i18n:substring-start-desc</description>
+    </param>
+    <param binding="false" type="number" label="i18n:substring-end-index" name="$end" value="10" min="0">
+       <description>i18n:substring-end-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="false" label="i18n:substring-result" name="$result">
+       <description>i18n:substring-result-desc</description>
+    </param>
+  </outputs>
+</widget>

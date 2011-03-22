@@ -1,0 +1,20 @@
+<widget type="PageLinkButtonWidget" label="i18n:pageLinkButton-title">
+  <description>i18n:pageLinkButton-desc</description>
+  <metadata>
+    <property frame="None" refreshable="false" minimizable="false"/>
+  </metadata>
+  <inputs>
+    <param type="modelpath" categories="Page" label="i18n:pageLinkButton-path" name="$path">
+      <description>i18n:pageLinkButton-path-desc</description>
+    </param>
+    <param type="string" label="i18n:pageLinkButton-label" name="$label">
+      <description>i18n:pageLinkButton-label-desc</description>
+    </param>
+    <param label="i18n:pageLinkButton-control" name="$control">
+      <description>i18n:pageLinkButton-control-desc</description>
+    </param>
+    <param type="string" label="i18n:pageLinkButton-param" name="$param">
+      <description>i18n:pageLinkButton-parameter-desc</description>
+    </param>
+  </inputs>
+</widget>

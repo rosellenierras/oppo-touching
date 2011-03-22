@@ -1,0 +1,29 @@
+<widget type="BinaryLogicalFunctionWidget" label="i18n:logicalComparator-title">
+  <description>i18n:logicalComparator-description</description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+  </metadata>
+  <inputs>
+    <param control="false" binding="false" type="Enumeration" label="i18n:logicalComparator-comparator" value="EQ" name="$operation">
+      <description>i18n:logicalComparator-comparator-desc</description>
+      <choice label="i18n:logicalComparator-equal" data="EQ"/>
+      <choice label="i18n:logicalComparator-not-equal" data="NE"/>
+      <choice label="i18n:logicalComparator-greater" data="GT"/>
+      <choice label="i18n:logicalComparator-greater-or-equal" data="GE"/>
+      <choice label="i18n:logicalComparator-less" data="LT"/>
+      <choice label="i18n:logicalComparator-less-or-equal" data="LE"/>
+    </param>
+    <param label="i18n:logicalComparator-term1" name="$arg1">
+      <description>i18n:logicalComparator-term1-desc</description>
+    </param>
+    <param label="i18n:logicalComparator-term2" name="$arg2">
+      <description>i18n:logicalComparator-term2-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="false" type="boolean" label="i18n:logicalComparator-result" name="$result">
+       <description>i18n:logicalComparator-result-desc</description>
+    </param>
+  </outputs>
+</widget>

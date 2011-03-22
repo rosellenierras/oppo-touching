@@ -1,0 +1,42 @@
+<widget version="v4" label="Area Chart Example" type="Dashboard" backgroundColor="#ffffff">
+  <metadata>
+    <property visual="true" refreshable="true"/>
+  </metadata>
+  <inputs/>
+  <outputs/>
+  <layout name="#NULL"/>
+  <notes/>
+  <widgets>
+    <widget uuid="9FE7FBE9-0DA6-4DD3-143F-611E83ABDC1F" name="builtin:generated-record-test-data-widget"
+            title="Generated Record" xpos="439" ypos="103" compx="304.15" compy="102"
+            width="80" height="40" frame="RoundedBox" frameStyle="null" visible="Never"
+            selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="$operation" value="GENERATED-RECORD"/>
+      <param name="$numRecord" value="12"/>
+      <param name="$numLabelField" value="0"/>
+      <param name="$tokenList" value="LoremIpsum"/>
+      <param name="$numValueField" value="6"/>
+    </widget>
+    <widget uuid="7A1F3941-C9ED-E489-F201-61226032D370" name="builtin:area-chart-widget"
+            title="Single Series" xpos="179" ypos="176" compx="573.15" compy="95"
+            width="482" height="322" frame="RoundedBox" frameStyle="null"
+            visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="series" value="value0,value1,value2,value3,value4,value5"/>
+      <param name="labels" value="group0"/>
+      <param name="legend" value="false"/>
+    </widget>
+    <widget uuid="0313A016-2A97-58BF-F847-EB24E54271C7" name="builtin:rich-text-widget"
+            title="Description" xpos="145" ypos="22" compx="388.15" compy="27"
+            width="569" height="128" frame="Box"
+            frameStyle="frameColor=#0,frameThickness=1.0,color=#0,bgColor=#66,bgAlpha=0.2"
+            visible="Always" selectable="true" dataChangeOnly="true" refreshOnQuiesce="false">
+      <param name="$text" value="&lt;TEXTFORMAT LEADING=&quot;2&quot;>&lt;P ALIGN=&quot;CENTER&quot;>&lt;FONT FACE=&quot;Verdana&quot; SIZE=&quot;10&quot; COLOR=&quot;#0000FF&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;>&lt;B>Area Chart Example&lt;/B>&lt;/FONT>&lt;/P>&lt;/TEXTFORMAT>&lt;TEXTFORMAT LEADING=&quot;2&quot;>&lt;P ALIGN=&quot;LEFT&quot;>&lt;FONT FACE=&quot;Verdana&quot; SIZE=&quot;4&quot; COLOR=&quot;#000000&quot; LETTERSPACING=&quot;0&quot; KERNING=&quot;0&quot;>The Area Chart widget allows you to display a single series of values or multiple series of values in an area chart with an area bounded by a line. In this example, the Generated Record widget generates a random set of values for the charts.&lt;FONT SIZE=&quot;11&quot;>&lt;/FONT>&lt;/FONT>&lt;/P>&lt;/TEXTFORMAT>"/>
+    </widget>
+  </widgets>
+  <connection>
+    <link event="undefined">
+      <source uuid="9FE7FBE9-0DA6-4DD3-143F-611E83ABDC1F" port="$result"/>
+      <target uuid="7A1F3941-C9ED-E489-F201-61226032D370" port="$results"/>
+    </link>
+  </connection>
+</widget>

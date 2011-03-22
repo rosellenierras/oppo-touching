@@ -1,0 +1,79 @@
+<widget type="InspectorWidget" label="i18n:inspector-title">
+  <description>i18n:inspector-title-description</description>
+  <metadata>
+    <property refreshable="false" actionable="true"/>
+    <formats>
+    	<format>Data</format>
+    	<format>Metadata</format>
+    </formats>
+  </metadata>
+  <inputs>
+    <param setting="false" label="i18n:inspector-value" name="$value">
+		<description>i18n:inspector-value-description</description>
+    </param>
+    <param setting="true" binding="false" label="i18n:inspector-history" name="$history" type="Boolean">
+		<description>i18n:inspector-history-description</description>
+    </param>
+    <param setting="true" binding="false" label="Port Type" name="$portType" type="Enumeration" value="untyped">
+		<description>Optional type metadata on port. Can be used to check effects of data coercion logic.</description>
+		<choice label="** Untyped **" data="untyped"/>
+		<choice label="boolean" data="boolean"/>
+		<choice label="boolean[]" data="boolean[]"/>
+		<choice label="collection" data="collection"/>
+		<choice label="color" data="color"/>
+		<choice label="color[]" data="color[]"/>
+		<choice label="date" data="date"/>
+		<choice label="date[]" data="date[]"/>
+		<choice label="daterange" data="daterange"/>
+		<choice label="daterange[]" data="daterange[]"/>
+		<choice label="datetime" data="datetime"/>
+		<choice label="datetime[]" data="datetime[]"/>
+		<choice label="datetimerange" data="datetimerange"/>
+		<choice label="datetimerange[]" data="datetimerange[]"/>
+		<choice label="decimal" data="decimal"/>
+		<choice label="decimal[]" data="decimal[]"/>
+		<choice label="double" data="double"/>
+		<choice label="double[]" data="double[]"/>
+		<choice label="enumeration" data="enumeration"/>
+		<choice label="float" data="float"/>
+		<choice label="float[]" data="float[]"/>
+		<choice label="int" data="int"/>
+		<choice label="int[]" data="int[]"/>
+		<choice label="integer" data="integer"/>
+		<choice label="integer[]" data="integer[]"/>
+		<choice label="long" data="long"/>
+		<choice label="long[]" data="long[]"/>
+		<choice label="number" data="number"/>
+		<choice label="number[]" data="number[]"/>
+		<choice label="object" data="object"/>
+		<choice label="record" data="record"/>
+		<choice label="record[]" data="record[]"/>
+		<choice label="short" data="short"/>
+		<choice label="short[]" data="short[]"/>
+		<choice label="string" data="string"/>
+		<choice label="string[]" data="string[]"/>
+		<choice label="time" data="time"/>
+		<choice label="time[]" data="time[]"/>
+		<choice label="timestamp" data="timestamp"/>
+		<choice label="timestamp[]" data="timestamp[]"/>
+		<choice label="xml" data="xml"/>
+		<choice label="xml[]" data="xml[]"/>
+		<choice label="xs:boolean" data="xs:boolean"/>
+		<choice label="xs:boolean*" data="xs:boolean*"/>
+		<choice label="xs:date" data="xs:date"/>
+		<choice label="xs:date*" data="xs:date*"/>
+		<choice label="xs:datetime" data="xs:datetime"/>
+		<choice label="xs:datetime*" data="xs:datetime*"/>
+		<choice label="xs:float" data="xs:float"/>
+		<choice label="xs:float*" data="xs:float*"/>
+		<choice label="xs:int" data="xs:int"/>
+		<choice label="xs:int*" data="xs:int*"/>
+		<choice label="xs:string" data="xs:string"/>
+		<choice label="xs:string*" data="xs:string*"/>
+		<choice label="xs:time" data="xs:time"/>
+		<choice label="xs:time*" data="xs:time*"/>
+		<choice label="xs:timestamp" data="xs:timestamp"/>
+		<choice label="xs:timestamp*" data="xs:timestamp*"/>
+    </param>
+  </inputs>
+</widget>

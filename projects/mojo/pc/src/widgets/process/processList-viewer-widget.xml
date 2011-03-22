@@ -1,0 +1,22 @@
+<widget type="ProcessListViewerWidget" label="i18n:processListViewer-title">
+  <description>i18n:processListViewer-title-description</description>
+  <inputs> 
+    <param setting="true" binding="false" type="boolean" label="i18n:processListViewer-process-control" name="processControl" style="true">
+      <description>i18n:processListViewer-process-control-description</description> 
+    </param> 
+    <param type="string" label="i18n:processListViewer-project-path" name="projectPath" style="true">
+      <description>i18n:processListViewer-project-path-description</description> 
+    </param>
+    <param type="string" label="i18n:processListViewer-server-name" name="serverName" style="true">
+      <description>i18n:processListViewer-server-name-description</description> 
+    </param>           
+  </inputs>
+  <outputs>
+    <param label="i18n:processListViewer-selected-lifecycle-id" name="lifecycleId">
+       <description>i18n:processListViewer-selected-lifecycle-id-description</description>
+    </param>
+    <param label="i18n:processListViewer-selected-process-id" name="processId">
+       <description>i18n:processListViewer-selected-process-id-description</description>
+    </param>      
+  </outputs>
+</widget>

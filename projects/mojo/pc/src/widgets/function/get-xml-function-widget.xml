@@ -1,0 +1,29 @@
+<widget type="GetXMLFunctionWidget" label="i18n:getXml-title">
+  <description>i18n:getXml-description</description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+    <metadata param="$arg"/>
+  </metadata>
+  <inputs>
+    <param name="$operation" value="GET-XML" setting="false" binding="false" control="false"/>
+    <param control="false" setting="false" label="i18n:getXml-value" name="$arg">
+      <description>i18n:getXml-value-desc</description>
+    </param>
+    <param binding="false" type="XPathField" label="i18n:getXml-xpath" name="$xpath">
+      <description>i18n:getXml-xpath-desc</description>
+    </param>
+    <param binding="false" type="boolean" label="i18n:getXml-parent" name="$parent" value="false">
+      <description>i18n:getXml-parent-desc</description>
+    </param>
+    <param type="heading" name="outputAsRecordsGroup" label="i18n:getXml-output-as-record" binding="false" control="false"/>
+    <param binding="false" type="boolean" name="$asRecords" label="i18n:getXml-result" value="false">
+      <description>i18n:getXml-output-as-record-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="false" label="i18n:getXml-result" name="$result">
+      <description>i18n:getXml-result-desc</description>
+    </param>
+  </outputs>
+</widget>

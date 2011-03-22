@@ -1,0 +1,28 @@
+<widget type="StringReplacementWidget" label="i18n:string-replacement-title">
+	<description>i18n:string-replacement-desc</description>
+    <metadata>
+        <size width="80" height="40" type="fixed"/>
+        <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+    </metadata>
+	<inputs>
+        <param binding="true" setting="false" label="i18n:string-replacement-input" name="input">
+           <description>i18n:string-replacement-input-desc</description>
+        </param> 
+        <param binding="true" setting="false" label="i18n:string-replacement-name-value-list" name="$results">
+          <description>i18n:string-replacement-name-value-list-desc</description> 
+        </param>  
+        <param binding="false" type="SingleField" label="i18n:string-replacement-name-field" name="nameField">
+          <description>i18n:string-replacement-name-field-desc</description>
+        </param>
+        <param binding="false" type="SingleField" label="i18n:string-replacement-value-field" name="valueField">
+          <description>i18n:string-replacement-value-field-desc</description>
+        </param>
+	</inputs>
+  
+	<outputs>
+        <param label="i18n:string-replacement-output" name="output" setting="false">
+           <description>i18n:string-replacement-output-desc</description>
+        </param>
+	</outputs>
+  
+</widget>

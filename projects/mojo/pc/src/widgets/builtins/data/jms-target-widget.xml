@@ -1,0 +1,44 @@
+<widget type="JMSTargetWidget" label="i18n:jmsTarget-title">
+	<metadata>
+	    <size width="80" height="40" type="fixed"/>
+	    <property frame="RoundedBox" visible="Never" visual="false" actionable="true"/>
+	</metadata>
+
+  <description>i18n:jmsTarget-desc</description>
+  <inputs>
+    <param control="false" setting="false" label="i18n:jmsTarget-inputs" name="$inputs">
+       <description>i18n:jmsTarget-inputs-desc</description>
+    </param>    
+    <param control="false" setting="false" type="boolean" label="i18n:jmsTarget-process" name="$process">
+       <description>i18n:jmsTarget-process-desc</description>
+    </param>    
+    <param binding="false" type="Enumeration" label="i18n:jms-location" name="location" value="LOCAL"
+        showButton="true" showButtonValue="EXTERNAL" 
+        popupImplClass="com.vitria.opbook.widgets.items.EnumerationItemPopupJMS">
+       <description>i18n:jms-location-desc</description>
+       <choice label="i18n:jms-local" data="LOCAL"/>
+       <choice label="i18n:jms-external" data="EXTERNAL"/>
+    </param>
+    <param binding="false" label="i18n:jms-connetion-factory" name="connfactory">
+       <description>i18n:jms-connetion-factory-desc</description>
+    </param>
+    <param binding="false" label="i18n:jms-name" name="name">
+       <description>i18n:jms-name-desc</description>
+    </param>
+    <param binding="false" label="i18n:jms-username" name="username">
+       <description>i18n:jms-username-desc</description>
+    </param>
+    <param binding="false" label="i18n:jms-password" type="password" name="password">
+       <description>i18n:jms-password-desc</description>
+    </param>
+    
+  </inputs>
+  <outputs>
+    <param type="boolean" label="i18n:jmsTarget-result" name="result" setting="false">
+        <description>i18n:jmsTarget-result-desc</description>
+    </param>
+    <param type="string" label="i18n:jmsTarget-output" name="output" setting="false">
+        <description>i18n:jmsTarget-output-desc</description>
+    </param>
+  </outputs>  
+</widget>

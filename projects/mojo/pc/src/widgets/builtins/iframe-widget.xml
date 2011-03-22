@@ -1,0 +1,14 @@
+<widget type="InlineFrameWidget" label="i18n:iframe-title">
+
+  <description>iFrame for hosting external web views. Requires running the UI with wmode=opaque on the URL.</description>
+
+  <metadata>
+    <property refreshable="true"/>
+  </metadata>
+
+  <inputs>
+    <param setting="true" binding="true" label="i18n:iframe-url" name="$url">
+    </param>
+  </inputs>
+
+</widget>

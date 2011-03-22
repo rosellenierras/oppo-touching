@@ -1,0 +1,25 @@
+<widget type="CalendarWidget" label="i18n:calendar-title">
+  <metadata>
+    <property frame="RoundedBox" refreshable="false" minimizable="false" inspectable="true"/>
+  </metadata>
+  
+  <description>
+      i18n:calendar-desc
+  </description>
+
+  <inputs>
+    <param label="i18n:calendar-value" name="$value" type="date" binding="true" setting="true">
+      <description>
+        i18n:calendar-value-desc
+      </description>
+    </param>
+  </inputs>
+
+  <outputs>
+    <param type="date" label="i18n:calendar-value" name="$value" setting="false">
+	  <description>
+	    i18n:calendar-output-value-desc
+	  </description>
+    </param>
+  </outputs>
+</widget>

@@ -1,0 +1,8 @@
+<widget type="RSSReaderWidget" label="i18n:rssreader-title">
+  <description>i18n:rssreader-title-description</description>
+  <inputs>
+    <param setting="false" label="i18n:rssreader-content" name="$value">
+      <description>i18n:rssreader-content-description</description>
+    </param>
+  </inputs>
+</widget>

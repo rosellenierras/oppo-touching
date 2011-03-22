@@ -1,0 +1,35 @@
+<widget type="VuMeterWidget" label="i18n:vuMeter-title">
+  <description>i18n:vuMeter-title-description</description>
+  <inputs> 
+    <param control="false" setting="false" type="Number" label="i18n:vuMeter-value" name="$value">
+      <description>i18n:vuMeter-value-description</description>
+    </param>
+    <param binding="false" value="0" type="number" label="i18n:vuMeter-minimum" name="minimum">
+      <description>i18n:vuMeter-minimum-description</description>
+    </param>     
+    <param binding="false" value="100" type="number" label="i18n:vuMeter-maximum" name="maximum">
+      <description>i18n:vuMeter-maximum-description</description>
+    </param>
+    <param binding="false" value="100" min="1" type="number" label="i18n:vuMeter-cell-number" name="cellNumber">
+      <description>i18n:vuMeter-cell-number-description</description>
+    </param>           
+    <param control="false" binding="false" value="0" min="0" max="5" type="Number" label="i18n:number-precision" name="numberPrecision">
+      <description>i18n:vuMeter-number-precision-description</description>
+    </param>   
+    <param binding="false" type="Color" label="i18n:vuMeter-normal-color" value="0x00FF00" name="normalColor">
+       <description>i18n:vuMeter-normal-color-description</description>
+    </param>             
+    <param binding="false" value="40" type="Number" label="i18n:vuMeter-low-alert" name="lowAlert">
+       <description>i18n:vuMeter-low-alert-description</description>
+    </param>       
+    <param binding="false" type="Color" label="i18n:vuMeter-low-alert-color" value="0x0000FF" name="lowAlertColor">
+       <description>i18n:vuMeter-low-alert-color-description</description>
+    </param>
+    <param binding="false" value="80" type="Number" label="i18n:vuMeter-high-alert" name="highAlert">
+       <description>i18n:vuMeter-high-alert-description</description>
+    </param>
+    <param binding="false" type="Color" label="i18n:vuMeter-high-alert-color" value="0xFF0000" name="highAlertColor">
+       <description>i18n:vuMeter-high-alert-color-description</description>
+    </param>                              
+  </inputs>
+</widget>

@@ -1,0 +1,13 @@
+<item type="layout" layout="HLayout" ratios="25,25,50">
+	<item type="layout" layout="VLayout" ratios="34,34,34">
+		<item type="blank"/>
+		<item type="blank"/>
+		<item type="blank"/>
+	</item>
+	<item type="layout" layout="VLayout" ratios="34,34,34">
+		<item type="blank"/>
+		<item type="blank"/>
+		<item type="blank"/>
+	</item>
+	<item type="blank"/>
+</item>

@@ -1,0 +1,26 @@
+<widget type="com.vitria.opbook.widgets.workflow.QueryDetailWidget" label="i18n:query-detail-widget-title">
+
+	<description>i18n:query-detail-widget-desc</description>
+    <metadata>
+        <size width="80" height="40" type="fixed"/>
+        <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+    </metadata>
+    <inputs>
+        <param name="queryParam" label="i18n:query-detail-widget-query-param" control="false">
+            <description>i18n:query-detail-widget-query-param-description</description>
+        </param>
+        <param name="run" label="i18n:query-detail-widget-run" control="false">
+            <description>i18n:query-detail-widget-run-description</description>
+        </param>		
+    </inputs>
+  
+    <outputs>
+        <param name="queryResult" label="i18n:query-detail-widget-result" setting="false" control="false" >
+            <description>i18n:query-detail-widget-result-description</description>
+        </param>   
+        <param name="error" label="i18n:query-detail-widget-error" setting="false" control="false" >
+            <description>i18n:query-detail-widget-error-description</description>
+        </param>   						       
+    </outputs>
+  
+</widget>

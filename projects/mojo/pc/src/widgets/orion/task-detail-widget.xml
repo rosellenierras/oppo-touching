@@ -1,0 +1,23 @@
+<widget type="com.vitria.opbook.widgets.workflow.TaskDetailWidget" label="i18n:task-detail-widget-title">
+
+	<description>i18n:task-detail-widget-desc</description>
+
+    <inputs>
+        <param name="taskType" type="boolean" label="i18n:task-detail-widget-task-type" binding="false" control="false">
+            <description>i18n:task-detail-widget-task-type-description</description>
+        </param>   
+        <param name="queryResult" label="i18n:task-detail-widget-result" setting="false" control="false" >
+            <description>i18n:task-detail-widget-result-description</description>
+        </param>  		
+    </inputs>
+  
+    <outputs>
+		<param name="detailParam" label="i18n:task-detail-widget-detail-param" setting="false" control="false">
+            <description>i18n:task-detail-widget-detail-param-description</description>
+        </param>				       
+        <param name="changeParam" label="i18n:task-detail-widget-change-param" setting="false" control="false">
+            <description>i18n:task-detail-widget-change-param-description</description>
+        </param>
+    </outputs>
+  
+</widget>

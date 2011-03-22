@@ -1,0 +1,17 @@
+<widget type="ProcessViewerWidget" label="i18n:bpmnProcessViewer-title">
+  <description>i18n:bpmnProcessViewer-title-description</description>
+  <inputs> 
+    <param setting="false" label="i18n:bpmnProcessViewer-selected-process-id" name="processID">
+       <description>i18n:bpmnProcessViewer-selected-process-id-description</description>
+    </param>
+    <param binding="false" type="boolean" label="i18n:bpmnProcessViewer-process-control" name="processControl" style="true">
+      <description>i18n:bpmnProcessViewer-process-control-description</description> 
+    </param>
+    <param type="string" label="i18n:bpmnProcessViewer-project-path" name="projectPath" style="true">
+      <description>i18n:bpmnProcessViewer-project-path-description</description> 
+    </param>
+    <param type="string" label="i18n:bpmnProcessViewer-server-name" name="serverName" style="true">
+      <description>i18n:bpmnProcessViewer-server-name-description</description> 
+    </param>        
+  </inputs>
+</widget>
