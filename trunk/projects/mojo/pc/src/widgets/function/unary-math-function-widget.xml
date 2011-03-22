@@ -1,0 +1,33 @@
+<widget type="UnaryMathFunctionWidget" label="i18n:unaryMathFunction-title">
+  <description>i18n:unaryMathFunction-description</description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+    <metadata param="$arg" passThru="$arg"/>
+  </metadata>
+  <inputs>
+    <param control="false" binding="false" type="Enumeration" value="ABS" label="i18n:unaryMathFunction-function" name="$operation">
+      <description>i18n:unaryMathFunction-function-desc</description>
+      <choice label="i18n:unaryMathFunction-absolute" data="ABS"/>
+      <choice label="i18n:unaryMathFunction-ceiling" data="CEILING"/>
+      <choice label="i18n:unaryMathFunction-floor" data="FLOOR"/>
+      <choice label="i18n:unaryMathFunction-inverse" data="INVERSE"/>
+      <choice label="i18n:unaryMathFunction-round" data="ROUND"/>
+      <choice label="i18n:unaryMathFunction-square-root" data="SQRT"/>
+    </param>
+    <param label="i18n:unaryMathFunction-input" setting="false" control="false" name="$arg">
+      <description>i18n:unaryMathFunction-input-desc</description>
+    </param>
+    <param binding="false" label="i18n:unaryMathFunction-field" type="SingleField" name="$field">
+      <description>i18n:unaryMathFunction-field-desc</description>
+    </param>
+    <param binding="false" label="i18n:unaryMathFunction-new-field" name="$newfield">
+      <description>i18n:unaryMathFunction-new-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="false" label="i18n:unaryMathFunction-result" name="$result">
+       <description>i18n:unaryMathFunction-result-desc</description>
+    </param>
+  </outputs>
+</widget>

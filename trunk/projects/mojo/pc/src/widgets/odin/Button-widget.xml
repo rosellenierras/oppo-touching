@@ -1,0 +1,21 @@
+<widget type="ButtonWidget" label="i18n:button-title">
+  <metadata>
+  	<property frame="None"/>
+  </metadata>
+
+  <description>i18n:button-desc</description>
+
+  <inputs>
+    <param binding="false" label="i18n:button-label" name="label">
+       <description>i18n:button-label-desc</description>
+    </param>
+    <param binding="false" label="i18n:button-value" name="output">
+       <description>i18n:button-value-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param label="i18n:button-value" name="$value" setting="false">
+      <description>i18n:button-value-desc</description>
+    </param>
+  </outputs>
+</widget>

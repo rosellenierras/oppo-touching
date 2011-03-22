@@ -1,0 +1,116 @@
+<widget type="TestFormItemWidget" label="Test Form Items">
+  <description>Used for testing form items</description>
+  <metadata>
+    <size width="40" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+    <multifieldgriddata>
+      <label>LoremIpsum</label>
+      <label>Nasdaq100</label>
+      <label>DOW30</label>
+    </multifieldgriddata>
+  </metadata>
+  <inputs>
+    <param name="stringPort" label="string" type="string" setting="true" binding="true" control="false"/>
+    <param name="numberPort" label="number" type="number" setting="true" binding="true" control="false"/>
+    <param name="numberrangemapPort" label="numberrangemap" type="numberrangemap" setting="true" binding="true" control="false"/>
+    <param name="datePort" label="date" type="date" setting="true" binding="true" control="false"/>
+    <param name="timePort" label="time" type="time" setting="true" binding="true" control="false"/>
+    <param name="datetimePort" label="datetime" type="datetime" setting="true" binding="true" control="false"/>
+    <param name="hsliderPort" label="hslider" type="hslider" min="0" max="100" step="5" setting="true" binding="true" control="false"/>
+    <param name="fontfamilyPort" label="fontfamily" type="fontfamily" setting="true" binding="true" control="false"/>
+    <param name="fontstylePort" label="fontstyle" type="fontstyle" setting="true" binding="true" control="false"/>
+    <param name="fontweightPort" label="fontweight" type="fontweight" setting="true" binding="true" control="false"/>
+    <param name="fontsizePort" label="fontsize" type="fontsize" setting="true" binding="true" control="false"/>
+    <param name="enumerationPort" label="enumeration" type="enumeration" setting="true" binding="true" control="false">
+      <choice label="Lorem Ipsum" data="LoremIpsum"/>
+      <choice label="Nasdaq 100" data="Nasdaq100"/>
+      <choice label="DOW 30" data="DOW30"/>
+    </param>
+    <param name="dynEnumPort" label="enumeration" type="enumeration" dataProvider="dyn-enum-port" setting="true" binding="true" control="false"/>
+    <param name="booleanPort" label="boolean" type="boolean" setting="true" binding="true" control="false"/>
+    <param name="serverPort" label="server" type="server" setting="true" binding="true" control="false"/>
+    <param name="relativedatePort" label="relativedate" type="relativedate" setting="true" binding="true" control="false"/>
+    <param name="relativeseasonPort" label="relativeseason" type="relativeseason" setting="true" binding="true" control="false"/>
+    <param name="colorPort" label="color" type="color" setting="true" binding="true" control="false"/>
+    <param name="colorsetPort" label="colorset" type="colorset" setting="true" binding="true" control="false"/>
+    <param name="xmlPort" label="xml" type="xml" setting="true" binding="true" control="false">
+    	<order id="123">
+    		<item>Apple iPhone 4G</item>
+    		<price>900.00</price>
+    		<available>12/1/2010</available>
+    	</order>
+    </param>
+    <param name="iconPort" label="icon" type="icon" setting="true" binding="true" control="false"/>
+    <param name="iconsetPort" label="iconset" type="iconset" setting="true" binding="true" control="false"/>
+
+    <param name="$results" label="Results" setting="false" binding="true" control="false"/>
+    <param name="label" label="label" type="label" setting="true" binding="false" control="false"/>
+    <param name="string" label="string" type="string" setting="true" binding="false" control="false"/>
+    <param name="password" label="password" type="password" setting="true" binding="false" control="false"/>
+    <param name="heading1" label="Heading 1" type="heading" binding="false" control="false"/>
+    <param name="text" label="text" type="text" setting="true" binding="false" control="false"/>
+    <param name="number" label="number" type="number" setting="true" binding="false" control="false"/>
+    <param name="separator1" type="separator" binding="false" control="false"/>
+    <param name="numberrangemap" label="numberrangemap" type="numberrangemap" setting="true" binding="false" control="false"/>
+    <param name="date" label="date" type="date" setting="true" binding="false" control="false"/>
+    <param name="time" label="time" type="time" setting="true" binding="false" control="false"/>
+    <param name="datetime" label="datetime" type="datetime" setting="true" binding="false" control="false"/>
+    <param name="hslider" label="hslider" type="hslider" min="0" max="100" step="5" setting="true" binding="false" control="false"/>
+    <param name="separator2" type="separator" height="3" binding="false" control="false"/>
+    <param name="fontfamily" label="fontfamily" type="fontfamily" setting="true" binding="false" control="false"/>
+    <param name="fontstyle" label="fontstyle" type="fontstyle" setting="true" binding="false" control="false"/>
+    <param name="fontweight" label="fontweight" type="fontweight" setting="true" binding="false" control="false"/>
+    <param name="fontsize" label="fontsize" type="fontsize" setting="true" binding="false" control="false"/>
+    <param name="separator3" type="separator" color="red" binding="false" control="false"/>
+    <param name="enumeration" label="enumeration" type="enumeration" setting="true" binding="false" control="false">
+      <choice label="Lorem Ipsum" data="LoremIpsum"/>
+      <choice label="Nasdaq 100" data="Nasdaq100"/>
+      <choice label="DOW 30" data="DOW30"/>
+    </param>
+    <param name="boolean" label="boolean" type="boolean" setting="true" binding="false" control="false"/>
+    <param name="server" label="server" type="server" setting="true" binding="false" control="false"/>
+    <param name="heading2" label="Heading 2" type="heading" binding="false" control="false"/>
+    <param name="relativedate" label="relativedate" type="relativedate" setting="true" binding="false" control="false"/>
+    <param name="relativeseason" label="relativeseason" type="relativeseason" setting="true" binding="false" control="false"/>
+    <param name="color" label="color" type="color" setting="true" binding="false" control="false"/>
+    <param name="colorset" label="colorset" type="colorset" setting="true" binding="false" control="false"/>
+    <param name="xml" label="xml" type="xml" setting="true" binding="false" control="false">
+    	<order id="123">
+    		<item>Apple iPhone 4G</item>
+    		<price>900.00</price>
+    		<available>12/1/2010</available>
+    	</order>
+    </param>
+    <param name="frame" label="frame" type="frame" setting="true" binding="false" control="false"/>
+    <param name="icon" label="icon" type="icon" setting="true" binding="false" control="false"/>
+    <param name="iconset" label="iconset" type="iconset" setting="true" binding="false" control="false"/>
+    <param name="multifieldvalueruntime" label="multifieldvalueruntime" type="multifieldvalueruntime" setting="true" binding="false" control="false"/>
+    <param name="xpathfieldmapping" label="xpathfieldmapping" type="xpathfieldmapping" setting="true" binding="false" control="false"/>
+    <param name="pagelink" label="pagelink" type="pagelink" setting="true" binding="false" control="false"/>
+    <param name="spacer" type="spacer" binding="false" control="false" height="20"/>
+    <param name="singlefield" label="singlefield" type="singlefield" setting="true" binding="false" control="false"/>
+    <param name="multifield" label="multifield" type="multifield" setting="true" binding="false" control="false"/>
+    <param name="multifieldvalue" label="multifieldvalue" type="multifieldvalue" setting="true" binding="false" control="false"/>
+    <param name="singlegroup" label="singlegroup" type="singlegroup" setting="true" binding="false" control="false"/>
+    <param name="multigroup" label="multigroup" type="multigroup" setting="true" binding="false" control="false"/>
+    <param name="multiseries" label="multiseries" type="multiseries" setting="true" binding="false" control="false"/>
+    <param name="multifieldgrid" label="multifieldgrid" type="multifieldgrid" dataProvider="multifieldgriddata" setting="true" binding="false" control="false"/>
+
+    <param name="dep1Spacer" type="spacer" binding="false" control="false" height="20"/>
+    <param name="dep1Heading" label="Interdependent Items" type="heading" binding="false" control="false"/>
+    <param name="dep1Sep1" type="separator" color="red" binding="false" control="false"/>
+    <param name="dependency" label="Dependency" type="enumeration" setting="true" binding="false" control="false">
+      <choice label="Name Only" data="nameOnly"/>
+      <choice label="Name and Phone" data="nameAndPhone"/>
+      <choice label="Name and Age" data="nameAndAge"/>
+    </param>
+    <param name="name" label="Name" type="string" setting="true" binding="false" control="false"/>
+    <param name="phone" label="Phone" type="string" setting="true" binding="false" control="false"/>
+    <param name="age" label="Age" type="number" min="1" max="90" step="1" setting="true" binding="false" control="false"/>
+    <param name="dep1Sep2" type="separator" color="red" binding="false" control="false"/>
+    <param name="dateTimeRangeSpacer" type="spacer" binding="false" control="false" height="20"/>
+	<param name="adhocrange" type="AdhocDateTimeRange" label="Adhoc Range" value="1d,-1,0" metadata="range=1m,incr=1d" binding="false" control="false"/>
+	<param name="discreterange" type="DiscreteDateTimeRange" label="Discrete Range" value="1w" metadata="1h,1d,1w,1m,1y" binding="false" control="false"/>
+  </inputs>
+  <outputs/>
+</widget>

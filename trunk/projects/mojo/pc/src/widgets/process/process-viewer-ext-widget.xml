@@ -1,0 +1,28 @@
+<widget type="ProcessViewerExtWidget" label="i18n:bpmnProcessViewerExt-title">
+  <description>i18n:bpmnProcessViewerExt-title-description</description>
+  <inputs>
+    <param binding="true" type="String" label="i18n:bpmnProcessViewerExt-process" name="processModelPath">
+       <description>i18n:bpmnProcessViewerExt-process-description</description>
+    </param>
+    <param binding="true" type="date" label="i18n:bpmnProcessViewerExt-from-date" name="fromDate" value="$TODAY()-1">
+       <description>i18n:bpmnProcessViewerExt-from-date-description</description>
+    </param>
+    <param binding="true" type="date" label="i18n:bpmnProcessViewerExt-to-date" name="toDate" value="$TODAY()">
+       <description>i18n:bpmnProcessViewerExt-to-date-description</description>
+    </param>    
+    <param binding="false" type="boolean" label="i18n:bpmnProcessViewer-process-control" name="processControl" style="true">
+      <description>i18n:bpmnProcessViewerExt-process-control-description</description> 
+    </param> 
+    <param binding="false" type="Enumeration" label="i18n:bpmnProcessViewerExt-process-perspective" name="defaultPerspective" value="CountPerStep" style="true">
+      <description>i18n:bpmnProcessViewerExt-process-perspective-description</description>
+      <choice label="i18n:bpmnProcessViewerExt-count-per-step" data="CountPerStep"/>
+      <choice label="i18n:bpmnProcessViewerExt-duration" data="Duration"/>
+      <!-- choice label="i18n:bpmnProcessViewerExt-jeopardy" data="Jeopardy"/ -->
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="false" type="string" label="i18n:bpmnProcessViewerExt-selected" name="selected">
+       <description>i18n:bpmnProcessViewerExt-selected-description</description>
+    </param>
+  </outputs>
+</widget>

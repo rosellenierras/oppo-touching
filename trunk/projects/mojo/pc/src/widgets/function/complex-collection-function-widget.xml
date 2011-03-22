@@ -1,0 +1,31 @@
+<widget type="ComplexCollectionFunctionWidget" label="i18n:complexCollectionFunction-title">
+  <description>i18n:complexCollectionFunction-description</description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+    <metadata param="$arg1"/>
+  </metadata>
+  <inputs>
+    <param control="false" binding="false" type="Enumeration" value="SUM" label="i18n:complexCollectionFunction-function" name="$operation">
+      <description>i18n:complexCollectionFunction-function-desc</description>
+      <choice label="i18n:complexCollectionFunction-sum" data="SUM"/>
+      <choice label="i18n:complexCollectionFunction-average" data="AVERAGE"/>
+      <choice label="i18n:complexCollectionFunction-count" data="COUNT"/>
+      <choice label="i18n:complexCollectionFunction-median" data="MEDIAN"/>
+      <choice label="i18n:complexCollectionFunction-mode" data="MODE"/>
+      <choice label="i18n:complexCollectionFunction-maximum" data="MAX"/>
+      <choice label="i18n:complexCollectionFunction-minimum" data="MIN"/>
+    </param>
+    <param control="false" setting="false" label="i18n:complexCollectionFunction-collection" name="$arg1">
+      <description>i18n:complexCollectionFunction-collection-desc</description>
+    </param>
+    <param type="XPathField" label="i18n:complexCollectionFunction-xpath-or-field" name="$arg2">
+      <description>i18n:complexCollectionFunction-xpath-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="false" label="i18n:complexCollectionFunction-result" name="$result">
+      <description>i18n:complexCollectionFunction-result-desc</description>
+    </param>
+  </outputs>
+</widget>

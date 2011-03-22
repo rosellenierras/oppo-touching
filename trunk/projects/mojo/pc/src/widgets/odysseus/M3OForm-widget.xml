@@ -1,0 +1,28 @@
+<widget type="com.vitria.opbook.widgets.M3OFormWidget" label="i18n:Form-widget-title">
+
+	<description>i18n:Form-widget-desc</description>
+
+	<inputs>
+		<param name="form" type="formfield" label="i18n:Form-widget-form" binding="true" setting="true">
+		  <description>i18n:Form-widget-linked-form-desc</description>
+    	</param>
+		<param name="data" label="i18n:Form-widget-value" binding="true" setting="true">
+		  <description>i18n:Form-widget-value-desc</description>
+    	</param>
+    	<param name="process" type="boolean" label="i18n:Form-widget-process" setting="false">
+    	  <description>i18n:Form-widget-process-desc</description>
+    	</param>
+    	<param name="showApplyButton" value="false" label="i18n:Form-widget-show-apply-button" type="boolean" binding="false" control="false">
+    	  <description>i18n:Form-widget-show-apply-button-desc</description>
+    	</param>
+    	<param name="applyButtonLabel" value="Apply" label="i18n:Form-widget-apply-button-label" binding="false" control="false">
+    	  <description>i18n:Form-widget-apply-button-label-desc</description>
+    	</param>
+	</inputs>
+  
+	<outputs>
+		<param name="data" label="i18n:Form-widget-value" binding="true" setting="false"/>
+		<param name="process" label="i18n:Form-widget-process" setting="false"/>
+	</outputs>
+  
+</widget>

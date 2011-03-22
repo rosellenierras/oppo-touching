@@ -1,0 +1,11 @@
+<widget type="TextDisplayWidget" label="i18n:dataDisplay-title">
+  <description>i18n:dataDisplay-title-description</description>
+  <metadata>
+    <property refreshable="false" actionable="true"/>
+  </metadata>
+  <inputs>
+    <param setting="false" label="i18n:dataDisplay-value" name="$value">
+      <description>i18n:dataDisplay-value-description</description>
+    </param>
+  </inputs>
+</widget>

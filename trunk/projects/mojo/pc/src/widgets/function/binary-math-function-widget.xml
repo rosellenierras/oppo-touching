@@ -1,0 +1,29 @@
+<widget type="BinaryMathFunctionWidget" label="i18n:binaryMathFunction-title">
+  <description>i18n:binaryMathFunction-description</description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+  </metadata>
+  <inputs>
+    <param control="false" binding="false" type="Enumeration" value="ADD" label="i18n:binaryMathFunction-function" name="$operation">
+      <description>i18n:binaryMathFunction-function-desc</description>
+      <choice label="i18n:binaryMathFunction-addition" data="ADD"/>
+      <choice label="i18n:binaryMathFunction-subtraction" data="SUB"/>
+      <choice label="i18n:binaryMathFunction-multiplication" data="MUL"/>
+      <choice label="i18n:binaryMathFunction-division" data="DIV"/>
+      <choice label="i18n:binaryMathFunction-power" data="POW"/>
+      <choice label="i18n:binaryMathFunction-modulus" data="MOD"/>
+    </param>
+    <param label="i18n:binaryMathFunction-term1" name="$arg1" type="number">
+      <description>i18n:binaryMathFunction-term1-desc</description>
+    </param>
+    <param label="i18n:binaryMathFunction-term2" name="$arg2" type="number">
+      <description>i18n:binaryMathFunction-term2-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="false" label="i18n:binaryMathFunction-result" name="$result" type="number">
+      <description>i18n:binaryMathFunction-result-desc</description>
+    </param>
+  </outputs>
+</widget>

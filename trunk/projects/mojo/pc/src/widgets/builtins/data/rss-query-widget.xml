@@ -1,0 +1,23 @@
+<widget type="RssQueryWidget" label="i18n:rssQuery-title">
+  <description>
+  i18n:rssQuery-desc
+  </description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" inspectable="true" actionable="true"/>
+    <http url="%url%"/>
+  </metadata>
+  <inputs>
+    <param type="string" label="i18n:rssQuery-url" name="url">
+       <description>i18n:rssQuery-url-desc</description>
+    </param>
+    <param type="string" label="i18n:rssQuery-encoding" name="encoding">
+       <description>i18n:rssQuery-encoding-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param type="xml" label="i18n:rssQuery-data" name="$result" setting="false">
+       <description>i18n:rssQuery-data-desc</description>
+    </param>
+  </outputs>
+</widget>

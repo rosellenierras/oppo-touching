@@ -1,0 +1,27 @@
+<widget type="com.vitria.opbook.widgets.DataExportWidget" label="i18n:dataExport-title">
+
+	<description>i18n:dataExport-desc</description>
+	<metadata>
+    	<size width="80" height="40" type="fixed"/>
+    	<property frame="RoundedBox" visible="Never" visual="false"/>
+  	</metadata>
+  
+	<inputs>
+		<param control="false" binding="false" value="untitled" label="i18n:dataExport-filename" name="fileName">
+      		<description>i18n:dataExport-filename-desc</description>
+    	</param>
+    	<param binding="false" type="Enumeration" label="i18n:dataExport-fileFormat" name="fileFormat">
+       		<description>i18n:dataExport-fileFormat-desc</description>
+       		<choice label="i18n:dataExport-fileFormat_CSV" data="CSV"/>
+    	</param>
+    	
+    	<param control="false" setting="false" label="i18n:dataExport-data" name="$data">
+       		<description>i18n:dataExport-data-desc</description>
+    	</param>    
+    	<param control="false" setting="false" type="boolean" label="i18n:dataExport-process" name="$process">
+       		<description>i18n:dataExport-process-desc</description>
+    	</param>    
+    
+   </inputs>
+  
+</widget>

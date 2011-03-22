@@ -1,0 +1,28 @@
+<widget type="RangeMapFunctionWidget" label="i18n:rangeMap-title">
+  <description>i18n:rangeMap-description</description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+    <metadata param="$arg" passThru="$arg"/>
+  </metadata>
+  <inputs>
+    <param name="$operation" value="RANGE-MAP" setting="false" binding="false" control="false"/>
+    <param control="false" setting="false" label="i18n:rangeMap-value" name="$arg">
+      <description>i18n:rangeMap-value-desc</description>
+    </param>
+    <param binding="false" label="i18n:rangeMap-field" type="SingleField" name="$field">
+      <description>i18n:rangeMap-field-desc</description>
+    </param>
+    <param binding="false" label="i18n:rangeMap-new-field" name="$newfield">
+      <description>i18n:rangeMap-new-desc</description>
+    </param>
+    <param control="true" setting="true" binding="false" type="NumberRangeMap" label="i18n:rangeMap-range-index-map" name="$range">
+      <description>i18n:rangeMap-map-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="false" label="i18n:rangeMap-index" name="$result">
+      <description>i18n:rangeMap-index-desc</description>
+    </param>
+  </outputs>
+</widget>

@@ -1,0 +1,21 @@
+<widget type="ConcatenateFunctionWidget" label="i18n:concatenate-title">
+  <description>i18n:concatenate-description</description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+  </metadata>
+  <inputs>
+    <param name="$operation" value="CONCATENATE" setting="false" binding="false" control="false"/>
+    <param binding="true" type="string" label="i18n:concatenate-string1" name="$arg">
+       <description>i18n:concatenate-string1-desc</description>
+    </param>
+    <param binding="true" type="string" label="i18n:concatenate-string2" name="$str2">
+       <description>i18n:concatenate-string2-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="false" label="i18n:concatenate-result" name="$result">
+       <description>i18n:concatenate-result-desc</description>
+    </param>
+  </outputs>
+</widget>

@@ -1,0 +1,24 @@
+<widget type="ScrollingTextWidget" label="i18n:scrollingText-title">
+  <description>i18n:scrollingText-title-description</description>
+  <metadata>
+    <property refreshable="false" actionable="true"/>
+  </metadata>
+  <inputs>
+    <param binding="false" type="Enumeration" label="i18n:scrollingText-style" value="leftToRight" name="style">
+      <description>i18n:scrollingText-style-description</description>
+      <choice label="i18n:scrollingText-left-to-right" data="leftToRight"/>
+      <choice label="i18n:scrollingText-right-to-left" data="rightToLeft"/>
+      <choice label="i18n:scrollingText-top-to-bottom" data="topToBottom"/>
+      <choice label="i18n:scrollingText-bottom-to-top" data="bottomToTop"/>
+    </param>
+    <param binding="true" label="i18n:scrollingText-text" name="text">
+       <description>i18n:scrollingText-text-description</description>
+    </param>
+    <param binding="true" type="Number" label="i18n:scrollingText-size" name="size" style="true">
+       <description>i18n:scrollingText-size-description</description>
+    </param>
+    <param binding="true" type="Number" label="i18n:scrollingText-rate" name="rate" style="true">
+       <description>i18n:scrollingText-rate-description</description>
+    </param>
+  </inputs>
+</widget>

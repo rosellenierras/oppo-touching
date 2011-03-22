@@ -1,0 +1,22 @@
+<widget type="ItemAtWidget" label="i18n:itemAt-title">
+  <description>i18n:itemAt-description</description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+    <metadata passThru="$arg"/>
+  </metadata>
+  <inputs>
+    <param name="$operation" value="ITEM-AT" setting="false" binding="false" control="false"/>
+    <param label="i18n:itemAt-value" setting="false" control="false" name="$arg">
+       <description>i18n:itemAt-value-desc</description>
+    </param>
+    <param max="1000" min="0" value="0" type="Number" label="i18n:itemAt-index" name="$index">
+       <description>i18n:itemAt-index-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="false" label="i18n:itemAt-result" name="$result">
+       <description>i18n:itemAt-result-desc</description>
+    </param>
+  </outputs>
+</widget>

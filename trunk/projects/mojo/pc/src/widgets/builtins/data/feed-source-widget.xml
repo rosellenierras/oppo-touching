@@ -1,0 +1,49 @@
+<widget type="com.vitria.opbook.widgets.impl.data.FeedSourceWidget" label="i18n:feed-feedSource-title">
+
+	<description>i18n:feed-feedSource-desc</description>
+    <metadata>
+        <size width="80" height="40" type="fixed"/>
+        <property frame="RoundedBox" visible="Never" visual="false" inspectable="true"/>
+    </metadata>
+	<inputs>
+	
+		<param binding="false" type="feed" name="feedName" label="i18n:feed-feedName" pickerfilter="true">
+          <description>i18n:feed-feedName-desc</description>
+        </param>
+        
+        <param binding="false" type="enumeration" label="i18n:feed-subscriberMode" name="subscriberMode" value="1">
+           <description>i18n:feed-subscriberMode-desc</description>
+           <choice label="i18n:feed-mode-getFeedState" data="1"/>
+           <choice label="i18n:feed-mode-getFeedArchiveCount" data="2"/>
+           <choice label="i18n:feed-mode-getFeedArchiveTime" data="3"/>
+		   <choice label="i18n:feed-mode-getFeedSub" data="4"/>
+		   <choice label="i18n:feed-mode-getFeedPlaybckSub" data="5"/>
+        </param>
+		
+        <param binding="false" type="boolean" name="withProperties" label="i18n:feed-withProperties" value="false">
+          <description>i18n:feed-withProperties-desc</description>
+        </param>		
+        
+        <param binding="false" type="number" min="1" name="archiveCount" label="i18n:feed-archiveCount">
+            <description>i18n:feed-archiveCount-desc</description>
+        </param>
+        
+        <param binding="false" type="relativedate" name="archiveTime" label="i18n:feed-archiveTime" min="1">
+            <description>i18n:feed-archiveTime-desc</description>
+        </param>		
+		
+		<param type="heading" name="outputAsRecordsGroup" label="i18n:output-event-as-record" binding="false" control="false"/>
+
+        <param binding="false" type="boolean" name="asRecords" label="i18n:feed-output" value="false">
+          <description>i18n:output-event-as-record-desc</description>
+        </param>
+		
+    </inputs>
+  
+	<outputs>
+		<param name="$result" label="i18n:feed-output" type="xml[]" setting="false" control="false">
+		  <description>i18n:feed-output-desc</description>
+		</param>
+	</outputs>
+  
+</widget>

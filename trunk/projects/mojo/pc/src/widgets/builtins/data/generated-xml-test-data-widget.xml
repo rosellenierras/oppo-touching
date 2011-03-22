@@ -1,0 +1,42 @@
+<widget type="GeneratedXMLTestDataWidget" label="i18n:generatedXml-title">
+  <description>i18n:generatedXml-desc</description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" inspectable="true"/>
+  </metadata>
+  <inputs>
+    <param name="$operation" value="GENERATED-XML" setting="false" binding="false" control="false"/>
+    <param max="10" min="0" value="3" type="Number" label="i18n:generatedXml-top-level-nodes" name="$numTopLevel">
+      <description>i18n:generatedXml-top-level-nodes-desc</description>
+    </param>
+    <param max="10" min="0" value="3" type="Number" label="i18n:generatedXml-branching" name="$numBranch">
+      <description>i18n:generatedXml-branching-desc</description>
+    </param>
+    <param binding="false" max="8" min="0" value="5" type="Number" label="i18n:generatedXml-nesting-level" name="$numLevel">
+      <description>i18n:generatedXml-nesting-level-desc</description>
+    </param>
+    <param binding="false" max="20" min="0" value="1" type="Number" label="i18n:generatedXml-grouping" name="$numGroup">
+      <description>i18n:generatedXml-grouping-desc</description>
+    </param>
+    <param binding="false" max="20" min="0" value="1" type="Number" label="i18n:generatedXml-number-of-label-fields" name="$numLabelField">
+      <description>i18n:generatedXml-number-of-label-fields-desc</description>
+    </param>
+    <param max="20" min="0" value="10" type="Number" label="i18n:generatedXml-label-token-variations" name="$numLabelToken">
+      <description>i18n:generatedXml-label-token-variations-desc</description>
+    </param>
+    <param binding="false" max="20" min="0" value="1" type="Number" label="i18n:generatedXml-number-of-value-fields" name="$numValueField">
+      <description>i18n:generatedXml-number-of-value-fields-desc</description>
+    </param>
+    <param value="0" type="Number" label="i18n:generatedXml-minimum-value" name="$minValue">
+      <description>i18n:generatedXml-minimum-value-desc</description>
+    </param>
+    <param value="100" type="Number" label="i18n:generatedXml-maximum-value" name="$maxValue">
+      <description>i18n:generatedXml-maximum-value-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param label="i18n:generatedXml-data" name="$result" type="xml" setting="false">
+      <description>i18n:generatedXml-data-desc</description>
+    </param>
+  </outputs>
+</widget>

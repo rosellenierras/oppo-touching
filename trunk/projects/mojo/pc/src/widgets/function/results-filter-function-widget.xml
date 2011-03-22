@@ -1,0 +1,35 @@
+<widget type="ResultsFilterFunctionWidget" label="i18n:resultsFilter-title">
+  <description>i18n:resultsFilter-description</description>
+  <metadata>
+    <size width="100" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+    <metadata passThru="$results"/>
+  </metadata>
+  <inputs>
+    <param name="$operation" value="FILTER" setting="false" binding="false" control="false"/>
+    <param control="false" setting="false" label="i18n:resultsFilter-input" name="$results">
+      <description>i18n:resultsFilter-input-desc</description>
+    </param>
+    <param binding="false" type="XPathField" label="i18n:resultsFilter-field-xpath" name="$key">
+      <description>i18n:resultsFilter-key-desc</description>
+    </param>
+    <param binding="false" type="Enumeration" label="i18n:resultsFilter-operator" value="EQ" name="$operator">
+      <description>i18n:resultsFilter-operator-desc</description>
+      <choice label="i18n:resultsFilter-equal" data="EQ"/>
+      <choice label="i18n:resultsFilter-not-equal" data="NE"/>
+      <choice label="i18n:resultsFilter-greater-than" data="GT"/>
+      <choice label="i18n:resultsFilter-greater-or-equal" data="GE"/>
+      <choice label="i18n:resultsFilter-less-than" data="LT"/>
+      <choice label="i18n:resultsFilter-less-or-equal" data="LE"/>
+      <choice label="i18n:resultsFilter-like" data="LIKE"/>
+    </param>
+    <param binding="true" label="i18n:resultsFilter-value" name="$value">
+      <description>i18n:resultsFilter-value-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="false" label="i18n:resultsFilter-results" name="$results">
+      <description>i18n:resultsFilter-results-desc</description>
+    </param>
+  </outputs>
+</widget>

@@ -1,0 +1,35 @@
+<widget type="HttpQueryWidget" label="i18n:httpQuery-title">
+  <description>
+  i18n:httpQuery-desc
+  </description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" inspectable="true" actionable="true"/>
+    <http url="%url%"/>
+  </metadata>
+  <inputs>
+    <param type="string" label="i18n:httpQuery-url" name="url">
+       <description>i18n:httpQuery-url-desc</description>
+    </param>
+    <param type="string" label="i18n:httpQuery-encoding" name="encoding">
+       <description>i18n:httpQuery-encoding-desc</description>
+    </param>
+    <param control="false" binding="false" type="Enumeration" label="i18n:httpQuery-proxy" value="service" name="proxy">
+      <description>i18n:httpQuery-proxy-desc</description>
+      <choice label="i18n:httpQuery-none" data="none"/>
+      <choice label="i18n:httpQuery-service" data="service"/>
+      <choice label="i18n:httpQuery-http" data="http"/>
+    </param>
+    <param control="false" binding="false" type="boolean" label="i18n:httpQuery-encode" value="true" name="encode">
+      <description>i18n:httpQuery-encode-desc</description>
+    </param>
+    <param type="number" binding="false" label="i18n:httpQuery-timeout" name="timeout" value="15">
+       <description>i18n:httpQuery-timeout-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param type="string" label="i18n:httpQuery-data" name="$result" setting="false">
+       <description>i18n:httpQuery-data-desc</description>
+    </param>
+  </outputs>
+</widget>

@@ -1,0 +1,38 @@
+<widget type="RadioKnobWidget" label="i18n:radioKnob-title">
+
+  <metadata>
+    <property frame="RoundedBox" refreshable="false"/>
+  </metadata>
+
+  <description>i18n:radioKnob-desc</description>
+
+  <inputs>
+    <param binding="true" value="0" type="number" label="i18n:radioKnob-minimum" name="minimum">
+      <description>i18n:radioKnob-minimum-desc</description>
+    </param>
+    <param binding="true" value="60" type="number" label="i18n:radioKnob-maximum" name="maximum">
+      <description>i18n:radioKnob-maximum-desc</description>
+    </param>
+    <param binding="false" value="30" type="number" step="0" label="i18n:radioKnob-defaultValue" name="defaultValue">
+      <description>i18n:radioKnob-defaultValue-desc</description>
+    </param>
+    <param control="false" binding="false" value="0" min="0" max="5" type="Number" label="i18n:number-precision" name="numberPrecision">
+      <description>i18n:number-precision-desc</description>
+    </param>    
+    <param binding="false" value="0x999999" type="Color" label="i18n:radioKnob-backgroudColor" name="backgroudColor">
+       <description>i18n:radioKnob-backgroudColor-desc</description>
+    </param>
+    <param binding="false" value="0xFFFF33" type="Color" label="i18n:radioKnob-foregroundColor" name="foregroundColor">
+       <description>i18n:radioKnob-foregroundColor-desc</description>
+    </param>
+    <param binding="false" value="0xFF6600" type="Color" label="i18n:radioKnob-highlightColor" name="highlightColor">
+       <description>i18n:radioKnob-highlightColor-desc</description>
+    </param>
+  </inputs>
+
+  <outputs>
+    <param type="number" label="i18n:radioKnob-value" name="$value" setting="false">
+      <description>i18n:radioKnob-value-desc</description>
+    </param>
+  </outputs>
+</widget>

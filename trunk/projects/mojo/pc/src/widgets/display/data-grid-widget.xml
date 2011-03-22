@@ -1,0 +1,25 @@
+<widget type="DataGridWidget" label="i18n:dataGrid-title">
+  <description>i18n:dataGrid-title-description</description>
+  <metadata>
+    <property refreshable="false" inspectable="true" actionable="true"/>
+    <metadata passThru="$results"/>
+  </metadata>
+  <inputs>
+    <param control="false" setting="false" label="i18n:dataGrid-results" name="$results">
+       <description>i18n:dataGrid-results-description</description>
+    </param>
+    <param binding="false" type="MultiField" label="i18n:dataGrid-fields" name="$fields">
+       <description>i18n:dataGrid-fields-description</description>
+    </param>
+    <param control="false" setting="false" label="i18n:dataGrid-info" name="$info">
+       <description>i18n:dataGrid-info-description</description>
+    </param>
+    <param control="false" binding="false" type="Style" label="Style" name="$style" style="true">
+      <description>i18n:dataGrid-style-description</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param label="i18n:dataGrid-selected-row" name="selected" type="record"/>
+    <param label="i18n:muti-selected-row" name="mutiselected" type="record[]"/>
+  </outputs>
+</widget>

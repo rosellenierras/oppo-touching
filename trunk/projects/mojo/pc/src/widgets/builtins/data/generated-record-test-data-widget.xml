@@ -1,0 +1,42 @@
+<widget type="GeneratedRecordTestDataWidget" label="i18n:generatedRecord-title">
+  <description>i18n:generatedRecord-desc</description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" inspectable="true"/>
+  </metadata>
+  <inputs>
+    <param name="$operation" value="GENERATED-RECORD" setting="false" binding="false" control="false"/>
+    <param max="10000" min="1" value="10" type="Number" label="i18n:generatedRecord-number-of-records" name="$numRecord">
+      <description>i18n:generatedRecord-number-of-records-desc</description>
+    </param>
+    <param binding="false" max="20" min="0" value="1" type="Number" label="i18n:generatedRecord-grouping" name="$numGroup">
+      <description>i18n:generatedRecord-grouping-desc</description>
+    </param>
+    <param binding="false" max="20" min="0" value="1" type="Number" label="i18n:generatedRecord-number-of-label-fields" name="$numLabelField">
+      <description>i18n:generatedRecord-number-of-label-fields-desc</description>
+    </param>
+    <param control="false" binding="false" type="Enumeration" label="i18n:generatedData-token-list" value="LoremIpsum" name="$tokenList">
+      <description>i18n:generatedData-token-list-desc</description>
+      <choice label="i18n:generatedData-lorem-ipsum" data="LoremIpsum"/>
+      <choice label="i18n:generatedData-nasdaq-100" data="Nasdaq100"/>
+      <choice label="i18n:generatedData-dow-30" data="DOW30"/>
+    </param>
+    <param max="20" min="0" value="10" type="Number" label="i18n:generatedRecord-label-token-variations" name="$numLabelToken">
+      <description>i18n:generatedRecord-label-token-variations-desc</description>
+    </param>
+    <param binding="false" max="20" min="0" value="1" type="Number" label="i18n:generatedRecord-number-of-value-fields" name="$numValueField">
+      <description>i18n:generatedRecord-number-of-value-fields-desc</description>
+    </param>
+    <param value="0" type="Number" label="i18n:generatedRecord-minimum-value" name="$minValue">
+      <description>i18n:generatedRecord-minimum-value-desc</description>
+    </param>
+    <param value="100" type="Number" label="i18n:generatedRecord-maximum-value" name="$maxValue">
+      <description>i18n:generatedRecord-maximum-value-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param label="i18n:generatedRecord-data" name="$result" type="record[]" setting="false">
+      <description>i18n:generatedRecord-data-desc</description>
+    </param>
+  </outputs>
+</widget>

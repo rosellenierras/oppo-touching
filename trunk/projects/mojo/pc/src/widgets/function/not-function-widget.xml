@@ -1,0 +1,18 @@
+<widget type="NotLogicalWidget" label="i18n:not-title">
+  <description>i18n:not-description</description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+  </metadata>
+  <inputs>
+    <param name="$operation" value="NOT" setting="false" binding="false" control="false"/>
+    <param type="boolean" label="i18n:not-term" name="$arg">
+      <description>i18n:not-term-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="false" type="boolean" label="i18n:not-value" name="$result">
+      <description>i18n:not-value-desc</description>
+    </param>
+  </outputs>
+</widget>

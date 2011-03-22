@@ -1,0 +1,22 @@
+<widget type="GetValueWidget" label="i18n:getValue-title">
+  <description>i18n:getValue-description</description>
+  <metadata>
+    <size width="80" height="40" type="fixed"/>
+    <property frame="RoundedBox" visible="Never" visual="false" refreshable="false"/>
+    <metadata param="$arg"/>
+  </metadata>
+  <inputs>
+    <param name="$operation" value="GET-VALUE" setting="false" binding="false" control="false"/>
+    <param label="i18n:getValue-record-xml" setting="false" control="false" name="$arg" type="object">
+      <description>i18n:getValue-record-desc</description>
+    </param>
+    <param type="XPathField" label="i18n:getValue-field-xpath" name="$field">
+      <description>i18n:getValue-field-desc</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param setting="false" label="i18n:getValue-value" name="$result">
+      <description>i18n:getValue-result-desc</description>
+    </param>
+  </outputs>
+</widget>

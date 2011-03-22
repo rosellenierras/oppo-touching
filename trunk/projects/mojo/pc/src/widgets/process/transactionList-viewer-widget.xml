@@ -1,0 +1,8 @@
+<widget type="TransactionListViewerWidget" label="i18n:transactionListViewer-title">
+  <description>i18n:transactionListViewer-title-description</description>
+  <outputs>
+    <param label="i18n:transactionListViewer-selected-lifecycle-id" name="lifecycleId">
+       <description>i18n:transactionListViewer-selected-lifecycle-id-description</description>
+    </param>  
+  </outputs>
+</widget>

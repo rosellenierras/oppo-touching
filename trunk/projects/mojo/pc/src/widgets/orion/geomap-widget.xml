@@ -1,0 +1,30 @@
+<widget type="com.vitria.opbook.widgets.GeoMapWidget" label="i18n:GeoMap-widget-title">
+
+	<description>i18n:GeoMap-widget-desc</description>
+    <metadata>
+        <property refreshable="false"/>
+    </metadata>
+	<inputs>
+		<param name="incomings" label="i18n:GeoMap-widget-incomings" setting="false" control="false">
+			<description>i18n:GeoMap-widget-incomings-description</description>
+		</param>
+        <param name="nodeIcons" label="i18n:GeoMap-widget-icontype" type="enhancediconset" showdefaulticon="true" binding="false" control="false">
+            <description>i18n:GeoMap-widget-icontype-description</description>
+        </param>
+        <param type="Boolean" label="i18n:GeoMap-widget-readonly" name="readOnly" binding="false" control="false">
+            <description>i18n:GeoMap-widget-readonly-description</description>
+        </param>
+	</inputs>
+  
+	<outputs>
+		<param name="outputall" label="i18n:GeoMap-widget-icontype-outputall" setting="false" control="false">
+			<description>i18n:GeoMap-widget-icontype-outputall-description</description>
+		</param>
+		<param name="selected" label="i18n:GeoMap-widget-icontype-select" setting="false" control="false">
+            <description>i18n:GeoMap-widget-icontype-select-description</description>
+        </param>
+        <param name="changes" label="i18n:GeoMap-widget-icontype-changes" setting="false" control="false">
+            <description>i18n:GeoMap-widget-icontype-changes-description</description>
+        </param>
+	</outputs>
+</widget>

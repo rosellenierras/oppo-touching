@@ -1,0 +1,74 @@
+<widget type="com.vitria.opbook.widgets.DateTimeComboChartWidget" label="DateTime Combo Chart">
+   <description>
+     i18n:DatetimeCombo-Chart-Description
+   </description>
+   <metadata>
+    <property refreshable="false" inspectable="true" actionable="true"/>
+    <metadata passThru="$results"/>
+   </metadata>
+   <inputs>
+    <param control="false" setting="false" label="i18n:TimeBaseComboChart-results" name="$results">
+       <description>i18n:Chart-results-Description</description>
+    </param>
+    <param binding="false" type="MultiField" label="i18n:TimeBaseComboChart-fields" name="$fields">
+       <description>i18n:Chart-fields-Description</description>
+    </param>
+    <param binding="false" type="MultiSeries" label="i18n:TimeBaseComboChart-series" name="series">
+       <description>i18n:Chart-series-Description</description>
+    </param>
+    <param binding="false" type="SingleField" label="i18n:TimeBaseComboChart-axis-field" name="labels">
+       <description>Date category field</description>
+    </param>
+    <param binding="false" type="String" label="i18n:TimeBaseComboChart-series-values" name="values">
+       <description>i18n:Chart-series-values-Description</description>
+    </param>
+    <param binding="false" type="Enumeration" label="i18n:TimeBaseComboChart-date-unit" value="days" name="dateunits">
+       <description>The date units of date time axis</description>
+       <choice label="i18n:years" data="years"/>
+       <choice label="i18n:months" data="months"/>
+       <choice label="i18n:weeks" data="weeks"/>
+       <choice label="i18n:days" data="days"/>
+       <choice label="i18n:hours" data="hours"/>
+       <choice label="i18n:minutes" data="minutes"/>
+       <choice label="i18n:seconds" data="seconds"/>
+    </param>
+    <param control="false" setting="true" label="i18n:TimeBaseComboChart-info" name="$info">
+       <description>i18n:Chart-info-Description</description>
+    </param>
+    <param binding="false" type="Enumeration" label="i18n:TimeBaseComboChart-chart-legend" name="legend" style="true">
+      <description>i18n:Chart-legend-Description</description>
+      <choice label="i18n:lineChart-hide" data="false"/>
+      <choice label="i18n:lineChart-show" data="true"/>
+    </param>
+    <param binding="false" type="ColorSet" label="i18n:TimeBaseComboChart-colors" name="colors" style="true">
+       <description>i18n:Chart-colors-Description</description>
+    </param>
+    <param control="false" binding="false" value="0" min="0" max="5" type="Number" label="i18n:number-precision" name="numberPrecision" style="true">
+      <description>i18n:Chart-number-presision-Description</description>
+    </param>
+    <param control="false" type="String" setting="true" label="i18n:upperThreshold-value" name="upperThreshold">
+      <description>i18n:Chart-upperThreshold-value-Description</description>
+    </param>
+    <param control="false" type="String" setting="true" label="i18n:lowerThreshold-value" name="lowerThreshold">
+      <description>i18n:Chart-lowerThreshold-value-Description</description>
+    </param>
+    <param control="false" binding="false" type="Style" label="Style" name="$style" style="true">
+      <description>i18n:Chart-style-Description</description>
+    </param>
+    <param control="false" type="String" binding="false" label="Max Value" name="maxValue">
+      <description>i18n:Y-Max-value-Description</description>
+    </param>
+    <param control="false" type="String" binding="false" label="Min Value" name="minValue">
+      <description>i18n:Y-Min-value-Description</description>
+    </param>
+  </inputs>
+  <outputs>
+    <param label="i18n:TimeBaseComboChart-selected-row" name="selected" type="record">
+       <description>i18n:Chart-selected-row-Description</description>
+    </param>
+    <param label="i18n:TimeBaseComboChart-selected-series" name="series">
+       <description>i18n:Chart-selected-series-Description</description>
+    </param>
+  </outputs>
+  
+</widget>

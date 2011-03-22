@@ -1,0 +1,19 @@
+<widget type="XQueryWidget" label="i18n:xquery-title">
+	<description>i18n:xquery-desc</description>
+  	<metadata>
+    	<property frame="RoundedBox" visible="Never" visual="false"/>
+  	</metadata> 	
+	<inputs>
+		<param type="string" label="i18n:xquery-xmlDocument" name="xmlDocument">
+       		<description>i18n:xquery-xmlDocument-desc</description>
+    	</param>
+		<param type="string" label="i18n:xquery-text" name="xqueryText">
+       		<description>i18n:xquery-text-desc</description>
+    	</param>    	
+	</inputs> 
+	<outputs>
+		<param type="string" label="i18n:xquery-data" name="$result" setting="false">
+       		<description>i18n:xquery-data-desc</description>
+    	</param>
+	</outputs>  
+</widget>

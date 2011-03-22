@@ -1,0 +1,28 @@
+<widget type="AnalogMeterWidget" label="i18n:analogMeter-title">
+  <description>i18n:analogMeter-title-description</description>
+  <metadata>
+    <property refreshable="false" minimizable="false" actionable="true"/>
+  </metadata>
+  <inputs>
+    <param control="false" setting="false" type="Number" label="i18n:analogMeter-value" name="$value">
+      <description>i18n:analogMeter-value-description</description>
+    </param>
+    <param binding="true" type="Number" label="i18n:analogMeter-minimum-value" name="minimum" value="0">
+       <description>i18n:analogMeter-minimum-description</description>
+    </param>
+    <param binding="true" type="Number" label="i18n:analogMeter-maximum-value" name="maximum" value="100">
+       <description>i18n:analogMeter-maximum-description</description>
+    </param>
+    <param binding="false" type="String" label="i18n:verticalMeter-meter-label" name="meterLabel" style="true">
+       <description>i18n:analogMeter-meter-label-description</description>
+    </param>
+    <param binding="false" type="Enumeration" label="i18n:analogMeter-meter-style" name="meterStyle" style="true">
+      <description>i18n:analogMeter-meter-style-description</description>
+      <choice label="i18n:analogMeter-gaugeskin" data="GaugeSkin"/>
+      <choice label="i18n:analogMeter-dialskin" data="DialSkin"/>
+    </param>
+    <param control="false" setting="true" label="i18n:Gauge-info" name="$info">
+       <description>i18n:analogMeter-info-description</description>
+    </param>
+  </inputs>
+</widget>
