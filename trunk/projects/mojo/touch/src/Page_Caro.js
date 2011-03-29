@@ -4,52 +4,24 @@ Ext.Page = Ext.extend(Ext.Carousel, {
     
     isPage: true,
     
-    // layout: 'carousel',
-    monitorOrientation: true,
-    //layout: 'card',
+    //layout: 'vbox',
     pageName: '',
     
     constructor: function(cfg) {
         var me = this;
         me.pageName = cfg.page;
         delete cfg.page;
-        if(Ext.Viewport.orientation == 'portrait') {
-            cfg.direction = 'horizontal';
-        } else {
-            cfg.direction = 'vertical';
-        }
         Ext.Page.superclass.constructor.apply(this, arguments);
     },
-    
+    /*
     initComponent:function(cfg) {
-        var me = this;
-        Ext.Page.superclass.initComponent.call(me);
-        me.on('orientationchange', me.changeLayout, me);
-    },
-    
-    /****
-     *
-     */
-    changeLayout:function(me, orientation, width, height) {
-         if(me.delegate != null) {
-            var reduceWidth = 0, reduceHeight = 0;
-             if(true /*this.layout == 'carousel'*/) {
-                 if(orientation == 'landscape') {
-                    if(me.direction =='vertical') {
-                        me.direction = 'horizontal';
-                    }
-                    reduceWidth = 20;
-                 } else {
-                    if(me.direction== 'horizontal') {
-                        me.direction = 'vertical';
-                    }
-                    reduceHeight = 20;
-                 }
-                 var size = me.getSize();
-                 me.delegate.populateSize(size.width - reduceWidth, size.height - reduceHeight);
-             }
-         }
-    },
+        this.items = [{
+            xtype: 'button',
+            ui: 'round',
+            text:  'test'
+        }];
+        Ext.Page.superclass.initComponent.call(this);
+    },*/
     
     afterRender:function(container, position) {
         var me = this;
@@ -77,12 +49,11 @@ Ext.Page = Ext.extend(Ext.Carousel, {
             //var delegate = Ext.create({xtype:'widgetsetdelegate', model: xml});
             delegate.render(me);
             delegate.refresh();
-            //me.doLayout();
+            me.doLayout();
             me.delegate = delegate;
         //} catch(err) {
         //    console.log('Fail to handle page render ' + err);
-        //}
-        me.changeLayout(me, Ext.Viewport.orientation);
+        //}        
     },
     
     refresh:function () {

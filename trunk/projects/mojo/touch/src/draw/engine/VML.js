@@ -622,12 +622,12 @@ Ext.draw.engine.VML = Ext.extend(Ext.draw.Surface, {
             }
         }
         //this.callParent(arguments);
-        Ext.draw.engine.VML.superclass.setSize.call(this, arguments);
+        Ext.draw.engine.VML.superclass.setSize.apply(this, arguments);
     },
 
     setViewBox: function(x, y, width, height) {
         //this.callParent(arguments);
-        Ext.draw.engine.VML.superclass.setViewBox.call(this, arguments);
+        Ext.draw.engine.VML.superclass.setViewBox.apply(this, arguments);
         this.viewBox = {
             x: x,
             y: y,
@@ -638,7 +638,7 @@ Ext.draw.engine.VML = Ext.extend(Ext.draw.Surface, {
 
     onAdd: function(item) {
         //this.callParent(arguments);
-        Ext.draw.engine.VML.superclass.onAdd.call(this, arguments);
+        Ext.draw.engine.VML.superclass.onAdd.apply(this, arguments);
         if (this.el) {
             this.renderItem(item);
         }
@@ -650,7 +650,7 @@ Ext.draw.engine.VML = Ext.extend(Ext.draw.Surface, {
             delete item.el;
         }
         //this.callParent(arguments);
-        Ext.draw.engine.VML.superclass.onRemove.call(this, arguments);
+        Ext.draw.engine.VML.superclass.onRemove.apply(this, arguments);
     },
 
     render: function (container) {

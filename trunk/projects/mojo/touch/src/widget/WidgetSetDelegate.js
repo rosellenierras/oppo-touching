@@ -16,12 +16,16 @@ Vitria.WidgetSetDelegate = Ext.extend(Vitria.WidgetDelegate, {
      */
     layout: null,
     
+    constructor: function(cfg) {
+        Vitria.WidgetSetDelegate.superclass.constructor.apply(this, arguments);
+    },
+    
     /****
      * Override the method of super class to get more detail info.
      * A widget set will contain widget children, and their relationships (link info)
      */
     initSignature:function(cfg) {
-        Vitria.WidgetSetDelegate.superclass.initSignature.call(this, cfg);
+        Vitria.WidgetSetDelegate.superclass.initSignature.apply(this, arguments);
         var me = this;
         if(me.model == null) return;
         // analyze widget children
@@ -54,7 +58,7 @@ Vitria.WidgetSetDelegate = Ext.extend(Vitria.WidgetDelegate, {
                 });
             }
         } else {
-            //console.log('wrong XML for widget.xml, two nodes of "widgets"...');
+            console.log('wrong XML for widget.xml, two nodes of "widgets"...');
         }
         // analyze widget links
         var links = me.model.getElementsByTagName('link');
@@ -87,7 +91,7 @@ Vitria.WidgetSetDelegate = Ext.extend(Vitria.WidgetDelegate, {
         var ele = document.createElement('widget');
         ele.setAttribute('type', type);
         var m = ele;
-        var child = Ext.create('Vitria.WidgetDelegate', {model: m, param:wi});
+        var child = new Vitria.WidgetDelegate({model: m, param:wi});
         me.children.push(child);
     },
     
@@ -96,18 +100,15 @@ Vitria.WidgetSetDelegate = Ext.extend(Vitria.WidgetDelegate, {
      */
     render: function(parent) {
         var me = this;
-        me.widget = Ext.create('Ext.panel.Panel', {
-            //id: '',
-            layout: 'absolute'
-        });
+        me.widget = parent;
         if(! (parent instanceof Ext.Component)){
-            //console.log("Can't identify the parent of widget: " + parent);
+            console.log("Can't identify the parent of widget: " + parent);
             return;
         }
-        me.parent = {widget:parent};
-        me.initSize();
-        parent.add(me.widget);
-        parent.doLayout();
+        // me.parent = {widget:parent};
+        // me.initSize();
+        //parent.add(me.widget);
+        //parent.doLayout();
         
         var i, length = me.children.length;
         for(i=0; i<length; i++) {
@@ -118,17 +119,30 @@ Vitria.WidgetSetDelegate = Ext.extend(Vitria.WidgetDelegate, {
         me.isCreated = true;
     },
     
+    /***
+     * Populate the size of container to every widget for Carousel layout (ViewStack)
+     * 
+     */
+    populateSize: function(width, height) {
+        var me = this;
+        var i, length = me.children.length;
+        for(i=0; i<length; i++) {
+            var child = me.children[i];
+            child.populateSize(width, height);
+        }
+    },
+    
     propertyChangedHandler:function(event, data) {
         var me = this;
         var sourceId = event.id;
         var sourcePort = data.name;
         var value = data.value;
-        //console.log('Data changed on ' + sourceId + "'s port "+ sourcePort);
+        console.log('Data changed on ' + sourceId + "'s port "+ sourcePort);
         var length = me.links.length;
         for (var i = 0; i < length; i++) {
             var link = me.links[i];
             if(link.sourceId == sourceId && link.sourcePort == sourcePort) {
-                //console.log('Populate data into ' + link.targetId + "'s port "+ link.targetPort);
+                console.log('Populate data into ' + link.targetId + "'s port "+ link.targetPort);
                 var delegate = me.getDelegate(link.targetId);
                 if(delegate != null) {
                     delegate.setValue(link.targetPort, value);
@@ -188,3 +202,5 @@ Vitria.WidgetSetDelegate = Ext.extend(Vitria.WidgetDelegate, {
     }
     
 });
+
+Ext.reg('widgetsetdelegate', Vitria.WidgetSetDelegate);

@@ -16,7 +16,6 @@ Ext.fx.target.Sprite = Ext.extend(Object, {
     constructor: function(target) {
         this.target = target;
         this.id = this.getId();
-        Ext.fx.target.Sprite.superclass.constructor.call(this, target);
     },
 
     type: 'draw',

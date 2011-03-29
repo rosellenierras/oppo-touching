@@ -79,28 +79,6 @@
  */
 Vitria.WidgetDelegate = Ext.extend(Ext.util.Observable, {
     
-    /*
-    config: {
-        visibility: 'Never',
-        frame: '',
-        view: '',
-        format: '',
-        title: '',
-        model: null,
-        selectable: false,
-        refreshable: false,
-        minimizable: false,
-        inspectable: false,
-        actionable: false,
-        dataChangeOnly: false,
-        refreshOnQuiesce: false,
-        metadataPassThruParam: '',
-        inputTypes: [],
-        inputParams: [],
-        outputTypes: [],
-        outputParams: []
-    },*/
-    
     // parent delegate. If it null, then it is root Widget delegate
     parent: null,
     
@@ -122,7 +100,7 @@ Vitria.WidgetDelegate = Ext.extend(Ext.util.Observable, {
         me.addEvents(
             'propertyChanged'
         );
-        Vitria.WidgetDelegate.superclass.constructor.call(this, arguments);
+        Vitria.WidgetDelegate.superclass.constructor.call(this);
         me.initSignature(cfg);
         me.initParameter(cfg);
     },
@@ -165,7 +143,7 @@ Vitria.WidgetDelegate = Ext.extend(Ext.util.Observable, {
             me.initSize();
             parent.doLayout();
         } else {
-            //console.log("Can't identify the parent of widget: " + parent);
+            console.log("Can't identify the parent of widget: " + parent);
         }
         me.isCreated = true;
     },
@@ -188,11 +166,22 @@ Vitria.WidgetDelegate = Ext.extend(Ext.util.Observable, {
     initSize:function() {
         var me = this;
         if(me.visible === 'Always') {
-            //console.log(me.widgetType+'.initSize('+me.xpos+', '+me.ypos+', '+me.width+', '+me.height+')');
-            me.widget.setPosition(me.xpos, me.ypos);
+            console.log(me.widgetType+'.initSize('+me.xpos+', '+me.ypos+', '+me.width+', '+me.height+')');
+            //me.widget.setPosition(me.xpos, me.ypos);
             me.widget.setSize(me.width, me.height);
             if(me.title && 'title' in me.widget) {
                 me.widget.title = me.title;
+            }
+        }
+    },
+    
+    populateSize:function(width, height) {
+        var me = this;
+        if(me.visible === 'Always') {
+            if(me.widget.width != width || me.widget.height != height) {
+                me.widget.setSize(width, height);
+                if('doLayout' in me.widget)
+                    me.widget.doLayout();
             }
         }
     },
@@ -233,7 +222,7 @@ Vitria.WidgetDelegate = Ext.extend(Ext.util.Observable, {
                 me.iWidgetProperties[name] = value;
             }
         }
-        //console.log(''+me.widgetType + '.initParameter(), iWidgetProperties: ' + me.getProperties());
+        console.log(''+me.widgetType + '.initParameter(), iWidgetProperties: ' + me.getProperties());
     },
     
     getProperties:function() {
@@ -254,7 +243,7 @@ Vitria.WidgetDelegate = Ext.extend(Ext.util.Observable, {
             // just do assignment, can't notify it
             me.widget[name] = value;
         } else {
-            var setter = 'set' + Ext.String.capitalize(name);
+            var setter = 'set' + Ext.capitalize(name);
             /**
              * if(me.widget.hasOwnProperty(setter)) {
              * can't work because setter exists in the prototype of widget 
@@ -275,7 +264,7 @@ Vitria.WidgetDelegate = Ext.extend(Ext.util.Observable, {
         if(name in me.widget) {
             return me.widget[name];
         } else {
-            var getter = 'get' + Ext.String.capitalize(name);
+            var getter = 'get' + Ext.capitalize(name);
             if(getter in me.widget && typeof me.widget[getter] === 'function') {
                 return me.widget[getter].call(me.widget, value);
             }
@@ -299,7 +288,7 @@ Vitria.WidgetDelegate = Ext.extend(Ext.util.Observable, {
      */
     invokeMethod:function(method, needReturn, params) {
         var me = this;
-        try {
+        //try {
             if(method in me.widget && typeof me.widget[method] === 'function') {
                 if(needReturn == true) {
                     return me.widget[method].apply(me.widget, params);
@@ -307,9 +296,9 @@ Vitria.WidgetDelegate = Ext.extend(Ext.util.Observable, {
                     me.widget[method].apply(me.widget, params);
                 }
             }
-        } catch (er) {
-            //console.log(er);
-        }
+        //} catch (er) {
+        //    console.log(er);
+        //} 
         if(needReturn == true) {
             return null;
         }
@@ -342,3 +331,5 @@ Vitria.WidgetDelegate = Ext.extend(Ext.util.Observable, {
         this.invokeMethod('thaw', false);
     }
 });
+
+Ext.reg('widgetdelegate', Vitria.WidgetDelegate);

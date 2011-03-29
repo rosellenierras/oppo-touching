@@ -108,9 +108,9 @@ Ext.chart.Chart = Ext.extend(Ext.draw.Component, {
                 config.animate = defaultAnim;
             }
         }
-        me.mixins.mask.constructor.call(me, config);
+        //me.mixins.mask.constructor.call(me, config);
         //me.callParent([config]);
-        Ext.chart.Chart.superclass.constructor.call(this, config);
+        Ext.chart.Chart.superclass.constructor.apply(this, arguments);
     },
     
     initComponent: function() {
@@ -118,7 +118,7 @@ Ext.chart.Chart = Ext.extend(Ext.draw.Component, {
             axes,
             series;
         //me.callParent();
-        Ext.chart.Chart.superclass.constructor.initComponent.call(this);
+        Ext.chart.Chart.superclass.initComponent.call(this);
         me.addEvents(
             'itemmousedown',
             'itemmouseup',
@@ -152,7 +152,7 @@ Ext.chart.Chart = Ext.extend(Ext.draw.Component, {
             }
         });
         me.maxGutter = [0, 0];
-        me.store = Ext.data.StoreMgr.lookup(me.store);
+        me.store = Ext.StoreMgr.lookup(me.store);
         axes = me.axes;
         me.axes = new Ext.util.MixedCollection(false, function(a) { return a.position; });
         if (axes) {
@@ -184,9 +184,9 @@ Ext.chart.Chart = Ext.extend(Ext.draw.Component, {
             me.curHeight = height;
             me.redraw(true);
         }
-        this.callParent(arguments);
+        Ext.chart.Chart.superclass.afterComponentLayout.apply(me, arguments);
     },
-
+    
     /**
      * Redraw the chart. If animations are set this will animate the chart too.
      * @cfg {boolean} resize Optional flag which changes the default origin points of the chart for animations.
@@ -411,7 +411,7 @@ Ext.chart.Chart = Ext.extend(Ext.draw.Component, {
             }
         }
         if (store) {
-            store = Ext.data.StoreMgr.lookup(store);
+            store = Ext.StoreMgr.lookup(store);
             store.on({
                 scope: me,
                 datachanged: me.refresh,
@@ -486,7 +486,9 @@ Ext.chart.Chart = Ext.extend(Ext.draw.Component, {
         }
         if (!axis.chart) {
             Ext.apply(config, axis);
-            axis = me.axes.replace(Ext.create('Ext.chart.axis.' + axis.type, config));
+            var claz = 'Ext.chart.axis.' + axis.type;
+            var obj = eval("new "+claz+ "(config)");
+            axis = me.axes.replace(obj);
         }
         else {
             Ext.apply(axis, config);
@@ -598,7 +600,9 @@ Ext.chart.Chart = Ext.extend(Ext.draw.Component, {
         }
         if (!series.chart) {
             Ext.applyIf(config, series);
-            series = me.series.replace(Ext.create('Ext.chart.series.' + Ext.String.capitalize(series.type), config));
+            var cla = 'Ext.chart.series.' + Ext.capitalize(series.type);
+            var classObj = eval("new "+cla+"(config)");
+            series = me.series.replace(classObj);
         } else {
             Ext.apply(series, config);
         }
@@ -633,7 +637,7 @@ Ext.chart.Chart = Ext.extend(Ext.draw.Component, {
     destroy: function() {
         this.surface.destroy();
         this.bindStore(null);
-        this.callParent(arguments);
+        Ext.chart.Chart.superclass.destroy.call(this);
     }
 });
 Ext.reg('chart', Ext.chart.Chart);

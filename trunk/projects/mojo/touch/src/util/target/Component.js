@@ -17,7 +17,6 @@ Ext.fx.target.Component = Ext.extend(Object, {
     constructor: function(target) {
         this.target = target;
         this.id = this.getId();
-        Ext.fx.target.Component.superclass.constructor.call(this, target);
     },
 
     // Methods to call to retrieve unspecified "from" values from a target Component

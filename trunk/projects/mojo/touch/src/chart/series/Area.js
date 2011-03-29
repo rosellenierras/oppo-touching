@@ -53,7 +53,7 @@ Ext.chart.series.Area = Ext.extend(Ext.chart.series.Cartesian, {
 
     constructor: function(config) {
         //this.callParent(arguments);
-        Ext.chart.series.Area.superclass.constructor.call(this, config);
+        Ext.chart.series.Area.superclass.constructor.apply(this, arguments);
         var me = this,
             surface = me.chart.surface,
             i, l;
@@ -346,7 +346,7 @@ Ext.chart.series.Area = Ext.extend(Ext.chart.series.Cartesian, {
     onAnimate: function(sprite, attr) {
         sprite.show();
         //return this.callParent(arguments);
-        var res = Ext.chart.series.Area.superclass.onAnimate.call(this, arguments);
+        var res = Ext.chart.series.Area.superclass.onAnimate.apply(this, arguments);
         return res;
     },
 

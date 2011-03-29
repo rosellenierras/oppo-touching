@@ -7,7 +7,7 @@ Ext.chart.MaskLayer = Ext.extend(Ext.Component, {
             style: 'position:absolute;background-color:#888;cursor:move;opacity:0.6;border:1px solid #222;'
         });
         // this.callParent([config]);
-        Ext.chart.MaskLayer.superclass.constructor.call(this, config);
+        Ext.chart.MaskLayer.superclass.constructor.apply(this, [config]);
     },
     
     initComponent: function() {
@@ -25,7 +25,7 @@ Ext.chart.MaskLayer = Ext.extend(Ext.Component, {
 
     initDraggable: function() {
         // this.callParent(arguments);
-        Ext.chart.MaskLayer.superclass.initDraggable.call(this, arguments);
+        Ext.chart.MaskLayer.superclass.initDraggable.apply(this, arguments);
         this.dd.onStart = function (e) {
             var me = this,
                 comp = me.comp;

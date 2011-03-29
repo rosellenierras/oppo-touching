@@ -16,7 +16,7 @@ Ext.util.Animate = Ext.extend(Object, {
         if (Ext.fx.Manager.hasFxBlock(me.id)) {
             return me;
         }
-        Ext.fx.Manager.queueFx(Ext.create('Ext.fx.Anim', me.anim(animObj)));
+        Ext.fx.Manager.queueFx(new Ext.fx.Anim(me.anim(animObj)));
         return this;
     },
 

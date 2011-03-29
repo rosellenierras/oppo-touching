@@ -605,7 +605,7 @@ Ext.chart.series.Scatter = Ext.extend(Ext.chart.series.Cartesian, {
     onAnimate: function(sprite, attr) {
         sprite.show();
         //return this.callParent(arguments);
-        var re = Ext.chart.series.Scatter.superclass.onAnimate.call(this, sprite, attr);
+        var re = Ext.chart.series.Scatter.superclass.onAnimate.apply(this, arguments);
         return re;
     },
 

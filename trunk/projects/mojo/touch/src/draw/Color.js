@@ -210,7 +210,7 @@ Ext.draw.Color = Ext.extend(Object, {
             }
         }
 
-        return (typeof r == 'undefined') ? undefined : Ext.create('Ext.draw.Color', r, g, b);
+        return (typeof r == 'undefined') ? undefined : new Ext.draw.Color(r, g, b);
     },
 
     /**
@@ -273,21 +273,16 @@ Ext.draw.Color = Ext.extend(Object, {
             }
             rgb = [rgb[0] + m, rgb[1] + m, rgb[2] + m];
         }
-        return Ext.create('Ext.draw.Color', rgb[0] * 255, rgb[1] * 255, rgb[2] * 255);
+        return new Ext.draw.Color(rgb[0] * 255, rgb[1] * 255, rgb[2] * 255);
     }
-}, function() {
-    var prototype = this.prototype;
-
-    //These functions are both static and instance. TODO: find a more elegant way of copying them
-    this.addStatics({
-        fromHSL: function() {
-            return prototype.fromHSL.apply(prototype, arguments);
-        },
-        fromString: function() {
-            return prototype.fromString.apply(prototype, arguments);
-        },
-        toHex: function() {
-            return prototype.toHex.apply(prototype, arguments);
-        }
-    });
 });
+
+Ext.draw.Color.fromHSL = function() {
+    return Ext.draw.Color.prototype.fromHSL.apply(Ext.draw.Color.prototype, arguments);
+};
+Ext.draw.Color.fromString = function() {
+    return Ext.draw.Color.prototype.fromString.apply(Ext.draw.Color.prototype, arguments);
+};
+Ext.draw.Color.toHex = function() {
+    return Ext.draw.Color.prototype.toHex.apply(Ext.draw.Color.prototype, arguments);
+};

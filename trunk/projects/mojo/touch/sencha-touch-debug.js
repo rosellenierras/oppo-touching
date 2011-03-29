@@ -18293,7 +18293,7 @@ Ext.gesture.Manager = new Ext.AbstractManager({
 
     addEventListener: function(target, eventName, listener, options) {
         target = Ext.getDom(target);
-
+        options = options || {};
         var targets = this.targets,
             name = this.getGestureName(eventName),
             gestures = Ext.Element.data(target, 'x-gestures'),

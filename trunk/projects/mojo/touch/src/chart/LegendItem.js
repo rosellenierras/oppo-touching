@@ -21,7 +21,7 @@ Ext.chart.LegendItem = Ext.extend(Ext.draw.SpriteGroup, {
 
     constructor: function(config) {
         //this.callParent(arguments);
-        Ext.chart.LegendItem.superclass.constructor.call(this, config);
+        Ext.chart.LegendItem.superclass.constructor.apply(this, arguments);
         this.createSprites(config);
     },
 

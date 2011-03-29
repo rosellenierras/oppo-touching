@@ -108,7 +108,7 @@ Ext.chart.Callouts = Ext.extend(Object, {
         styles));
 
         if (config.items) {
-            calloutObj.panel = Ext.create('widget.panel', {
+            calloutObj.panel = new Ext.Panel({
                 style: "position: absolute;",    
                 width: width,
                 height: height,

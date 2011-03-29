@@ -11,7 +11,6 @@ Vitria.MissingDefWidget = Ext.extend(Ext.Panel, {
                     }]
             });
         Vitria.MissingDefWidget.superclass.initComponent.call(this);
-        
     }
     
     

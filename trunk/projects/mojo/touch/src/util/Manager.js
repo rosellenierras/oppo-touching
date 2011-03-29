@@ -6,7 +6,7 @@
  */
 
 //Ext.define('Ext.fx.Manager', {
-Ext.fx.Manager = Ext.extend(Ext.fx.Queue, {
+Ext.fx.AnimateQueue = Ext.extend(Ext.fx.Queue, {
     /* Begin Definitions */
     /*
     singleton: true,
@@ -26,25 +26,7 @@ Ext.fx.Manager = Ext.extend(Ext.fx.Queue, {
 
     constructor: function() {
         this.items = new Ext.util.MixedCollection();
-        Ext.fx.Manager.superclass.constructor.call(this);
-
-        // this.requestAnimFrame = (function() {
-        //     var raf = window.requestAnimationFrame ||
-        //               window.webkitRequestAnimationFrame ||
-        //               window.mozRequestAnimationFrame ||
-        //               window.oRequestAnimationFrame ||
-        //               window.msRequestAnimationFrame;
-        //     if (raf) {
-        //         return function(callback, element) {
-        //             raf(callback);
-        //         };
-        //     }
-        //     else {
-        //         return function(callback, element) {
-        //             window.setTimeout(callback, Ext.fx.Manager.interval);
-        //         };
-        //     }
-        // })();
+        Ext.fx.AnimateQueue.superclass.constructor.call(this);
     },
 
     /**
@@ -79,7 +61,8 @@ Ext.fx.Manager = Ext.extend(Ext.fx.Queue, {
             // Element
             else if (target.dom) {
                 //console.log("It is Element in animate, don't support it");
-                targetObj = Ext.create('Ext.fx.target.' + 'Element' + (useCSS3 ? 'CSS' : ''), target);
+                var cla = 'Ext.fx.target.' + 'Element' + (useCSS3 ? 'CSS' : '');
+                targetObj = new cla(target);
             }
             // Element Composite
             else if (target.isComposite) {
@@ -305,3 +288,5 @@ Ext.fx.Manager = Ext.extend(Ext.fx.Queue, {
         }
     }
 });
+
+Ext.fx.Manager = new Ext.fx.AnimateQueue();

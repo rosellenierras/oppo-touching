@@ -81,7 +81,7 @@ Ext.chart.series.Series = Ext.extend(Ext.util.Observable, {
 
         me.mixins.labels.constructor.call(me, config);
         me.mixins.highlights.constructor.call(me, config);
-        me.mixins.tips.constructor.call(me, config);
+        //me.mixins.tips.constructor.call(me, config);
         me.mixins.callouts.constructor.call(me, config);
 
         me.chart.on({
