@@ -72,14 +72,14 @@ Ext.draw.SpriteGroup = Ext.extend(Ext.util.MixedCollection, {
 
     add: function(key, o) {
         //var result = this.callParent(arguments);
-        var result = Ext.draw.SpriteGroup.superclass.add.call(this, arguments);
+        var result = Ext.draw.SpriteGroup.superclass.add.apply(this, arguments);
         this.attachEvents(result);
         return result;
     },
 
     insert: function(index, key, o) {
         //return this.callParent(arguments);
-        return Ext.draw.SpriteGroup.superclass.insert.call(this, arguments);
+        return Ext.draw.SpriteGroup.superclass.insert.apply(this, arguments);
     },
 
     remove: function(o) {
@@ -94,7 +94,7 @@ Ext.draw.SpriteGroup = Ext.extend(Ext.util.MixedCollection, {
             click: me.onClick
         });
         //me.callParent(arguments);
-        Ext.draw.SpriteGroup.superclass.remove.call(this, arguments);
+        Ext.draw.SpriteGroup.superclass.remove.apply(this, arguments);
     },
     // Returns the group bounding box.
     getBBox: function() {

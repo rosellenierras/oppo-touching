@@ -225,7 +225,7 @@ Ext.draw.engine.SVG = Ext.extend(Ext.draw.Surface, {
             height: h
         });
         //me.callParent([w, h]);
-        Ext.draw.engine.SVG.superclass.setSize.call(this, w, h);
+        Ext.draw.engine.SVG.superclass.setSize.apply(this, arguments);
     },
 
     /**
@@ -254,12 +254,12 @@ Ext.draw.engine.SVG = Ext.extend(Ext.draw.Surface, {
             delete item.el;
         }
         //this.callParent(arguments);
-        Ext.draw.engine.SVG.superclass.onRemove.call(this, item);
+        Ext.draw.engine.SVG.superclass.onRemove.apply(this, arguments);
     },
     
     setViewBox: function(x, y, width, height) {
         //this.callParent(arguments);
-        Ext.draw.engine.SVG.superclass.SetViewBox.call(this, arguments);
+        Ext.draw.engine.SVG.superclass.setViewBox.apply(this, arguments);
         this.el.dom.setAttribute("viewBox", [x, y, width, height].join(" "));
     },
 

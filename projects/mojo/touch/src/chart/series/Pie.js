@@ -97,7 +97,7 @@ Ext.chart.series.Pie = Ext.extend(Ext.chart.series.Series, {
     
     constructor: function(config) {
         //this.callParent(arguments);
-        Ext.chart.series.Pie.superclass.constructor.call(this, config);
+        Ext.chart.series.Pie.superclass.constructor.apply(this, arguments);
         var me = this,
             chart = me.chart,
             surface = chart.surface,
@@ -724,7 +724,7 @@ Ext.chart.series.Pie = Ext.extend(Ext.chart.series.Series, {
     onAnimate: function(sprite, attr) {
         sprite.show();
         //return this.callParent(arguments);
-        var re = Ext.chart.series.Pie.superclass.onAnimate.call(this, sprite, attr);
+        var re = Ext.chart.series.Pie.superclass.onAnimate.apply(this, arguments);
         return re;
     },
 

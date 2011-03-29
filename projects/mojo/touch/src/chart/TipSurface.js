@@ -15,7 +15,7 @@ Ext.chart.TipSurface = Ext.extend(Ext.draw.Component, {
     renderFirst: true,
 
     constructor: function(config) {
-        Ext.chart.TipSurface.superclass.constructor.call(this, config);
+        Ext.chart.TipSurface.superclass.constructor.apply(this, arguments);
         if (config.sprites) {
             this.spriteArray = [].concat(config.sprites);
             delete config.sprites;

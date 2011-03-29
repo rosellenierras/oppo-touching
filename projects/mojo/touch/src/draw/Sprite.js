@@ -101,7 +101,8 @@ Ext.draw.Sprite = Ext.extend(Ext.util.Observable, {
             custom = me.surface.customAttributes,
             spriteAttrs = me.attr,
             attr, i, translate, translation, rotate, rotation, scale, scaling;
-
+        if(typeof attrs == 'undefined')
+            return this;
         for (attr in custom) {
             if (attrs.hasOwnProperty(attr) && typeof custom[attr] == "function") {
                 Ext.apply(attrs, custom[attr].apply(me, [].concat(attrs[attr])));

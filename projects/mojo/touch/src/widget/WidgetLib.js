@@ -16,6 +16,7 @@ Vitria.WidgetLib = {
             GeneratedXMLTestDataWidget:   {claz: Vitria.TestDataWidget, isLegacy:false},
             RichTextWidget:               {claz: Vitria.RichTextWidget, isLegacy:false},
             TextDisplayWidget:               {claz: Vitria.TextDisplayWidget, isLegacy:false},
+            DrawWidget:             {claz: Vitria.DrawWidget, isLegacy:false},
             /*  Charting Widgets */
             AreaChartWidget:              {claz: Vitria.ChartWidget, isLegacy:true},
             BarChartWidget:               {claz: Vitria.ChartWidget, isLegacy:true},
@@ -34,7 +35,8 @@ Vitria.WidgetLib = {
             'builtin:pie-chart-widget': 'PieChartWidget',
             'builtin:line-chart-widget': 'LineChartWidget',
             'builtin:rich-text-widget': 'RichTextWidget',
-            'builtin:text-display-widget': 'TextDisplayWidget'
+            'builtin:text-display-widget': 'TextDisplayWidget',
+            'builtin:draw-widget':'DrawWidget'
         },
         
         getWidgetType:function(alias) {
@@ -54,7 +56,7 @@ Vitria.WidgetLib = {
         
         isLegacyWidget:function(type) {
             var obj = this.widgetClassFactories[type];
-            if(obj['isLegacy'] == true)
+            if(obj && obj['isLegacy'] == true)
                 return true;
             return false;
         },

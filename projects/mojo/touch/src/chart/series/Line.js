@@ -113,7 +113,7 @@ Ext.chart.series.Line = Ext.extend(Ext.chart.series.Cartesian, {
 
     constructor: function(config) {
         //this.callParent(arguments);
-        Ext.chart.series.Line.superclass.constructor.call(this, config);
+        Ext.chart.series.Line.superclass.constructor.apply(this, arguments);
         var me = this,
             surface = me.chart.surface,
             shadow = me.chart.shadow,
@@ -707,7 +707,7 @@ Ext.chart.series.Line = Ext.extend(Ext.chart.series.Cartesian, {
     highlightItem: function() {
         var me = this;
         //me.callParent(arguments);
-        Ext.chart.series.Line.superclass.highlightItem.call(me, arguments);
+        Ext.chart.series.Line.superclass.highlightItem.apply(me, arguments);
         if (this.line && !this.highlighted) {
             if (!('__strokeWidth' in this.line)) {
                 this.line.__strokeWidth = this.line.attr['stroke-width'] || 0;
@@ -729,7 +729,7 @@ Ext.chart.series.Line = Ext.extend(Ext.chart.series.Cartesian, {
     unHighlightItem: function() {
         var me = this;
         //me.callParent(arguments);
-        Ext.chart.series.Line.superclass.unHighlightItem.call(me, arguments);
+        Ext.chart.series.Line.superclass.unHighlightItem.apply(me, arguments);
         if (this.line && this.highlighted) {
             this.line.__anim = new Ext.fx.Anim({
                 target: this.line,

@@ -21,7 +21,7 @@ Ext.chart.Mask = Ext.extend(Ext.util.Observable, {
         if (me.mask) {
             me.on('afterrender', function() {
                 //create a mask layer component
-                var comp = Ext.create('Ext.chart.MaskLayer', {
+                var comp = new Ext.chart.MaskLayer({
                     renderTo: me.el
                 });
                 comp.el.on({
@@ -33,7 +33,7 @@ Ext.chart.Mask = Ext.extend(Ext.util.Observable, {
                     }
                 });
                 //create a resize handler for the component
-                var resizeHandler = Ext.create('Ext.resizer.Resizer', {
+                var resizeHandler = new Ext.resizer.Resizer({
                     el: comp.el,
                     handles: 'all',
                     pinned: true

@@ -13,12 +13,22 @@ Vitria.ChartWidget = Ext.extend(Ext.chart.Chart, {
     fields: null,
     obj:null,
     
-    results: null,
+    results_: null,
     
     setResults: function(value) {
         var me = this;
-        me.applyResults(value, me.results);
-        me.results = value;
+        me.applyResults(value, me.results_);
+        me.results_ = value;
+    },
+    
+    /**
+     * Added by Kui, for set curWidth/curHeight correctly
+     */
+    setSize : function(width, height) {
+        var me = this;
+        me.curWidth = width;
+        me.curHeight = height;
+        Ext.chart.Chart.superclass.setSize.apply(me, arguments);
     },
     
     /**
@@ -27,12 +37,19 @@ Vitria.ChartWidget = Ext.extend(Ext.chart.Chart, {
      */
     applyResults:function(newValue, oldValue) {
         var me = this;
-        var store = Ext.create('Ext.data.JsonStore', {
+        var store = new Ext.data.JsonStore({
             fields: me.seriesValueField,
             data: newValue
         });
         me.bindStore(store, true);
-        //me.redraw();
+        // Don't redraw in touch, which will cause errors
+        me.redraw();
+    },
+    
+    doLayout:function() {
+        var me = this;
+        if(me.rendered)
+            me.redraw(false);    
     },
     
     constructor: function(config) {
@@ -64,8 +81,8 @@ Vitria.ChartWidget = Ext.extend(Ext.chart.Chart, {
                 case 'AreaChartWidget':
                     field = item.storeField;
                     var index = item.storeIndex;
-                    axis = axesValueFields[index];
-                    temp = me.results[index];
+                    axis = me.axesValueFields[index];
+                    temp = me.results_[index];
                     value = temp[field];
                     break;
                 case 'BarChartWidget':
@@ -73,7 +90,7 @@ Vitria.ChartWidget = Ext.extend(Ext.chart.Chart, {
                     // item contains 'value' {Array} [2], while [0] is seriesField like 'data1'
                     field = item.value[0];
                     value = item.value[1];
-                    var dp = me.results;
+                    var dp = me.results_;
                     var length = dp.length;
                     for (var i=0;i<length;i++) {
                         var obj2 = dp[i];
@@ -91,7 +108,7 @@ Vitria.ChartWidget = Ext.extend(Ext.chart.Chart, {
                 case 'LineChartWidget':
                     break;
                 case 'PieChartWidget':
-                    obj = me.generatePieChartWidget(axesLabelFields, axesValueFields, seriesLabelField, seriesValueField);
+                    obj = me.generatePieChartWidget(axesLabelFields, me.axesValueFields, seriesLabelField, seriesValueField);
                     break;
                 default:
                     break;
@@ -187,7 +204,7 @@ Vitria.ChartWidget = Ext.extend(Ext.chart.Chart, {
                 //xtype: 'chart',
                 //legend: legend,
                 legend: {
-                    position: 'bottom'
+                    position: this.getCorrectLegendPosition()
                 },
                 store: [],
                 axes: [{
@@ -222,6 +239,13 @@ Vitria.ChartWidget = Ext.extend(Ext.chart.Chart, {
             };  
     },
     
+    getCorrectLegendPosition:function() {
+        if(Ext.Viewport.orientation == 'portrait') {
+            return 'bottom';
+        } else {
+            return 'right';
+        }
+    },
     /***
      * Generate AreaChart config
      * Convention:
@@ -232,7 +256,7 @@ Vitria.ChartWidget = Ext.extend(Ext.chart.Chart, {
                 //xtype: 'chart',
                 //legend: legend,
                 legend: {
-                    position: 'bottom'
+                    position: this.getCorrectLegendPosition()
                 },
                 store: [],
                 axes: [{
@@ -286,7 +310,7 @@ Vitria.ChartWidget = Ext.extend(Ext.chart.Chart, {
         return  {animate: true,
                  shadow: true,
                 legend: {
-                    position: 'bottom'
+                    position: this.getCorrectLegendPosition()
                 },
                 store: [],
                 //theme: 'White',
@@ -348,7 +372,7 @@ Vitria.ChartWidget = Ext.extend(Ext.chart.Chart, {
         return  {animate: true,
                  shadow: true,
                 legend: {
-                    position: 'bottom'
+                    position: this.getCorrectLegendPosition()
                 },
                 store: [],
                 //theme: 'White',
@@ -414,7 +438,7 @@ Vitria.ChartWidget = Ext.extend(Ext.chart.Chart, {
                  animate: true,
                  shadow: true,
                 legend: {
-                    position: 'right'
+                    position: this.getCorrectLegendPosition()
                 },
                 store: [],
                 insetPadding: 60,

@@ -25,7 +25,7 @@ Ext.draw.Component = Ext.extend(Ext.Component, {
      */
     implOrder: ['SVG', 'Canvas', 'VML'],
 
-    baseCls: Ext.baseCSSPrefix + 'surface',
+    baseCls:  'x-surface',
 
     componentLayout: 'draw',
 
@@ -58,13 +58,15 @@ Ext.draw.Component = Ext.extend(Ext.Component, {
     /**
      * Create the Surface on initial render
      */
-    onRender: function() {
+    //onRender: function() { // old API of EXT JS4
+    // With Touch API
+    onRender: function(container, position) {
         var me = this,
             viewBox = me.viewBox,
             autoSize = me.autoSize,
             bbox, items, width, height, x, y;
         //me.callParent(arguments);
-        Ext.draw.Component.superclass.onRender.call(this, arguments);
+        Ext.draw.Component.superclass.onRender.apply(this, arguments);
         me.createSurface();
 
         items = me.surface.items;

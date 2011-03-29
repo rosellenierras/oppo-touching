@@ -216,10 +216,18 @@ Ext.ux.UniversalUI = Ext.extend(Ext.Panel, {
         }
 
         if (card) {
+            var orignalCard = this.getActiveItem();
+            if(orignalCard != null && orignalCard.isPage == true) {
+                this.remove(orignalCard, true);
+            }
             this.setActiveItem(card, anim || 'slide');
             this.currentCard = card;
+            
+            //if('redraw' in card) {
+            //    card.redraw();
+            //}
         }
-
+        
         if (title) {
             this.navigationBar.setTitle(title);
         }

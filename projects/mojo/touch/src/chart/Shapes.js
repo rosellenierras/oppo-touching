@@ -3,10 +3,10 @@
  * @ignore
  */
 // Ext.define('Ext.chart.Shapes', {
-Ext.chart.Shapes = Ext.extend(Object, {
+Ext.chart.Shapes = {
     /* Begin Definitions */
 
-    singleton: true,
+    //singleton: true,
 
     /* End Definitions */
 
@@ -104,4 +104,4 @@ Ext.chart.Shapes = Ext.extend(Object, {
             fill: '#fff'
         });
     }
-});
+};

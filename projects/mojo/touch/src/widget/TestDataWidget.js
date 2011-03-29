@@ -71,7 +71,7 @@ Vitria.TestDataWidget = Ext.extend(Ext.util.Observable, {
              */
             'propertyChanged'
         );
-        Vitria.TestDataWidget.superclass.constructor.call(this, arguments);
+        Vitria.TestDataWidget.superclass.constructor.call(this);
     },
     
     refresh:function() {

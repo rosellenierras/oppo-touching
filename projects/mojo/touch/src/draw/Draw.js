@@ -4,7 +4,8 @@
  */
 
 // Ext.define('Ext.draw.Draw', {
-Ext.draw.Draw = Ext.extend(Object, {
+Ext.draw.Draw = Ext.extend(Object, {});
+Ext.apply(Ext.draw.Draw, {
     /* Begin Definitions */
 
     //singleton: true,

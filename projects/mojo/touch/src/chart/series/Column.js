@@ -27,7 +27,7 @@
 
 //Ext.define('Ext.chart.series.Column', {
 
-Ext.chart.series.Series = Ext.extend(Ext.chart.series.Bar, {
+Ext.chart.series.Column = Ext.extend(Ext.chart.series.Bar, {
     /* Begin Definitions */
 
     //extend: 'Ext.chart.series.Bar',
@@ -47,5 +47,10 @@ Ext.chart.series.Series = Ext.extend(Ext.chart.series.Bar, {
      * @cfg {Number} ypadding
      * Padding between the top/bottom axes and the bars
      */
-    ypadding: 0
+    ypadding: 0,
+    
+    constructor: function(config) {
+        //this.callParent(arguments);
+        Ext.chart.series.Column.superclass.constructor.apply(this, arguments);
+    }
 });

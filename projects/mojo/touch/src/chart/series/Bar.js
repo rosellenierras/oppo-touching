@@ -86,7 +86,7 @@ Ext.chart.series.Bar = Ext.extend(Ext.chart.series.Cartesian, {
 
     constructor: function(config) {
         //this.callParent(arguments);
-        Ext.chart.series.Bar.superclass.constructor.call(this, config);
+        Ext.chart.series.Bar.superclass.constructor.apply(this, arguments);
         var me = this,
             surface = me.chart.surface,
             shadow = me.chart.shadow,
@@ -705,7 +705,7 @@ Ext.chart.series.Bar = Ext.extend(Ext.chart.series.Cartesian, {
     onAnimate: function(sprite, attr) {
         sprite.show();
         // return this.callParent(arguments);
-        var res = Ext.chart.series.Bar.superclass.onAnimate.call(this, sprite, attr);
+        var res = Ext.chart.series.Bar.superclass.onAnimate.apply(this, arguments);
         return res;
     },
     

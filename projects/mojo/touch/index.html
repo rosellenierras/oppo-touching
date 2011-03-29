@@ -3,14 +3,15 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <!-- # // enable full-screen mode   -->
-    <meta name="apple-mobile-web-app-capable" content="yes"/> 
+    <!--meta name="apple-mobile-web-app-capable" content="yes"/--> 
 
     <title>M3OJO</title>
 
     <link rel="stylesheet" href="resources/css/sencha-touch-debug.css" type="text/css">
     <link rel="stylesheet" href="themes/sink.css" type="text/css">
     <link rel="stylesheet" href="themes/codebox.css" type="text/css">
-
+    <link rel="stylesheet" href="themes/chart.css" type="text/css">
+    
     <!--script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script-->
     <script type="text/javascript" src="sencha-touch-debug.js"></script>
     
@@ -21,11 +22,21 @@
     
     <script type="text/javascript" src="src/util/target/Sprite.js"></script>
     <script type="text/javascript" src="src/util/target/SpriteGroup.js"></script>
+    
+    <script type="text/javascript" src="src/util/CubicBezier.js"></script>
+    <script type="text/javascript" src="src/util/Easing.js"></script>
+    <script type="text/javascript" src="src/util/PropHandler.js"></script>
+    <script type="text/javascript" src="src/util/PseudoEasing.js"></script>
+
     <script type="text/javascript" src="src/util/Queue.js"></script>
+    <script type="text/javascript" src="src/util/Animator.js"></script>
+    <script type="text/javascript" src="src/util/Anim.js"></script>
+
     <script type="text/javascript" src="src/util/TaskMgr.js"></script>
     <script type="text/javascript" src="src/util/Manager.js"></script>
     <script type="text/javascript" src="src/util/Animate.js"></script>
     
+    <script type="text/javascript" src="src/layout/Draw.js"></script>
     <!-- Charting component -->
     <script type="text/javascript" src="src/chart/Callouts.js"></script>
     <script type="text/javascript" src="src/chart/Mask.js"></script>
@@ -34,8 +45,9 @@
     <script type="text/javascript" src="src/draw/Draw.js"></script>
     <script type="text/javascript" src="src/draw/Matrix.js"></script>
     <script type="text/javascript" src="src/chart/Labels.js"></script>
-    <script type="text/javascript" src="src/chart/theme/Theme.js"></script>
+    <!--script type="text/javascript" src="src/chart/theme/Theme.js"></script-->
     <script type="text/javascript" src="src/chart/theme/Base.js"></script>
+    
     <script type="text/javascript" src="src/draw/Sprite.js"></script>
     <script type="text/javascript" src="src/draw/SpriteGroup.js"></script>
     <script type="text/javascript" src="src/chart/LegendItem.js"></script>
@@ -73,13 +85,16 @@
     <script type="text/javascript" src="src/widget/builtins/RichTextWidget.js"></script>
     <script type="text/javascript" src="src/widget/display/TextDisplayWidget.js"></script>
     <script type="text/javascript" src="src/widget/display/ChartWidget.js"></script>
+    <script type="text/javascript" src="src/widget/beta/DrawWidget.js"></script>
     
     <script type="text/javascript" src="src/widget/WidgetDelegate.js"></script>
     <script type="text/javascript" src="src/widget/WidgetSetDelegate.js"></script>
     <script type="text/javascript" src="src/widget/WidgetLib.js"></script>
     
     <!-- Touch navigator layout -->
+    <script type="text/javascript" src="src/example-data.js"></script>
     <script type="text/javascript" src="src/CodeBox.js"></script>
+    <!--script type="text/javascript" src="src/Page.js"></script-->
     <script type="text/javascript" src="src/Page.js"></script>
     <script type="text/javascript" src="src/index.js"></script>
     
