@@ -13,6 +13,13 @@
                 "type": "book",
                 "items": [
                     {
+                        "id": 999,
+                        "name": "Tiger",
+                        "type": "page",
+                        "image": null,
+                        "leaf": true,
+                        "def": "../data/Tiger.xml"
+                    }, {
                         "id": 1000,
                         "name": "AreaChartExample",
                         "type": "page",
