@@ -572,7 +572,7 @@ Ext.chart.series.Line = Ext.extend(Ext.chart.series.Cartesian, {
                 for(j = 0; j < lnsh; j++) {
                     shadows[j].setAttributes({
                         path: path
-                    });
+                    }, true);
                 }
             }
             if (me.fill) {

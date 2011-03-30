@@ -1,4 +1,9 @@
 
+/* line 24, ../themes/stylesheets/ext4/default/core/_core.scss */
+.x-hide-visibility {
+  visibility: hidden !important;
+}
+
 /* line 2, ../themes/stylesheets/ext4/default/widgets/_drawcomponent.scss */
 .x-surface {
   display: -moz-inline-box;

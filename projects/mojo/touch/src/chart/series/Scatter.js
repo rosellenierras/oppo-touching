@@ -287,6 +287,7 @@ Ext.chart.series.Scatter = Ext.extend(Ext.chart.series.Cartesian, {
             shadowGroups = me.shadowGroups,
             shadowAttributes = me.shadowAttributes,
             lnsh = shadowGroups.length,
+            bbox = me.bbox,
             i, shadow, shadows, attr, endMarkerStyle, type;
 
         endMarkerStyle = Ext.apply(me.markerStyle, me.markerCfg);
