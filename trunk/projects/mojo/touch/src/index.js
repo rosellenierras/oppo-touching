@@ -203,6 +203,9 @@ Ext.ux.UniversalUI = Ext.extend(Ext.Panel, {
         if (record) {
             type        = record.get('type');
             var name = record.get('name');
+            var or = this.getActiveItem();
+            if(or != null && or.pageName == name)
+                return;
             if(type == 'page') {
                 card        = new Ext.Page({page: name});
                 //card        = record.get('card');

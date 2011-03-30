@@ -1,5 +1,41 @@
-Vitria.DrawWidget = Ext.extend(Ext.draw.Component, {
-    
+Vitria.DrawWidget = Ext.extend(Ext.Panel, {
+        layout: 'fit',
+        
+        constructor:function() {
+           this.childId = this.getChildId();
+           Vitria.DrawWidget.superclass.constructor.apply(this, arguments);
+        },
+          
+        /**
+        *
+        * Added by Kui, for set curWidth/curHeight correctly
+        */
+       setSize : function(width, height) {
+           var me = this;
+           Vitria.DrawWidget.superclass.setSize.apply(me, arguments);
+           var tiger = Ext.getCmp(me.childId);
+           if(tiger) {
+                tiger.curWidth = width;
+                tiger.curHeight = height;
+           }
+       },
+       
+       getChildId:function() {
+           return 'tiger-' + (++Ext.lib.Component.AUTO_ID);
+       },
+       
+       destroy:function() {
+           var tiger = Ext.getCmp(this.childId);
+           if(tiger) {
+                tiger.destroy();
+                //this.remove(tiger, true);
+           }
+           Vitria.DrawWidget.superclass.destroy.call(this);
+       },
+       
+       onRender:function() {
+          var tiger = new Ext.draw.Component({
+        id: this.childId,
         autoSize: true,
         //width: 200,
         //height: 200,
@@ -8,20 +44,8 @@ Vitria.DrawWidget = Ext.extend(Ext.draw.Component, {
         //    constrain: true
         //},
         //floating: true,
-        //renderTo: Ext.getBody(),
-        /**
-     * Added by Kui, for set curWidth/curHeight correctly
-     */
-    setSize : function(width, height) {
-        var me = this;
-        me.curWidth = width;
-        me.curHeight = height;
-        Vitria.DrawWidget.superclass.setSize.apply(me, arguments);
-    },
-    
-    refresh:function() {
-        this.refresh();
-    },
+        //renderTo: this.el,
+     
         items: [{
             type: "path",
             path: "M-122.304 84.285C-122.304 84.285 -122.203 86.179 -123.027 86.16C-123.851 86.141 -140.305 38.066 -160.833 40.309C-160.833 40.309 -143.05 32.956 -122.304 84.285z","stroke-width":"0.172",
@@ -1532,4 +1556,8 @@ Vitria.DrawWidget = Ext.extend(Ext.draw.Component, {
             stroke: "#000",
             fill: "#000"
         }]
-    });
+                });
+          this.add(tiger);
+          Vitria.DrawWidget.superclass.onRender.apply(this, arguments);
+       }
+});
