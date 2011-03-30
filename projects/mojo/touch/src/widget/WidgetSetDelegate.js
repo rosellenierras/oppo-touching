@@ -166,12 +166,15 @@ Vitria.WidgetSetDelegate = Ext.extend(Vitria.WidgetDelegate, {
          * me.children = [];
          * 
          */
-        if(me.children.length >= 0) {
+        while(me.children.length > 0) {
             var delegate = me.children.pop();
             delegate.un('propertyChanged', me.propertyChangedHandler);
             delegate.destroy();
         } 
         me.children = [];
+        while(me.links.length > 0) {
+            me.links.pop();
+        }
         me.links = [];
         me.eventsPending = [];
         me.layout = null;
