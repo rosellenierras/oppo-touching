@@ -658,7 +658,6 @@ Ext.draw.engine.VML = Ext.extend(Ext.draw.Surface, {
             doc = Ext.getDoc().dom;
         // VML Node factory method (createNode)
         if (!me.createNode) {
-            doc.createStyleSheet().addRule(".rvml", "behavior:url(#default#VML)");
             try {
                 if (!doc.namespaces.rvml) {
                     doc.namespaces.add("rvml", "urn:schemas-microsoft-com:vml");
