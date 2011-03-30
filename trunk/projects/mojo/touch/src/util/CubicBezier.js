@@ -2,13 +2,7 @@
  * @class Ext.fx.CubicBezier
  * @ignore
  */
-//Ext.define('Ext.fx.CubicBezier', {
 Ext.fx.CubicBezier = {
-    /* Begin Definitions */
-
-    //singleton: true,
-
-    /* End Definitions */
 
     cubicBezierAtTime: function(t, p1x, p1y, p2x, p2y, duration) {
         var cx = 3 * p1x,

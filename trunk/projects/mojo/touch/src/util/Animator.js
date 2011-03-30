@@ -3,16 +3,10 @@
  * Animation instance
  * @ignore
  */
-//Ext.define('Ext.fx.Animator', {
 Ext.fx.Animator = Ext.extend(Ext.util.Observable, {
-    /* Begin Definitions */
-/*
-    mixins: {
-        observable: 'Ext.util.Observable'
-    },
 
-    requires: ['Ext.fx.Manager'],
-*/
+    //requires: ['Ext.fx.Manager'],
+
     /* End Definitions */
 
     isAnimator: true,

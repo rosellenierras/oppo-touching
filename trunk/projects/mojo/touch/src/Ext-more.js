@@ -2,6 +2,7 @@
 Ext.apply(Ext, {
     
     baseCSSPrefix: 'x-',
+    
     capitalize: function(string) {
         return string.charAt(0).toUpperCase() + string.substr(1);
     },
@@ -9,13 +10,13 @@ Ext.apply(Ext, {
     /**
     * Copies a set of named properties fom the source object to the destination object.
     * <p>example:<pre><code>
-ImageComponent = Ext.extend(Ext.Component, {
-    initComponent: function() {
-        this.autoEl = { tag: 'img' };
-        MyComponent.superclass.initComponent.apply(this, arguments);
-        this.initialBox = Ext.copyTo({}, this.initialConfig, 'x,y,width,height');
-    }
-});
+        ImageComponent = Ext.extend(Ext.Component, {
+            initComponent: function() {
+                this.autoEl = { tag: 'img' };
+                MyComponent.superclass.initComponent.apply(this, arguments);
+                this.initialBox = Ext.copyTo({}, this.initialConfig, 'x,y,width,height');
+            }
+        });
     * </code></pre>
     * @param {Object} dest The destination object.
     * @param {Object} source The source object.

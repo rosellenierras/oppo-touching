@@ -4,15 +4,9 @@
  * A single item of a legend (marker plus label)
  * @constructor
  */
-//Ext.define('Ext.chart.LegendItem', {
 Ext.chart.LegendItem = Ext.extend(Ext.draw.SpriteGroup, {
-    /* Begin Definitions */
-
-    //extend: 'Ext.draw.SpriteGroup',
 
     //requires: ['Ext.chart.Shapes'],
-
-    /* End Definitions */
 
     // Position of the item, relative to the upper-left corner of the legend box
     x: 0,

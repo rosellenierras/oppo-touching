@@ -2,17 +2,8 @@
  * @class Ext.draw.SpriteGroup
  * @extends Ext.util.MixedCollection
  */
-//Ext.define('Ext.draw.SpriteGroup', {
-
 Ext.draw.SpriteGroup = Ext.extend(Ext.util.MixedCollection, {
-    /* Begin Definitions */
-/*
-    extend: 'Ext.util.MixedCollection',
-    mixins: {
-        animate: 'Ext.util.Animate'
-    },
-*/
-    /* End Definitions */
+
     isSpriteGroup: true,
     constructor: function(config) {
         var me = this;
@@ -248,3 +239,5 @@ Ext.draw.SpriteGroup = Ext.extend(Ext.util.MixedCollection, {
         me.clearListeners();
     }
 });
+
+Ext.mixin(Ext.draw.SpriteGroup, 'animate', Ext.util.Animate);

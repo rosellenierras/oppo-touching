@@ -3,16 +3,9 @@
  * @extends Ext.draw.Surface
  * Provides specific methods to draw with SVG.
  */
-//Ext.define('Ext.draw.engine.SVG', {
-
 Ext.draw.engine.SVG = Ext.extend(Ext.draw.Surface, {
-    /* Begin Definitions */
-
-    //extend: 'Ext.draw.Surface',
 
     //requires: ['Ext.draw.Draw', 'Ext.draw.Sprite', 'Ext.draw.Matrix', 'Ext.core.Element'],
-
-    /* End Definitions */
 
     engine: 'SVG',
 

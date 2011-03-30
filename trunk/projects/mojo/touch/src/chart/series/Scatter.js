@@ -47,16 +47,9 @@
  * @xtype scatter
  * 
  */
-//Ext.define('Ext.chart.series.Scatter', {
-
 Ext.chart.series.Scatter = Ext.extend(Ext.chart.series.Cartesian, {
-    /* Begin Definitions */
-
-    //extend: 'Ext.chart.series.Cartesian',
 
     //requires: ['Ext.chart.axis.Axis', 'Ext.chart.Shapes', 'Ext.fx.Anim'],
-
-    /* End Definitions */
 
     type: 'scatter',
 

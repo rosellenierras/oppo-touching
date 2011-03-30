@@ -4,14 +4,7 @@
  * @private
  */
 
-//Ext.define('Ext.fx.target.SpriteGroup', {
-
 Ext.fx.target.SpriteGroup = Ext.extend(Ext.fx.target.Sprite, {
-    /* Begin Definitions */
-
-    //extend: 'Ext.fx.target.Sprite',
-
-    /* End Definitions */
 
     getAttr: function(attr, val) {
         var out = [],

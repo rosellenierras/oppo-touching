@@ -1,6 +1,4 @@
-// Ext.define('Ext.chart.MaskLayer', {
 Ext.chart.MaskLayer = Ext.extend(Ext.Component, {
-    //extend: 'Ext.Component',
     
     constructor: function(config) {
         config = Ext.apply(config || {}, {

@@ -33,27 +33,8 @@
  * @xtype chart
  */
 
-// Ext.define('Ext.chart.Chart', {
 Ext.chart.Chart = Ext.extend(Ext.draw.Component, {
-    /* Begin Definitions */
-    /*
-    alias: 'widget.chart',
-
-    extend: 'Ext.draw.Component',
-
-    mixins: {
-        themeMgr: 'Ext.chart.theme.Theme',
-        mask: 'Ext.chart.Mask'
-    },
-
-    requires: [
-        'Ext.util.MixedCollection',
-        'Ext.data.StoreMgr',
-        'Ext.chart.Legend',
-        'Ext.util.DelayedTask'
-    ],
-    */ 
-    /* End Definitions */
+    
     // @private
     viewBox: false,
 

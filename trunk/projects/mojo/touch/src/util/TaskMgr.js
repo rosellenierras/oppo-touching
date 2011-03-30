@@ -31,7 +31,6 @@ Ext.TaskMgr.start({
  * @param {Number} interval (optional) The minimum precision in milliseconds supported by this TaskRunner instance
  * (defaults to 10)
  */
-Ext.ns('Ext.util');
 
 Ext.util.TaskRunner = function(interval) {
     interval = interval || 10;

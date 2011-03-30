@@ -5,19 +5,7 @@
  * methods from Labels, Highlights, Tips and Callouts mixins. This class implements the logic of handling 
  * mouse events, animating, hiding, showing all elements and returning the color of the series to be used as a legend item.
  */
-// Ext.define('Ext.chart.series.Series', {
-
 Ext.chart.series.Series = Ext.extend(Ext.util.Observable, {
-    /* Begin Definitions */
-
-    /*mixins: {
-        labels: 'Ext.chart.Labels',
-        highlights: 'Ext.chart.Highlights',
-        tips: 'Ext.chart.Tips',
-        callouts: 'Ext.chart.Callouts'
-    },*/
-
-    /* End Definitions */
 
     /**
      * @cfg {String} type
@@ -291,9 +279,3 @@ Ext.mixin(Ext.chart.series.Series, 'labels', Ext.chart.Labels);
 Ext.mixin(Ext.chart.series.Series, 'highlights', Ext.chart.Highlights);
 Ext.mixin(Ext.chart.series.Series, 'tips', Ext.chart.Tips);
 Ext.mixin(Ext.chart.series.Series, 'callouts', Ext.chart.Callouts);
-/*
-        labels: 'Ext.chart.Labels',
-        highlights: 'Ext.chart.Highlights',
-        tips: 'Ext.chart.Tips',
-        callouts: 'Ext.chart.Callouts'
-*/

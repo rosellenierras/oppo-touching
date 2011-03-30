@@ -3,16 +3,10 @@
  * Animation instance...
  */
 
-//Ext.define('Ext.fx.Anim', {
 Ext.fx.Anim = Ext.extend(Ext.util.Observable, {
-    /* Begin Definitions */
-   /*
-    mixins: {
-        observable: 'Ext.util.Observable'
-    },
 
-    requires: ['Ext.fx.Manager', 'Ext.fx.Animator', 'Ext.fx.Easing', 'Ext.fx.CubicBezier', 'Ext.fx.PropHandler'],
-   */
+    //requires: ['Ext.fx.Manager', 'Ext.fx.Animator', 'Ext.fx.Easing', 'Ext.fx.CubicBezier', 'Ext.fx.PropHandler'],
+   
     /* End Definitions */
 
     isAnimation: true,

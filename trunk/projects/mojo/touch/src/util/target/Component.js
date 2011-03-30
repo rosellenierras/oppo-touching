@@ -4,11 +4,7 @@
  * @extends Object
  */
 
-//Ext.define('Ext.fx.target.Component', {
 Ext.fx.target.Component = Ext.extend(Object, {
-    /* Begin Definitions */
-
-    /* End Definitions */
 
     isAnimTarget: true,
 

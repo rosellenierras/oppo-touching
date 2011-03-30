@@ -2,18 +2,12 @@
  * @class Ext.draw.Surface
  * @extends Object
  */
-// Ext.define('Ext.draw.Surface', {
 
 Ext.draw.Surface = Ext.extend(Ext.util.Observable, {
-    /* Begin Definitions */
-/*
-    mixins: {
-        observable: 'Ext.util.Observable'
-    },
 
-    requires: ['Ext.draw.SpriteGroup'],
-    uses: ['Ext.draw.engine.SVG', 'Ext.draw.engine.VML', 'Ext.draw.engine.Canvas'],
-*/
+    //requires: ['Ext.draw.SpriteGroup'],
+    //uses: ['Ext.draw.engine.SVG', 'Ext.draw.engine.VML', 'Ext.draw.engine.Canvas'],
+
     separatorRe: /[, ]+/,
 
     // statics: {

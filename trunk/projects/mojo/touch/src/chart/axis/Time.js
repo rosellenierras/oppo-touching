@@ -35,15 +35,9 @@
  * 
  * @constructor
  */
-//Ext.define('Ext.chart.axis.Time', {
 Ext.chart.axis.Time = Ext.extend(Ext.chart.axis.Category, {
-    /* Begin Definitions */
-
-    //extend: 'Ext.chart.axis.Category',
 
     //requires: ['Ext.data.Store', 'Ext.data.JsonStore'],
-
-    /* End Definitions */
 
      /**
       * The minimum value drawn by the axis. If not set explicitly, the axis

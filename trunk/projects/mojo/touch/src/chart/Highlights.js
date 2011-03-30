@@ -2,13 +2,9 @@
  * @class Ext.chart.Highlights
  * @ignore
  */
-//Ext.define('Ext.chart.Highlights', {
 Ext.chart.Highlights = Ext.extend(Object, {
-    /* Begin Definitions */
 
     //requires: ['Ext.fx.Anim'],
-
-    /* End Definitions */
 
     /**
      * Highlight the given series item.

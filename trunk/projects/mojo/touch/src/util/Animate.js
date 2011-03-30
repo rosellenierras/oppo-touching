@@ -2,8 +2,8 @@
  * @class Ext.util.Animate
  * A mixin to add animation capabilities to Elements/CompositeElements/Sprites/SpriteGroups/Components
  */
-//Ext.define('Ext.util.Animate', {
 Ext.util.Animate = Ext.extend(Object, {
+    
     //uses: ['Ext.fx.Manager', 'Ext.fx.Anim'],
 
     /**

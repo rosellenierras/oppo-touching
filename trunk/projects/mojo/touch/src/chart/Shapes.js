@@ -2,13 +2,9 @@
  * @class Ext.chart.Shapes
  * @ignore
  */
-// Ext.define('Ext.chart.Shapes', {
 Ext.chart.Shapes = {
-    /* Begin Definitions */
 
     //singleton: true,
-
-    /* End Definitions */
 
     circle: function (surface, opts) {
         return surface.add(Ext.apply({

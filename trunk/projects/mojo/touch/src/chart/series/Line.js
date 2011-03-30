@@ -52,16 +52,9 @@
  </p>
  */
 
-//Ext.define('Ext.chart.series.Line', {
-
 Ext.chart.series.Line = Ext.extend(Ext.chart.series.Cartesian, {
-    /* Begin Definitions */
-
-    //extend: 'Ext.chart.series.Cartesian',
 
     //requires: ['Ext.chart.axis.Axis', 'Ext.chart.Shapes', 'Ext.draw.Draw', 'Ext.fx.Anim'],
-
-    /* End Definitions */
 
     type: 'line',
 

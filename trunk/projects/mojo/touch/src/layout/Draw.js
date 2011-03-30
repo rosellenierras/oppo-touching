@@ -5,15 +5,7 @@
  *
  */
 
-//Ext.define('Ext.layout.component.Draw', {
 Ext.layout.Draw = Ext.extend(Ext.layout.AutoComponentLayout , {
-    /* Begin Definitions */
-
-    //alias: 'layout.draw',
-
-    //extend: 'Ext.layout.component.Auto',
-
-    /* End Definitions */
 
     type: 'draw',
 

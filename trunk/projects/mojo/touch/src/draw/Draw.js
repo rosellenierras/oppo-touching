@@ -2,17 +2,11 @@
  * @class Ext.draw.Draw
  * Base Drawing class.  Provides base drawing functions.
  */
-
-// Ext.define('Ext.draw.Draw', {
 Ext.draw.Draw = Ext.extend(Object, {});
 Ext.apply(Ext.draw.Draw, {
-    /* Begin Definitions */
 
     //singleton: true,
-
     //requires: ['Ext.draw.Color'],
-
-    /* End Definitions */
 
     pathToStringRE: /,?([achlmqrstvxz]),?/gi,
     pathCommandRE: /([achlmqstvz])[\s,]*((-?\d*\.?\d*(?:e[-+]?\d+)?\s*,?\s*)+)/ig,
