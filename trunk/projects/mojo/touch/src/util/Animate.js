@@ -79,6 +79,3 @@ Ext.util.Animate = Ext.extend(Object, {
         return Ext.fx.Manager.hasActiveFx(this.id);
     }
 });
-
-// Apply Animate mixin manually until Element is defined in the proper 4.x way
-//Ext.applyIf(Ext.core.Element.prototype, Ext.util.Animate.prototype);

@@ -13,7 +13,7 @@
       <param name="$tokenList" value="LoremIpsum"/>
       <param name="$numValueField" value="3"/>
     </widget>
-    <widget uuid="BDC5DDC2-7159-1B59-AA47-6A9BCE9F97C0" name="builtin:vertical-slider-widget" title="UpperThreshold" xpos="406" ypos="186" compx="248" compy="294" width="191" height="150" frame="RoundedBox" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
+    <!--widget uuid="BDC5DDC2-7159-1B59-AA47-6A9BCE9F97C0" name="builtin:vertical-slider-widget" title="UpperThreshold" xpos="406" ypos="186" compx="248" compy="294" width="191" height="150" frame="RoundedBox" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
       <param name="minimum" value="50"/>
       <param name="maximum" value="100"/>
       <param name="tick-interval" value="10"/>
@@ -21,7 +21,7 @@
     <widget uuid="8B91F423-3174-2E71-42AD-6A9BD650C096" name="builtin:vertical-slider-widget" title="LowerThreshold" xpos="402" ypos="347" compx="236.15" compy="415" width="200" height="150" frame="RoundedBox" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
       <param name="maximum" value="50"/>
       <param name="tick-interval" value="10"/>
-    </widget>
+    </widget-->
     <widget uuid="A40E8CDE-B40C-0F56-A9DC-64CA5053B9FC" name="builtin:line-chart-widget" title="Multi Series" xpos="609" ypos="177" compx="444.15" compy="286" width="384" height="329" frame="Panel" frameStyle="null" visible="Always" selectable="false" dataChangeOnly="true" refreshOnQuiesce="false">
       <param name="series" value="value0,value1,value2"/>
       <param name="labels" value="group0"/>
@@ -50,13 +50,13 @@
       <source uuid="0A42365B-ADD3-05B8-764C-64CA0A169AB8" port="$result"/>
       <target uuid="A40E8CDE-B40C-0F56-A9DC-64CA5053B9FC" port="$results"/>
     </link>
-    <link event="undefined">
+    <!--link event="undefined">
       <source uuid="BDC5DDC2-7159-1B59-AA47-6A9BCE9F97C0" port="$value"/>
       <target uuid="A40E8CDE-B40C-0F56-A9DC-64CA5053B9FC" port="upperThreshold"/>
     </link>
     <link event="undefined">
       <source uuid="8B91F423-3174-2E71-42AD-6A9BD650C096" port="$value"/>
       <target uuid="A40E8CDE-B40C-0F56-A9DC-64CA5053B9FC" port="lowerThreshold"/>
-    </link>
+    </link-->
   </connection>
 </widget>
