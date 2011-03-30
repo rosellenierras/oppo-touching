@@ -3,16 +3,9 @@
  * @extends Ext.draw.Surface
  * Provides specific methods to draw with Canvas.
  */
-//Ext.define('Ext.draw.engine.Canvas', {
-
 Ext.draw.engine.Canvas = Ext.extend(Ext.draw.Surface, {
-    /* Begin Definitions */
-/*
-    extend: 'Ext.draw.Surface',
 
-    requires: ['Ext.draw.Draw', 'Ext.draw.Sprite', 'Ext.core.Element'],
-*/
-    /* End Definitions */
+    //requires: ['Ext.draw.Draw', 'Ext.draw.Sprite', 'Ext.core.Element'],
 
     fontSizeRE: /(?:^|\s)(\d+)px(?:\s|$)/,
     fontWeightRE: /(?:^|\s)(normal|bold|bolder|lighter|[1-9]00)(?:\s|$)/,

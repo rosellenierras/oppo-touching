@@ -2,13 +2,9 @@
  * @class Ext.chart.Tips
  * @ignore
  */
-//Ext.define('Ext.chart.Tips', {
 Ext.chart.Tips = Ext.extend(Object, {
-    /* Begin Definitions */
 
     //requires: ['Ext.tip.ToolTip', 'Ext.chart.TipSurface'],
-
-    /* End Definitions */
 
     constructor: function(config) {
         var me = this,

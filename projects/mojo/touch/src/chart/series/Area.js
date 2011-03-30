@@ -32,16 +32,10 @@
  * @xtype area
  * 
  */
-//Ext.define('Ext.chart.series.Area', {
 
 Ext.chart.series.Area = Ext.extend(Ext.chart.series.Cartesian, {
-    /* Begin Definitions */
-
-    //extend: 'Ext.chart.series.Cartesian',
 
     //requires: ['Ext.chart.axis.Axis', 'Ext.draw.Color', 'Ext.fx.Anim'],
-
-    /* End Definitions */
 
     type: 'area',
 

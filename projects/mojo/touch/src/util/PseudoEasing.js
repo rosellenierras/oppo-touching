@@ -15,13 +15,7 @@
  * @singleton
  */
 
-//Ext.define('Ext.fx.PseudoEasing', {
 Ext.fx.PseudoEasing = {
-    /* Begin Definitions */
-
-    //singleton: true,
-
-    /* End Definitions */
 
     'back-in': {
         isPseudoEasing: true,

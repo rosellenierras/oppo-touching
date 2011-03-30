@@ -4,7 +4,6 @@
  * @private
  */
 
-//Ext.define('Ext.fx.Queue', {
 Ext.fx.Queue = Ext.extend(Object, {
     //requires: ['Ext.util.HashMap'],
 

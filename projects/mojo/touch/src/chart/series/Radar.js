@@ -57,16 +57,9 @@
  * @xtype radar
  * 
  */
-//Ext.define('Ext.chart.series.Radar', {
-
 Ext.chart.series.Radar = Ext.extend(Ext.chart.series.Series, {
-    /* Begin Definitions */
-
-    //extend: 'Ext.chart.series.Series',
 
     //requires: ['Ext.chart.Shapes', 'Ext.fx.Anim'],
-
-    /* End Definitions */
 
     type: "pie",
     rad: Math.PI / 180,

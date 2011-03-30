@@ -3,16 +3,7 @@
  * @extends Object
  * Base drawing spriteitive class.  Provides bucket for all spriteitive attributes and basic methods for updating them.
  */
-//Ext.define('Ext.draw.Sprite', {
 Ext.draw.Sprite = Ext.extend(Ext.util.Observable, {
-    /* Begin Definitions */
-/*
-    mixins: {
-        observable: 'Ext.util.Observable',
-        animate: 'Ext.util.Animate'
-    },
-*/
-    /* End Definitions */
 
     dirty: false,
     dirtyHidden: false,
@@ -258,9 +249,3 @@ Ext.draw.Sprite = Ext.extend(Ext.util.Observable, {
 });
 
 Ext.mixin(Ext.draw.Sprite, 'animate', Ext.util.Animate);
-/*
-    mixins: {
-        observable: 'Ext.util.Observable',
-        animate: 'Ext.util.Animate'
-    },
-*/

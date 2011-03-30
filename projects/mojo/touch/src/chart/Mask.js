@@ -6,8 +6,6 @@
  *
  * @constructor
  */
-
-//Ext.define('Ext.chart.Mask', {
 Ext.chart.Mask = Ext.extend(Ext.util.Observable, {
     
     constructor: function(config) {

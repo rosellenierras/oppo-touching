@@ -4,12 +4,7 @@
  * @extends Object
  */
 
-//Ext.define('Ext.fx.target.Sprite', {
-
 Ext.fx.target.Sprite = Ext.extend(Object, {
-    /* Begin Definitions */
-
-    /* End Definitions */
 
     isAnimTarget: true,
 

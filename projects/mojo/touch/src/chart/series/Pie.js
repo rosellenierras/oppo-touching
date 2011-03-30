@@ -37,13 +37,9 @@
  * @xtype pie
  *
  */
-//Ext.define('Ext.chart.series.Pie', {
 Ext.chart.series.Pie = Ext.extend(Ext.chart.series.Series, {
-    /* Begin Definitions */
 
     //extend: 'Ext.chart.series.Series',
-
-    /* End Definitions */
 
     type: "pie",
     rad: Math.PI / 180,

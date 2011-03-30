@@ -2,13 +2,11 @@
  * @class Ext.fx.PropHandler
  * @ignore
  */
-//Ext.define('Ext.fx.PropHandler', {
+
 Ext.fx.PropHandler = {
-    /* Begin Definitions */
 
 //    requires: ['Ext.draw.Draw'],
 
-//    statics: {
         defaultHandler: {
             unitRE: /^(-?\d*\.?\d*){1}(em|ex|px|in|cm|mm|pt|pc|%)*$/,
 
@@ -324,7 +322,6 @@ Ext.fx.PropHandler = {
 //    }
 };
 
-//function() {
     Ext.each([
         'outlineColor',
         'backgroundColor',
@@ -338,4 +335,3 @@ Ext.fx.PropHandler = {
     ], function(prop) {
         this[prop] = this.color;
     }, Ext.fx.PropHandler);
-//});

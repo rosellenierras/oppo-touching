@@ -20,9 +20,6 @@ Note that cubic-bezier will create a custom easing curve following the CSS3 tran
 as (x1, y1, x2, y2). All values must be in the range [0, 1] or the definition is invalid.
  * @markdown
  */
-//Ext.ns('Ext.fx');
-
-//Ext.require('Ext.fx.CubicBezier', function() {
 (function() {
     var math = Math,
         pi = math.PI,

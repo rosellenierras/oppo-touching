@@ -3,8 +3,6 @@
  * Provides default colors for non-specified things. Should be sub-classed when creating new themes.
  * @ignore
  */
-//Ext.define('Ext.chart.theme.Base', {
-
 Ext.chart.theme = function(config, base) {
         config = config || {};
         var i = 0, l, colors, color,
@@ -137,11 +135,8 @@ Ext.chart.theme.Theme = Ext.extend(Object, {
 });
 
 Ext.chart.theme.Base = Ext.extend(Object, {
-    /* Begin Definitions */
 
     //requires: ['Ext.chart.theme.Theme'],
-
-    /* End Definitions */
 
     constructor: function(config) {
         Ext.chart.theme.call(this, config, {

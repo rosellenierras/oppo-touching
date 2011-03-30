@@ -4,16 +4,9 @@
  * Provides specific methods to draw with VML.
  */
 
-//Ext.define('Ext.draw.engine.VML', {
-
 Ext.draw.engine.VML = Ext.extend(Ext.draw.Surface, {
-    /* Begin Definitions */
-
-    //extend: 'Ext.draw.Surface',
 
     //requires: ['Ext.draw.Draw', 'Ext.draw.Color', 'Ext.draw.Sprite', 'Ext.draw.Matrix', 'Ext.core.Element'],
-
-    /* End Definitions */
 
     engine: 'VML',
 

@@ -25,14 +25,7 @@
   </p>
  */
 
-//Ext.define('Ext.chart.series.Column', {
-
 Ext.chart.series.Column = Ext.extend(Ext.chart.series.Bar, {
-    /* Begin Definitions */
-
-    //extend: 'Ext.chart.series.Bar',
-
-    /* End Definitions */
 
     type: 'column',
     column: true,

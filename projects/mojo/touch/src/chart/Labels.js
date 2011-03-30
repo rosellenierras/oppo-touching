@@ -32,13 +32,9 @@
     </ul>
   
  */
-//Ext.define('Ext.chart.Labels', {
 Ext.chart.Labels = Ext.extend(Object, {
-    /* Begin Definitions */
 
     //requires: ['Ext.draw.Color'],
-    
-    /* End Definitions */
 
     /**
      * @cfg {String} labelDisplay

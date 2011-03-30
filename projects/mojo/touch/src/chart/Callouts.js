@@ -4,10 +4,6 @@
  */
 Ext.chart.Callouts = Ext.extend(Object, {
 
-    /* Begin Definitions */
-
-    /* End Definitions */
-
     constructor: function(config) {
         if (config.callouts) {
             config.callouts.styles = Ext.applyIf(config.callouts.styles || {}, {

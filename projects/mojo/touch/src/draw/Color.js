@@ -5,11 +5,7 @@
  * Represents an RGB color and provides helper functions get
  * color components in HSL color space.
  */
-//Ext.define('Ext.draw.Color', {
 Ext.draw.Color = Ext.extend(Object, {
-    /* Begin Definitions */
-
-    /* End Definitions */
 
     colorToHexRe: /(.*?)rgb\((\d+),\s*(\d+),\s*(\d+)\)/,
     rgbRe: /\s*rgb\s*\(\s*([0-9]+)\s*,\s*([0-9]+)\s*,\s*([0-9]+)\s*\)\s*/,

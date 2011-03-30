@@ -21,14 +21,7 @@
     In this example with set the category axis to the bottom of the surface, bound the axis to
     the <em>name</em> property and set as title <em>Month of the Year</em>.
  */
-
-//Ext.define('Ext.chart.axis.Category', {
 Ext.chart.axis.Category = Ext.extend(Ext.chart.axis.Axis, {
-    /* Begin Definitions */
-
-    //extend: 'Ext.chart.axis.Axis',
-
-    /* End Definitions */
 
     /**
      * A list of category names to display along this axis.

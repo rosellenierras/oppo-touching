@@ -36,15 +36,9 @@
     like `color`, `text-anchor`, etc.
    </p>
  */
-//Ext.define('Ext.chart.series.Bar', {
 Ext.chart.series.Bar = Ext.extend(Ext.chart.series.Cartesian, {
-    /* Begin Definitions */
-
-    //extend: 'Ext.chart.series.Cartesian',
 
     //requires: ['Ext.chart.axis.Axis', 'Ext.fx.Anim'],
-
-    /* End Definitions */
 
     type: 'bar',
 

@@ -5,24 +5,15 @@
  * @singleton
  */
 
-//Ext.define('Ext.fx.Manager', {
 Ext.fx.AnimateQueue = Ext.extend(Ext.fx.Queue, {
-    /* Begin Definitions */
     /*
-    singleton: true,
-
     requires: ['Ext.util.MixedCollection',
                'Ext.fx.target.Element',
                'Ext.fx.target.CompositeElement',
                'Ext.fx.target.Sprite',
                'Ext.fx.target.SpriteGroup',
                'Ext.fx.target.Component'],
-
-    mixins: {
-        queue: 'Ext.fx.Queue'
-    },
     */
-    /* End Definitions */
 
     constructor: function() {
         this.items = new Ext.util.MixedCollection();

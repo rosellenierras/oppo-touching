@@ -2,22 +2,11 @@
  * @class Ext.draw.Component
  * @extends Ext.Component
  */
-//Ext.define('Ext.draw.Component', {
 
 Ext.draw.Component = Ext.extend(Ext.Component, {
-    /* Begin Definitions */
-    /*
-    alias: 'widget.draw',
-
-    extend: 'Ext.Component',
-
-    requires: [
-        'Ext.draw.Surface',
-        'Ext.layout.component.Draw'
-    ],
-    */
-    /* End Definitions */
-
+    
+    //requires: ['Ext.draw.Surface', 'Ext.layout.component.Draw' ],
+    
     /**
      * @cfg {Array} implOrder
      * Defines the priority order for which Surface implementation to use. The first
