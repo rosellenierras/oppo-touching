@@ -99,11 +99,8 @@ Ext.chart.theme = function(config, base) {
     };
 
 Ext.chart.theme.Theme = Ext.extend(Object, {
-    /* Begin Definitions */
 
     //requires: ['Ext.draw.Color'],
-
-    /* End Definitions */
 
     theme: 'Base',
     themeAttrs: false,
