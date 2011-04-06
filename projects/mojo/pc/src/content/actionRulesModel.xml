@@ -1,9 +1,0 @@
-<m3o>
-  <ruleset>
-    <rule id="4B59198A-06B9-F1BE-7D8C-31BE819330F8" name="New RULE">
-      <stmt type="ruleAction" id="9F7FA21E-768F-D587-55E9-31BE92AA8A44" ref="assignExpressionToVariable"/>
-      <stmt type="ruleAction" id="08B2352B-5199-2629-2582-31BE99DE291A" ref="assignWidgetOutputToVariable"/>
-      <stmt type="ruleAction" id="978D890C-9CF0-104D-1344-31BE9F3DFAA4" ref="assignModelVariableToVariable"/>
-    </rule>
-  </ruleset>
-</m3o>

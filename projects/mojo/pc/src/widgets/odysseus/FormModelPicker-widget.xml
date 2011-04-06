@@ -1,9 +1,0 @@
-<widget type="com.vitria.opbook.widgets.FormModelPickerWidget" label="i18n:FormModelPicker-widget-title">
-
-	<description>i18n:FormModelPicker-widget-desc</description>
-
-	<outputs>
-		<param name="form" label="Form" binding="true" setting="false" control="true"/>
-	</outputs>
-  
-</widget>
