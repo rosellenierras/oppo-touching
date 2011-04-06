@@ -1,9 +1,0 @@
-<widget type="SpacerWidget" label="i18n:spacer-title">
-
-  <description>i18n:spacer-title-description</description>
-
-  <metadata>
-    <property refreshable="false"/>
-  </metadata>
-
-</widget>

@@ -1,9 +1,0 @@
-<widget type="CheckPolicyWidget" label="Check Policy">
-
-  <description>Check Policy Test</description>
-
-  <metadata>
-    <property refreshable="false"/>
-  </metadata>
-
-</widget>

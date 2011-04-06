@@ -1,8 +1,0 @@
-<widget type="EventDetailViewerWidget" label="i18n:eventDetailViewer-title">
-  <description>i18n:eventDetailViewer-title-description</description>
-  <inputs> 
-    <param binding="true" type="String" label="i18n:eventDetailViewer-model" name="model">
-       <description>i18n:eventDetailViewer-model-description</description>
-    </param> 
-  </inputs> 
-</widget>
