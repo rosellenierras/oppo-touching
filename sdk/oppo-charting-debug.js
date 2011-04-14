@@ -9695,6 +9695,16 @@ Ext.chart.Chart = Ext.extend(Ext.draw.Component, {
         this.surface.destroy();
         this.bindStore(null);
         Ext.chart.Chart.superclass.destroy.call(this);
+    },
+    
+    /**
+     * Added by Kui, for set curWidth/curHeight correctly
+     */
+    setSize : function(width, height) {
+        var me = this;
+        me.curWidth = width;
+        me.curHeight = height;
+        Ext.chart.Chart.superclass.setSize.apply(me, arguments);
     }
 });
 Ext.reg('chart', Ext.chart.Chart);
