@@ -11032,7 +11032,7 @@ Ext.chart.axis.Time = Ext.extend(Ext.chart.axis.Category, {
                 recObj.date = fromDate;
                 newStore.add(recObj);
             }
-            fromDate = Ext.Date.add(fromDate, step[0], step[1]);
+            fromDate = fromDate.add(step[0], step[1]);
         }
         
         this.chart.filteredStore = newStore;
