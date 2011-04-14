@@ -83,8 +83,7 @@ Ext.ns(
     'Ext.chart.series',
     'Ext.chart.theme',
     'Ext.draw',
-    'Ext.draw.engine',
-    'Vitria'
+    'Ext.draw.engine'
 );/**
  * @class Ext.Array
  *
