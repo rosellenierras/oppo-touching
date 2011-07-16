@@ -158,14 +158,14 @@ Ext.chart.Chart = Ext.extend(Ext.draw.Component, {
     },
 
     // @private overrides the component method to set the correct dimensions to the chart.
-    afterComponentLayout: function(width, height) {
+    doComponentLayout: function(width, height) {
         var me = this;
         if (Ext.isNumber(width) && Ext.isNumber(height)) {
             me.curWidth = width;
             me.curHeight = height;
             me.redraw(true);
         }
-        Ext.chart.Chart.superclass.afterComponentLayout.apply(me, arguments);
+        Ext.chart.Chart.superclass.doComponentLayout.apply(me, arguments);
     },
     
     /**

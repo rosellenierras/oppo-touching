@@ -7,7 +7,7 @@
     <target name='default' depends='compile'/>
 	
     <target name='compile'>
-        <concat destfile='${root}/oppo-charting-debug.js' overwrite='true'>
+        <concat destfile='${root}/oppo-charting-debug.js'>
             <filelist id="coresourcefiles" dir="${basedir}/src">
 		<file name='Ext-more.js'/>
 		<file name='util/Array.js'/>
