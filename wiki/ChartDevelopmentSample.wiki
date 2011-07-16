@@ -114,3 +114,5 @@ Ext.setup({
 }}}
 
    * View HTML page
+
+[http://oppo-touching.googlecode.com/svn/trunk/sdk/doc/charting.png]
