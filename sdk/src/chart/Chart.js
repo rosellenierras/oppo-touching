@@ -616,7 +616,6 @@ Ext.chart.Chart = Ext.extend(Ext.draw.Component, {
 
     // @private remove gently.
     destroy: function() {
-        this.surface.destroy();
         this.bindStore(null);
         Ext.chart.Chart.superclass.destroy.call(this);
     },
