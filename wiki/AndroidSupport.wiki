@@ -11,10 +11,18 @@ The list of supported Android OS:
   * Android OS Launchpad;
 [http://oppo-touching.googlecode.com/svn/trunk/sdk/doc/Android/Android_32_Tablet_OS.png]
   * Open the browser and access Sencha Touch example;
+[http://oppo-touching.googlecode.com/svn/trunk/sdk/doc/Android/SenchaTouchExample.png]
   * Go to Oppo charting;
+[http://oppo-touching.googlecode.com/svn/trunk/sdk/doc/Android/Main.png]
   * charting list;
+[http://oppo-touching.googlecode.com/svn/trunk/sdk/doc/Android/ChartList.png]
   * Area chart;
+[http://oppo-touching.googlecode.com/svn/trunk/sdk/doc/Android/AreaChart.png]
   * Mixed chart;
+[http://oppo-touching.googlecode.com/svn/trunk/sdk/doc/Android/MixedChart.png]
   * Grouped bar chart;
+[http://oppo-touching.googlecode.com/svn/trunk/sdk/doc/Android/groupedBarChart.png]
   * Radar chart;
+[http://oppo-touching.googlecode.com/svn/trunk/sdk/doc/Android/RadarChart.png]
   * Famous tiger;
+[http://oppo-touching.googlecode.com/svn/trunk/sdk/doc/Android/Tiger.png]
