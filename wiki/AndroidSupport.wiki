@@ -1,0 +1,19 @@
+Many users complain that oppo-touching didn't support Android, I did lots of investigation and make this report, hope it can help you. 
+
+= Introduction =
+
+Android OS grows very quickly, it takes different version of Webkit Core at different OS. So it is not easy to say Oppo-touching didn't support Android. I just try every Android OS and let you know the supported version. 
+
+
+= Supported Android OS =
+
+The list of supported Android OS:
+  * Android OS Launchpad;
+  * Open the browser and access Sencha Touch example;
+  * Go to Oppo charting;
+  * charting list;
+  * Area chart;
+  * Mixed chart;
+  * Grouped bar chart;
+  * Radar chart;
+  * Famous tiger;
