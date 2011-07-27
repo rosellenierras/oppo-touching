@@ -8,6 +8,13 @@ Android OS grows very quickly, it takes different version of Webkit Core at diff
 = Supported Android OS =
 
 The list of supported Android OS:
+
+|| *Android* || *Webkit* || *oppo supported* ||
+|| 2.3 || 533 || No ||
+|| 3.0 || ? || No ||
+|| 3.1 || ? || Yes ||
+|| 3.2 || ? || Yes ||
+
   * Android OS Launchpad;
 [http://oppo-touching.googlecode.com/svn/trunk/sdk/doc/Android/Android_32_Tablet_OS.png]
   * Open the browser and access Sencha Touch example;
