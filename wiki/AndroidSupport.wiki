@@ -11,7 +11,7 @@ The list of supported Android OS:
 
 || *Android* || *Webkit* || *oppo supported* ||
 || 2.3 || 533 || No ||
-|| 3.0 || ? || No ||
+|| 3.0 || ? || No (Sencha Touch didn't support it) ||
 || 3.1 || ? || Yes ||
 || 3.2 || ? || Yes ||
 
