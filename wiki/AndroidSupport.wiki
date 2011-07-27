@@ -9,7 +9,7 @@ Android OS grows very quickly, it takes different version of Webkit Core at diff
 
 The list of supported Android OS:
   * Android OS Launchpad;
-[http://oppo-touching.googlecode.com/svn/trunk/sdk/doc/Android/Android 3.2 Tablet OS.png]
+[http://oppo-touching.googlecode.com/svn/trunk/sdk/doc/Android/Android_32_Tablet_OS.png]
   * Open the browser and access Sencha Touch example;
   * Go to Oppo charting;
   * charting list;
